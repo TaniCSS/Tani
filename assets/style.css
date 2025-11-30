@@ -1,0 +1,342 @@
+:root {
+            --docs-bg: #f8f9fa;
+            --docs-sidebar-bg: #ffffff;
+            --docs-border: #e9ecef;
+            --docs-text: #212529;
+            --docs-heading: #495057;
+        }
+
+        /* Override default code block styles to use Prism dark theme */
+        .docs-component-code {
+            padding: 20px;
+            overflow-x: auto;
+            border-top: 1px solid #444;
+            position: relative;
+            background-color: #1e1e1e !important;
+            font-family: 'Ubuntu Mono', 'Courier New', monospace;
+        }
+
+        /* Copy button styling */
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #2d2d2d;
+            color: #d4d4d4;
+            border: 1px solid #444;
+            border-radius: 4px;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            z-index: 10;
+        }
+
+        .copy-button:hover {
+            background-color: #3d3d3d;
+        }
+
+        .copy-button.copied {
+            background-color: #28a745;
+            color: white;
+        }
+
+        /* Prism overrides for dark theme */
+        .docs-component-code pre {
+            margin: 0;
+            padding: 0;
+            background: transparent !important;
+        }
+
+        .docs-component-code code {
+            font-size: 0.9rem;
+            border-radius: 0;
+        }
+
+        body {
+            background-color: var(--docs-bg);
+            color: var(--docs-text);
+            font-family: "Ubuntu Mono", "Courier New", monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .docs-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .docs-sidebar {
+            width: 280px;
+            background-color: var(--docs-sidebar-bg);
+            border-right: 1px solid var(--docs-border);
+            padding: 20px;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .docs-main {
+            flex: 1;
+            margin-left: 280px;
+            padding: 30px;
+        }
+
+        .docs-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--docs-border);
+            padding: 20px 30px;
+            margin: -30px -30px 30px -30px;
+        }
+
+        .docs-title {
+            color: var(--docs-heading);
+            margin: 0 0 10px 0;
+        }
+
+        .docs-subtitle {
+            color: #6c757d;
+            margin: 0 0 20px 0;
+            font-size: 1.1rem;
+        }
+
+        .docs-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--docs-border);
+        }
+
+        .docs-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .docs-section-title {
+            color: var(--docs-heading);
+            font-size: 1.8rem;
+            margin: 0 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .docs-subsection {
+            margin: 30px 0;
+        }
+
+        .docs-subsection-title {
+            color: var(--docs-heading);
+            font-size: 1.4rem;
+            margin: 0 0 15px 0;
+        }
+
+        .docs-component {
+            background-color: #ffffff;
+            border: 1px solid var(--docs-border);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .docs-component-preview {
+            padding: 25px;
+            border-bottom: 1px solid var(--docs-border);
+        }
+
+        .docs-component-code {
+            background-color: #f8f9fa;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            border-top: 1px solid var(--docs-border);
+            background-color: #212529;
+        }
+
+        /* Prism overrides */
+        .docs-component-code pre {
+            margin: 0;
+            padding: 0;
+            background: transparent !important;
+        }
+
+        .docs-component-code code {
+            font-size: 0.9rem;
+            border-radius: 0;
+        }
+
+        .docs-nav-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--docs-border);
+            color: var(--docs-heading);
+        }
+
+        .docs-nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 25px 0;
+        }
+
+        .docs-nav-item {
+            margin-bottom: 8px;
+        }
+
+        .docs-nav-link {
+            text-decoration: none;
+            color: #495057;
+            display: block;
+            padding: 6px 12px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .docs-nav-link:hover {
+            background-color: #e9ecef;
+            color: var(--primary);
+        }
+
+        .docs-nav-link.active {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .docs-color-palette {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .docs-color-item {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .docs-color-swatch {
+            height: 80px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .docs-color-name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .docs-color-value {
+            font-size: 0.85rem;
+            color: #6c757d;
+        }
+
+
+        .docs-utility-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .docs-utility-table th,
+        .docs-utility-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .docs-utility-table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+
+        .docs-installation-steps {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+
+        .docs-installation-steps li {
+            counter-increment: step-counter;
+            margin-bottom: 25px;
+            padding-left: 50px;
+            position: relative;
+        }
+
+        .docs-installation-steps li:before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: var(--primary);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .docs-code-block {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        .docs-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 0 5px;
+        }
+
+        .docs-note {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .docs-tip {
+            background-color: #e8f5e9;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        @media (max-width: 992px) {
+            .docs-container {
+                flex-direction: column;
+            }
+
+            .docs-sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+
+            .docs-main {
+                margin-left: 0;
+            }
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--body-color);
+            background: transparent;
+        }

@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tani - Official Documentation for the Tani CSS Framework</title>
+    <link rel="stylesheet" href="./dist/css/tani.css">
+    <!-- Prism CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <!-- Ubuntu Mono Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+</head>
+
+<body>
+    <div class="docs-container">
+        <aside class="docs-sidebar">
+            <h1 class="docs-nav-title">Tani</h1>
+            <ul class="docs-nav-list">
+                <li class="docs-nav-item"><a href="#introduction" class="docs-nav-link">Introduction</a></li>
+                <li class="docs-nav-item"><a href="#installation" class="docs-nav-link">Installation</a></li>
+                <li class="docs-nav-item"><a href="#color-palette" class="docs-nav-link">Color Palette</a></li>
+                <li class="docs-nav-item"><a href="#buttons" class="docs-nav-link">Buttons</a></li>
+                <li class="docs-nav-item"><a href="#badges" class="docs-nav-link">Badges</a></li>
+                <li class="docs-nav-item"><a href="#cards" class="docs-nav-link">Cards</a></li>
+                <li class="docs-nav-item"><a href="#navbar" class="docs-nav-link">Navbar</a></li>
+                <li class="docs-nav-item"><a href="#forms" class="docs-nav-link">Forms</a></li>
+                <li class="docs-nav-item"><a href="#utilities" class="docs-nav-link">Utility Classes</a></li>
+                <li class="docs-nav-item"><a href="#typography" class="docs-nav-link">Typography</a></li>
+            </ul>
+        </aside>
+
+        <main class="docs-main">
+            <header class="docs-header">
+                <h1 class="docs-title">Tani</h1>
+                <p class="docs-subtitle">Official Documentation for the Tani CSS Framework - A lightweight, utility-first CSS framework with rich component library</p>
+                <div>
+                    <span class="docs-badge" style="background-color: #ffab58; color: white;">v1.0.0</span>
+                    <span class="docs-badge" style="background-color: #28a745; color: white;">Stable</span>
+                </div>
+            </header>
+
+            <section id="introduction" class="docs-section">
+                <h2 class="docs-section-title">Introduction</h2>
+                <p>Tani is a modern CSS framework that provides a comprehensive set of utility classes and components
+                    to build responsive, beautiful web interfaces quickly and efficiently.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Features</h3>
+                    <ul>
+                        <li>Utility-first approach for rapid development</li>
+                        <li>Rich component library (buttons, cards, badges, navbar, etc.)</li>
+                        <li>Comprehensive color palette</li>
+                        <li>Extensive utility classes for spacing, typography, and more</li>
+                        <li>No JavaScript dependencies</li>
+                        <li>Lightweight and performant</li>
+                    </ul>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Browser Support</h3>
+                    <p>Tani supports all modern browsers:</p>
+                    <ul>
+                        <li>Chrome (latest)</li>
+                        <li>Firefox (latest)</li>
+                        <li>Safari (latest)</li>
+                        <li>Edge (latest)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="installation" class="docs-section">
+                <h2 class="docs-section-title">Installation</h2>
+                <p>There are several ways to include Tani in your project:</p>
+
+                <ol class="docs-installation-steps">
+                    <li>
+                        <h3>Download</h3>
+                        <p>Download the CSS file and include it in your project:</p>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;link rel="stylesheet" href="./dist/css/tani.css"&gt;</code></pre>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <section id="color-palette" class="docs-section">
+                <h2 class="docs-section-title">Color Palette</h2>
+                <p>Tani comes with a carefully crafted color palette designed for accessibility and visual appeal.
+                </p>
+
+                <div class="docs-color-palette">
+                    <div class="docs-color-item">
+                        <div class="docs-color-swatch" style="background-color: #ffab58;"></div>
+                        <div class="docs-color-name">Primary</div>
+                        <div class="docs-color-value">#ffab58</div>
+                    </div>
+                    <div class="docs-color-item">
+                        <div class="docs-color-swatch" style="background-color: #1780b4;"></div>
+                        <div class="docs-color-name">Secondary</div>
+                        <div class="docs-color-value">#1780b4</div>
+                    </div>
+                    <div class="docs-color-item">
+                        <div class="docs-color-swatch" style="background-color: #24292e;"></div>
+                        <div class="docs-color-name">Dark</div>
+                        <div class="docs-color-value">#24292e</div>
+                    </div>
+                    <div class="docs-color-item">
+                        <div class="docs-color-swatch" style="background-color: #28a745;"></div>
+                        <div class="docs-color-name">Success</div>
+                        <div class="docs-color-value">#28a745</div>
+                    </div>
+                    <div class="docs-color-item">
+                        <div class="docs-color-swatch" style="background-color: #dc3545;"></div>
+                        <div class="docs-color-name">Danger</div>
+                        <div class="docs-color-value">#dc3545</div>
+                    </div>
+                    <div class="docs-color-item">
+                        <div class="docs-color-swatch" style="background-color: #ffc107;"></div>
+                        <div class="docs-color-name">Warning</div>
+                        <div class="docs-color-value">#ffc107</div>
+                    </div>
+                </div>
+
+                <div class="docs-note">
+                    <strong>Note:</strong> All colors are accessible with proper contrast ratios for text and
+                    backgrounds.
+                </div>
+            </section>
+
+            <section id="buttons" class="docs-section">
+                <h2 class="docs-section-title">Buttons</h2>
+                <p>Buttons are essential interface elements available in multiple styles and sizes.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Standard Buttons</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-primary">Primary</button>
+                            <button class="btn btn-secondary">Secondary</button>
+                            <button class="btn btn-success">Success</button>
+                            <button class="btn btn-danger">Danger</button>
+                            <button class="btn btn-warning">Warning</button>
+                            <button class="btn btn-dark">Dark</button>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-dark"&gt;Dark&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Outline Buttons</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-outline-primary">Primary</button>
+                            <button class="btn btn-outline-secondary">Secondary</button>
+                            <button class="btn btn-outline-success">Success</button>
+                            <button class="btn btn-outline-danger">Danger</button>
+                            <button class="btn btn-outline-warning">Warning</button>
+                            <button class="btn btn-outline-dark">Dark</button>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;button class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-outline-success"&gt;Success&lt;/button&gt;
+&lt;button class="btn btn-outline-danger"&gt;Danger&lt;/button&gt;
+&lt;button class="btn btn-outline-warning"&gt;Warning&lt;/button&gt;
+&lt;button class="btn btn-outline-dark"&gt;Dark&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Button Sizes</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-primary btn-sm">Small</button>
+                            <button class="btn btn-primary">Normal</button>
+                            <button class="btn btn-primary btn-lg">Large</button>
+                            <button class="btn btn-primary btn-xl">Extra Large</button>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;button class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Normal&lt;/button&gt;
+&lt;button class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;
+&lt;button class="btn btn-primary btn-xl"&gt;Extra Large&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Rounded Buttons</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-primary btn-rounded">Primary</button>
+                            <button class="btn btn-secondary btn-rounded">Secondary</button>
+                            <button class="btn btn-success btn-rounded">Success</button>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;button class="btn btn-primary btn-rounded"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-secondary btn-rounded"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-success btn-rounded"&gt;Success&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Block Buttons</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-primary btn-block">Block Button</button>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;button class="btn btn-primary btn-block"&gt;Block Button&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Button States</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-primary" disabled>Disabled</button>
+                            <button class="btn btn-primary">Active</button>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;button class="btn btn-primary" disabled&gt;Disabled&lt;/button&gt;
+&lt;button class="btn btn-primary"&gt;Active&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="badges" class="docs-section">
+                <h2 class="docs-section-title">Badges</h2>
+                <p>Badges are small status indicators useful for highlighting information.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Standard Badges</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <span class="badge badge-primary">Primary</span>
+                            <span class="badge badge-secondary">Secondary</span>
+                            <span class="badge badge-success">Success</span>
+                            <span class="badge badge-danger">Danger</span>
+                            <span class="badge badge-warning">Warning</span>
+                            <span class="badge badge-dark">Dark</span>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
+&lt;span class="badge badge-secondary"&gt;Secondary&lt;/span&gt;
+&lt;span class="badge badge-success"&gt;Success&lt;/span&gt;
+&lt;span class="badge badge-danger"&gt;Danger&lt;/span&gt;
+&lt;span class="badge badge-warning"&gt;Warning&lt;/span&gt;
+&lt;span class="badge badge-dark"&gt;Dark&lt;/span&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Badge Sizes</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <span class="badge badge-primary badge-sm">Small</span>
+                            <span class="badge badge-primary">Normal</span>
+                            <span class="badge badge-primary badge-lg">Large</span>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;span class="badge badge-primary badge-sm"&gt;Small&lt;/span&gt;
+&lt;span class="badge badge-primary"&gt;Normal&lt;/span&gt;
+&lt;span class="badge badge-primary badge-lg"&gt;Large&lt;/span&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Pill Badges</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <span class="badge badge-primary badge-pill">Primary</span>
+                            <span class="badge badge-secondary badge-pill">Secondary</span>
+                            <span class="badge badge-success badge-pill">Success</span>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;span class="badge badge-primary badge-pill"&gt;Primary&lt;/span&gt;
+&lt;span class="badge badge-secondary badge-pill"&gt;Secondary&lt;/span&gt;
+&lt;span class="badge badge-success badge-pill"&gt;Success&lt;/span&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cards" class="docs-section">
+                <h2 class="docs-section-title">Cards</h2>
+                <p>Cards are flexible content containers for displaying information.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Basic Card</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="card" style="max-width: 300px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card Title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="card"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Card Title&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Some quick example text...&lt;/p&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Card with Header and Footer</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="card" style="max-width: 300px;">
+                                <div class="card-header">
+                                    Featured
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Special title treatment</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional
+                                        content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                                <div class="card-footer text-muted">
+                                    2 days ago
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="card"&gt;
+  &lt;div class="card-header"&gt;
+    Featured
+  &lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Special title treatment&lt;/h5&gt;
+    &lt;p class="card-text"&gt;With supporting text...&lt;/p&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;Go somewhere&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="card-footer text-muted"&gt;
+    2 days ago
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Colored Cards</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="card card-primary" style="max-width: 300px;">
+                                <div class="card-header">Primary Card</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Primary card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="card card-primary"&gt;
+  &lt;div class="card-header"&gt;Primary Card&lt;/div&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Primary card title&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Some quick example text...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Card Sizes</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="card card-sm" style="max-width: 300px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Small Card</h5>
+                                    <p class="card-text">This is a small card.</p>
+                                </div>
+                            </div>
+                            <div class="card card-lg" style="max-width: 300px; margin-top: 20px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Large Card</h5>
+                                    <p class="card-text">This is a large card with more padding.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="card card-sm"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Small Card&lt;/h5&gt;
+    &lt;p class="card-text"&gt;This is a small card.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="card card-lg"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h5 class="card-title"&gt;Large Card&lt;/h5&gt;
+    &lt;p class="card-text"&gt;This is a large card with more padding.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="navbar" class="docs-section">
+                <h2 class="docs-section-title">Navbar</h2>
+                <p>The navbar component provides a responsive navigation header for your website or application with
+                    full desktop, tablet, and mobile support.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Basic Navbar</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <nav class="navbar navbar-expand-lg bg-light">
+                                <div class="container-fluid">
+                                    <a class="navbar-brand" href="#">Navbar</a>
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Link</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                    data-toggle="dropdown" aria-expanded="false">
+                                                    Dropdown
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                    <li>
+                                                        <hr class="dropdown-divider">
+                                                    </li>
+                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                                            </li>
+                                        </ul>
+                                        <form class="d-flex" role="search">
+                                            <input class="form-control me-2" type="search" placeholder="Search"
+                                                aria-label="Search" />
+                                            <button class="btn btn-outline-success" type="submit">Search</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;nav class="navbar navbar-expand-lg bg-light"&gt;
+  &lt;div class="container-fluid"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+    &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+      &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+      &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link active" aria-current="page" href="#"&gt;Home&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item dropdown"&gt;
+          &lt;a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false"&gt;
+            Dropdown
+          &lt;/a&gt;
+          &lt;ul class="dropdown-menu"&gt;
+            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+          &lt;a class="nav-link disabled" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;form class="d-flex" role="search"&gt;
+        &lt;input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/&gt;
+        &lt;button class="btn btn-outline-success" type="submit"&gt;Search&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Colored Navbars</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <nav class="navbar navbar-expand-lg navbar-primary mb-3">
+                                <div class="container-fluid">
+                                    <a class="navbar-brand" href="#">Primary Navbar</a>
+                                    <button class="navbar-toggler" type="button">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="navbar-collapse collapse">
+                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Features</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+
+                            <nav class="navbar navbar-expand-lg navbar-dark mb-3">
+                                <div class="container-fluid">
+                                    <a class="navbar-brand" href="#">Dark Navbar</a>
+                                    <button class="navbar-toggler" type="button">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="navbar-collapse collapse">
+                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Features</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+
+                            <nav class="navbar navbar-expand-lg navbar-light">
+                                <div class="container-fluid">
+                                    <a class="navbar-brand" href="#">Light Navbar</a>
+                                    <button class="navbar-toggler" type="button">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                                    <div class="navbar-collapse collapse">
+                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Features</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">
+                                &lt;nav class="navbar navbar-expand-lg navbar-primary mb-3"&gt;&lt;/nav&gt;
+
+&lt;nav class="navbar navbar-expand-lg navbar-dark mb-3"&gt;&lt;/nav&gt;
+
+&lt;nav class="navbar navbar-expand-lg navbar-light"&gt;&lt;/nav&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Responsive Behavior</h3>
+                    <p>The navbar automatically adapts to different screen sizes:</p>
+                    <ul>
+                        <li><strong>Desktop (&gt; 992px)</strong>: Full horizontal navigation</li>
+                        <li><strong>Tablet (≤ 992px)</strong>: Toggler button appears, collapsible menu</li>
+                        <li><strong>Mobile (≤ 768px)</strong>: Dropdown menu with stacked items</li>
+                    </ul>
+                    <div class="docs-note">
+                        <strong>Note:</strong> Resize your browser window to see the responsive behavior in action.
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">JavaScript</h3>
+                    <p>Tani navbar requires JavaScript to handle toggling and dropdown functionality. Here's the
+                        complete JavaScript code:</p>
+
+                    <div class="docs-component">
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-javascript">// Navbar toggler functionality
+const togglerButtons = document.querySelectorAll('.navbar-toggler');
+togglerButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        const targetId = this.getAttribute('data-target') || this.getAttribute('data-bs-target');
+        const target = targetId ? document.querySelector(targetId) : this.closest('.navbar').querySelector('.navbar-collapse');
+        
+        if (target) {
+            const isExpanded = target.classList.contains('show');
+            target.classList.toggle('show');
+            this.setAttribute('aria-expanded', !isExpanded);
+            
+            // Close other collapses
+            document.querySelectorAll('.navbar-collapse.show').forEach(collapse => {
+                if (collapse !== target) {
+                    collapse.classList.remove('show');
+                }
+            });
+        }
+    });
+});
+
+// Dropdown toggle functionality
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle, [data-toggle="dropdown"], [data-bs-toggle="dropdown"]');
+dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        const dropdown = this.closest('.dropdown');
+        const menu = dropdown ? dropdown.querySelector('.dropdown-menu') : null;
+        
+        if (menu) {
+            const isOpen = menu.classList.contains('show');
+            
+            // Close all other dropdowns
+            document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
+                if (openMenu !== menu) {
+                    openMenu.classList.remove('show');
+                }
+            });
+            
+            // Toggle current dropdown
+            menu.classList.toggle('show');
+            this.setAttribute('aria-expanded', !isOpen);
+        }
+    });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function (event) {
+    if (!event.target.closest('.dropdown') && !event.target.closest('.navbar-toggler')) {
+        document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+            menu.classList.remove('show');
+        });
+        
+        // Close navbar collapse when clicking outside
+        if (!event.target.closest('.navbar')) {
+            document.querySelectorAll('.navbar-collapse.show').forEach(collapse => {
+                collapse.classList.remove('show');
+            });
+        }
+    }
+});
+
+// Handle window resize
+window.addEventListener('resize', function () {
+    if (window.innerWidth >= 992) {
+        // On desktop, ensure navbar-collapse is visible for navbar-expand-lg
+        document.querySelectorAll('.navbar-expand-lg .navbar-collapse').forEach(collapse => {
+            collapse.classList.add('show');
+        });
+    }
+});</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="docs-tip">
+                        <strong>Tip:</strong> Include this JavaScript code in your page, preferably at the end of the
+                        body tag or wrap it in a <code>DOMContentLoaded</code> event listener to ensure it runs after
+                        the DOM is fully loaded.
+                    </div>
+                </div>
+            </section>
+
+            <section id="forms" class="docs-section">
+                <h2 class="docs-section-title">Forms</h2>
+                <p>Tani provides a comprehensive set of form components for creating beautiful and functional forms.
+                </p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Basic Form</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <div class="form-text">We'll never share your email with anyone else.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleSelect" class="form-label">Select Example</label>
+                                    <select class="form-select" id="exampleSelect">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;form&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="exampleInputEmail1" class="form-label"&gt;Email address&lt;/label&gt;
+    &lt;input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"&gt;
+    &lt;div class="form-text"&gt;We'll never share your email with anyone else.&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="exampleInputPassword1" class="form-label"&gt;Password&lt;/label&gt;
+    &lt;input type="password" class="form-control" id="exampleInputPassword1"&gt;
+  &lt;/div&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="exampleSelect" class="form-label"&gt;Select Example&lt;/label&gt;
+    &lt;select class="form-select" id="exampleSelect"&gt;
+      &lt;option selected&gt;Open this select menu&lt;/option&gt;
+      &lt;option value="1"&gt;One&lt;/option&gt;
+      &lt;option value="2"&gt;Two&lt;/option&gt;
+      &lt;option value="3"&gt;Three&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;div class="form-check"&gt;
+    &lt;input type="checkbox" class="form-check-input" id="exampleCheck1"&gt;
+    &lt;label class="form-check-label" for="exampleCheck1"&gt;Check me out&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Form Controls</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="name@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="formFile" class="form-label">Default file input example</label>
+                                <input class="form-control" type="file" id="formFile">
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="form-group"&gt;
+  &lt;label for="exampleFormControlInput1" class="form-label"&gt;Email address&lt;/label&gt;
+  &lt;input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;label for="exampleFormControlTextarea1" class="form-label"&gt;Example textarea&lt;/label&gt;
+  &lt;textarea class="form-control" id="exampleFormControlTextarea1" rows="3"&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;label for="formFile" class="form-label"&gt;Default file input example&lt;/label&gt;
+  &lt;input class="form-control" type="file" id="formFile"&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Checkboxes and Radios</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Default checkbox
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Checked checkbox
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault1">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Default radio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Default checked radio
+                                </label>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"&gt;
+  &lt;label class="form-check-label" for="flexCheckDefault"&gt;
+    Default checkbox
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked&gt;
+  &lt;label class="form-check-label" for="flexCheckChecked"&gt;
+    Checked checkbox
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"&gt;
+  &lt;label class="form-check-label" for="flexRadioDefault1"&gt;
+    Default radio
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class="form-check"&gt;
+  &lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked&gt;
+  &lt;label class="form-check-label" for="flexRadioDefault2"&gt;
+    Default checked radio
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Form Grid</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <input type="text" class="form-control" placeholder="First name">
+                                    </div>
+                                    <div class="form-col">
+                                        <input type="text" class="form-control" placeholder="Last name">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;form&gt;
+  &lt;div class="form-row"&gt;
+    &lt;div class="form-col"&gt;
+      &lt;input type="text" class="form-control" placeholder="First name"&gt;
+    &lt;/div&gt;
+    &lt;div class="form-col"&gt;
+      &lt;input type="text" class="form-control" placeholder="Last name"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Sizing</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <input class="form-control form-control-lg" type="text" placeholder="Large input">
+                            <br>
+                            <input class="form-control" type="text" placeholder="Default input">
+                            <br>
+                            <input class="form-control form-control-sm" type="text" placeholder="Small input">
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;input class="form-control form-control-lg" type="text" placeholder="Large input"&gt;
+&lt;input class="form-control" type="text" placeholder="Default input"&gt;
+&lt;input class="form-control form-control-sm" type="text" placeholder="Small input"&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="utilities" class="docs-section">
+                <h2 class="docs-section-title">Utility Classes</h2>
+                <p>Tani provides a comprehensive set of utility classes for common styling needs.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Spacing Utilities</h3>
+                    <p>Margin and padding utilities use a 5-level scale (0-5):</p>
+
+                    <table class="docs-utility-table">
+                        <thead>
+                            <tr>
+                                <th>Size</th>
+                                <th>Value</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td><code>.m-0</code>, <code>.p-0</code></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0.25rem</td>
+                                <td><code>.m-1</code>, <code>.p-1</code></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>0.5rem</td>
+                                <td><code>.m-2</code>, <code>.p-2</code></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>1rem</td>
+                                <td><code>.m-3</code>, <code>.p-3</code></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>1.5rem</td>
+                                <td><code>.m-4</code>, <code>.p-4</code></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>3rem</td>
+                                <td><code>.m-5</code>, <code>.p-5</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="docs-tip">
+                        <strong>Tip:</strong> Use directional prefixes for specific sides: <code>t</code> (top),
+                        <code>r</code> (right), <code>b</code> (bottom), <code>l</code> (left), <code>x</code>
+                        (horizontal), <code>y</code> (vertical).
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Display Utilities</h3>
+                    <table class="docs-utility-table">
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Property</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.d-none</code></td>
+                                <td><code>display: none;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.d-inline</code></td>
+                                <td><code>display: inline;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.d-inline-block</code></td>
+                                <td><code>display: inline-block;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.d-block</code></td>
+                                <td><code>display: block;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.d-flex</code></td>
+                                <td><code>display: flex;</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Flexbox Utilities</h3>
+                    <table class="docs-utility-table">
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Property</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.d-flex</code></td>
+                                <td><code>display: flex;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.flex-row</code></td>
+                                <td><code>flex-direction: row;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.flex-column</code></td>
+                                <td><code>flex-direction: column;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.justify-content-start</code></td>
+                                <td><code>justify-content: flex-start;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.justify-content-center</code></td>
+                                <td><code>justify-content: center;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.justify-content-between</code></td>
+                                <td><code>justify-content: space-between;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.align-items-start</code></td>
+                                <td><code>align-items: flex-start;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.align-items-center</code></td>
+                                <td><code>align-items: center;</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Text Utilities</h3>
+                    <table class="docs-utility-table">
+                        <thead>
+                            <tr>
+                                <th>Class</th>
+                                <th>Property</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>.text-left</code></td>
+                                <td><code>text-align: left;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.text-center</code></td>
+                                <td><code>text-align: center;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.text-right</code></td>
+                                <td><code>text-align: right;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.text-muted</code></td>
+                                <td><code>color: #6c757d;</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>.text-primary</code></td>
+                                <td><code>color: var(--primary);</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="typography" class="docs-section">
+                <h2 class="docs-section-title">Typography</h2>
+                <p>Tani provides a consistent typography system with headings, paragraphs, and lists.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Headings</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <h1>h1. Heading</h1>
+                            <h2>h2. Heading</h2>
+                            <h3>h3. Heading</h3>
+                            <h4>h4. Heading</h4>
+                            <h5>h5. Heading</h5>
+                            <h6>h6. Heading</h6>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">
+                            &lt;h1&gt;h1. Heading&lt;/h1&gt;
+                            &lt;h2&gt;h2. Heading&lt;/h2&gt;
+                            &lt;h3&gt;h3. Heading&lt;/h3&gt;
+                            &lt;h4&gt;h4. Heading&lt;/h4&gt;
+                            &lt;h5&gt;h5. Heading&lt;/h5&gt;
+                            &lt;h6&gt;h6. Heading&lt;/h6&gt;
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Paragraphs</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <p>This is a paragraph with default styling. It has appropriate line height and margins for
+                                readability.</p>
+                            <p class="text-muted">This is a muted paragraph using the <code>.text-muted</code> class.
+                            </p>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">
+                            &lt;p&gt;This is a paragraph with default styling.&lt;/p&gt;
+                            &lt;p class="text-muted"&gt;This is a muted paragraph...&lt;/p&gt;
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer
+                style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #e9ecef; text-align: center; color: #6c757d;">
+                <p>© 2025 Tani Framework. Documentation v1.0.0</p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // Simple navigation highlighting
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('.docs-nav-link');
+            const sections = document.querySelectorAll('.docs-section');
+
+            function highlightNav() {
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (window.pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', highlightNav);
+            highlightNav(); // Run on initial load
+
+            // Navbar toggler functionality
+            const togglerButtons = document.querySelectorAll('.navbar-toggler');
+            togglerButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const targetId = this.getAttribute('data-target') || this.getAttribute('data-bs-target');
+                    const target = targetId ? document.querySelector(targetId) : this.closest('.navbar').querySelector('.navbar-collapse');
+
+                    if (target) {
+                        const isExpanded = target.classList.contains('show');
+                        target.classList.toggle('show');
+                        this.setAttribute('aria-expanded', !isExpanded);
+
+                        // Close other collapses
+                        document.querySelectorAll('.navbar-collapse.show').forEach(collapse => {
+                            if (collapse !== target) {
+                                collapse.classList.remove('show');
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Dropdown toggle functionality
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle, [data-toggle="dropdown"], [data-bs-toggle="dropdown"]');
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const dropdown = this.closest('.dropdown');
+                    const menu = dropdown ? dropdown.querySelector('.dropdown-menu') : null;
+
+                    if (menu) {
+                        const isOpen = menu.classList.contains('show');
+
+                        // Close all other dropdowns
+                        document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
+                            if (openMenu !== menu) {
+                                openMenu.classList.remove('show');
+                            }
+                        });
+
+                        // Toggle current dropdown
+                        menu.classList.toggle('show');
+                        this.setAttribute('aria-expanded', !isOpen);
+                    }
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function (event) {
+                if (!event.target.closest('.dropdown') && !event.target.closest('.navbar-toggler')) {
+                    document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+                        menu.classList.remove('show');
+                    });
+
+                    // Close navbar collapse when clicking outside
+                    if (!event.target.closest('.navbar')) {
+                        document.querySelectorAll('.navbar-collapse.show').forEach(collapse => {
+                            collapse.classList.remove('show');
+                        });
+                    }
+                }
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 992) {
+                    // On desktop, ensure navbar-collapse is visible for navbar-expand-lg
+                    document.querySelectorAll('.navbar-expand-lg .navbar-collapse').forEach(collapse => {
+                        collapse.classList.add('show');
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- Prism JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <script>
+        // Initialize Prism highlighting
+        document.addEventListener('DOMContentLoaded', function () {
+            Prism.highlightAll();
+        });
+
+        // Copy code functionality
+        function copyCode(button) {
+            // Find the code element within the same container
+            const preElement = button.nextElementSibling;
+            const codeBlock = preElement.querySelector('code');
+            const textToCopy = codeBlock.textContent;
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                // Change button text temporarily
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
+</body>
+
+</html>
