@@ -94,6 +94,7 @@
                 <li class="docs-nav-item"><a href="#button-groups" class="docs-nav-link">Button Groups</a></li>
                 <li class="docs-nav-item"><a href="#badges" class="docs-nav-link">Badges</a></li>
                 <li class="docs-nav-item"><a href="#cards" class="docs-nav-link">Cards</a></li>
+                <li class="docs-nav-item"><a href="#breadcrumbs" class="docs-nav-link">Breadcrumbs</a></li>
                 <li class="docs-nav-item"><a href="#navbar" class="docs-nav-link">Navbar</a></li>
                 <li class="docs-nav-item"><a href="#navs-tabs" class="docs-nav-link">Navs & Tabs</a></li>
                 <li class="docs-nav-item"><a href="#dropdowns" class="docs-nav-link">Dropdowns</a></li>
@@ -729,6 +730,321 @@
 &lt;/div&gt;</code></pre>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section id="breadcrumbs" class="docs-section">
+                <h2 class="docs-section-title">Breadcrumbs</h2>
+                <p>Breadcrumbs indicate the current page's location within a navigational hierarchy.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Basic Breadcrumb</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;nav aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;Data&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Breadcrumb Separators</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <nav aria-label="breadcrumb" style="margin-bottom: 15px;">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Electronics</li>
+                                </ol>
+                            </nav>
+                            <nav aria-label="breadcrumb" style="margin-bottom: 15px;">
+                                <ol class="breadcrumb breadcrumb-arrow">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Electronics</li>
+                                </ol>
+                            </nav>
+                            <nav aria-label="breadcrumb" style="margin-bottom: 15px;">
+                                <ol class="breadcrumb breadcrumb-chevron">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Electronics</li>
+                                </ol>
+                            </nav>
+                            <nav aria-label="breadcrumb" style="margin-bottom: 15px;">
+                                <ol class="breadcrumb breadcrumb-dot">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Electronics</li>
+                                </ol>
+                            </nav>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-dash">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Electronics</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Default (slash) --&gt;
+&lt;ol class="breadcrumb"&gt;...&lt;/ol&gt;
+
+&lt;!-- Arrow --&gt;
+&lt;ol class="breadcrumb breadcrumb-arrow"&gt;...&lt;/ol&gt;
+
+&lt;!-- Chevron --&gt;
+&lt;ol class="breadcrumb breadcrumb-chevron"&gt;...&lt;/ol&gt;
+
+&lt;!-- Dot --&gt;
+&lt;ol class="breadcrumb breadcrumb-dot"&gt;...&lt;/ol&gt;
+
+&lt;!-- Dash --&gt;
+&lt;ol class="breadcrumb breadcrumb-dash"&gt;...&lt;/ol&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Breadcrumb Styles</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <nav aria-label="breadcrumb" style="margin-bottom: 15px;">
+                                <ol class="breadcrumb breadcrumb-transparent">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                            <nav aria-label="breadcrumb" style="margin-bottom: 15px;">
+                                <ol class="breadcrumb breadcrumb-bordered">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-rounded">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Transparent --&gt;
+&lt;ol class="breadcrumb breadcrumb-transparent"&gt;...&lt;/ol&gt;
+
+&lt;!-- Bordered --&gt;
+&lt;ol class="breadcrumb breadcrumb-bordered"&gt;...&lt;/ol&gt;
+
+&lt;!-- Rounded --&gt;
+&lt;ol class="breadcrumb breadcrumb-rounded"&gt;...&lt;/ol&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Breadcrumb Colors</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <nav aria-label="breadcrumb" style="margin-bottom: 15px;">
+                                <ol class="breadcrumb breadcrumb-primary">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                            <nav aria-label="breadcrumb" style="margin-bottom: 15px;">
+                                <ol class="breadcrumb breadcrumb-secondary">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                            <nav aria-label="breadcrumb" style="margin-bottom: 15px;">
+                                <ol class="breadcrumb breadcrumb-success">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-dark">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Primary --&gt;
+&lt;ol class="breadcrumb breadcrumb-primary"&gt;...&lt;/ol&gt;
+
+&lt;!-- Secondary --&gt;
+&lt;ol class="breadcrumb breadcrumb-secondary"&gt;...&lt;/ol&gt;
+
+&lt;!-- Success --&gt;
+&lt;ol class="breadcrumb breadcrumb-success"&gt;...&lt;/ol&gt;
+
+&lt;!-- Dark --&gt;
+&lt;ol class="breadcrumb breadcrumb-dark"&gt;...&lt;/ol&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Breadcrumb Sizes</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <nav aria-label="breadcrumb" style="margin-bottom: 15px;">
+                                <ol class="breadcrumb breadcrumb-sm">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                            <nav aria-label="breadcrumb" style="margin-bottom: 15px;">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-lg">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Small --&gt;
+&lt;ol class="breadcrumb breadcrumb-sm"&gt;...&lt;/ol&gt;
+
+&lt;!-- Normal --&gt;
+&lt;ol class="breadcrumb"&gt;...&lt;/ol&gt;
+
+&lt;!-- Large --&gt;
+&lt;ol class="breadcrumb breadcrumb-lg"&gt;...&lt;/ol&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Breadcrumb with Icons</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="#">
+                                            <span class="breadcrumb-icon">🏠</span>
+                                            Home
+                                        </a>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <a href="#">
+                                            <span class="breadcrumb-icon">📚</span>
+                                            Library
+                                        </a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">
+                                        <span class="breadcrumb-icon">📊</span>
+                                        Data
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;nav aria-label="breadcrumb"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;a href="#"&gt;
+        &lt;span class="breadcrumb-icon"&gt;🏠&lt;/span&gt;
+        Home
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumb-item"&gt;
+      &lt;a href="#"&gt;
+        &lt;span class="breadcrumb-icon"&gt;📚&lt;/span&gt;
+        Library
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;
+      &lt;span class="breadcrumb-icon"&gt;📊&lt;/span&gt;
+      Data
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Combined Styles</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <nav aria-label="breadcrumb" style="margin-bottom: 15px;">
+                                <ol class="breadcrumb breadcrumb-primary breadcrumb-arrow breadcrumb-rounded">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Electronics</li>
+                                </ol>
+                            </nav>
+                            <nav aria-label="breadcrumb" style="margin-bottom: 15px;">
+                                <ol class="breadcrumb breadcrumb-dark breadcrumb-chevron breadcrumb-lg">
+                                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Settings</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Profile</li>
+                                </ol>
+                            </nav>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb breadcrumb-success breadcrumb-dot breadcrumb-bordered">
+                                    <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Users</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Edit</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Primary + Arrow + Rounded --&gt;
+&lt;ol class="breadcrumb breadcrumb-primary breadcrumb-arrow breadcrumb-rounded"&gt;...&lt;/ol&gt;
+
+&lt;!-- Dark + Chevron + Large --&gt;
+&lt;ol class="breadcrumb breadcrumb-dark breadcrumb-chevron breadcrumb-lg"&gt;...&lt;/ol&gt;
+
+&lt;!-- Success + Dot + Bordered --&gt;
+&lt;ol class="breadcrumb breadcrumb-success breadcrumb-dot breadcrumb-bordered"&gt;...&lt;/ol&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-note">
+                    <strong>Note:</strong> Always use <code>aria-label="breadcrumb"</code> on the <code>&lt;nav&gt;</code> element and <code>aria-current="page"</code> on the active item for accessibility.
                 </div>
             </section>
 
