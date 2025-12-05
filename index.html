@@ -25,6 +25,7 @@
                 <li class="docs-nav-item"><a href="#badges" class="docs-nav-link">Badges</a></li>
                 <li class="docs-nav-item"><a href="#cards" class="docs-nav-link">Cards</a></li>
                 <li class="docs-nav-item"><a href="#navbar" class="docs-nav-link">Navbar</a></li>
+                <li class="docs-nav-item"><a href="#dropdowns" class="docs-nav-link">Dropdowns</a></li>
                 <li class="docs-nav-item"><a href="#modals" class="docs-nav-link">Modals</a></li>
                 <li class="docs-nav-item"><a href="#forms" class="docs-nav-link">Forms</a></li>
                 <li class="docs-nav-item"><a href="#utilities" class="docs-nav-link">Utility Classes</a></li>
@@ -705,6 +706,266 @@ window.addEventListener('resize', function () {
                         <strong>Tip:</strong> Include this JavaScript code in your page, preferably at the end of the
                         body tag or wrap it in a <code>DOMContentLoaded</code> event listener to ensure it runs after
                         the DOM is fully loaded.
+                    </div>
+                </div>
+            </section>
+
+            <section id="dropdowns" class="docs-section">
+                <h2 class="docs-section-title">Dropdowns</h2>
+                <p>Dropdowns are toggleable overlays for displaying lists of links, actions, and more. They work great as standalone components or within navigation bars.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Basic Dropdown</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="dropdown" style="display: inline-block;">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    Dropdown Button
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="dropdown"&gt;
+  &lt;button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"&gt;
+    Dropdown Button
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Dropdown with Divider</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="dropdown" style="display: inline-block;">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    Menu Options
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Regular link</a></li>
+                                    <li><a class="dropdown-item" href="#">Another link</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="dropdown"&gt;
+  &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"&gt;
+    Menu Options
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Regular link&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another link&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Dropdown Button Variants</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="dropdown" style="display: inline-block; margin-right: 10px;">
+                                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    Success
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown" style="display: inline-block; margin-right: 10px;">
+                                <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    Danger
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown" style="display: inline-block; margin-right: 10px;">
+                                <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    Warning
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown" style="display: inline-block;">
+                                <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    Dark
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="dropdown"&gt;
+  &lt;button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown"&gt;
+    Success
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;...&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="dropdown"&gt;
+  &lt;button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown"&gt;
+    Danger
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;...&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Dropdown with Active and Disabled Items</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="dropdown" style="display: inline-block;">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    Dropdown States
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Regular item</a></li>
+                                    <li><a class="dropdown-item active" href="#">Active item</a></li>
+                                    <li><a class="dropdown-item disabled" href="#">Disabled item</a></li>
+                                    <li><a class="dropdown-item" href="#">Another item</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="dropdown"&gt;
+  &lt;button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"&gt;
+    Dropdown States
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Regular item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item active" href="#"&gt;Active item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item disabled" href="#"&gt;Disabled item&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another item&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Outline Button Dropdowns</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="dropdown" style="display: inline-block; margin-right: 10px;">
+                                <button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    Primary
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown" style="display: inline-block; margin-right: 10px;">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    Secondary
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown" style="display: inline-block;">
+                                <button class="btn btn-outline-success dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                    Success
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="dropdown"&gt;
+  &lt;button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown"&gt;
+    Primary
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;...&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Usage in Navigation</h3>
+                    <p>Dropdowns are commonly used within navigation bars. See the <a href="#navbar">Navbar section</a> for examples of dropdowns integrated into navigation menus.</p>
+                    <div class="docs-note">
+                        <strong>Note:</strong> When used in a navbar, dropdowns automatically adjust their positioning and behavior for mobile devices.
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">JavaScript</h3>
+                    <p>Dropdowns require JavaScript to function. The dropdown toggle functionality is already included in the navbar JavaScript code. Here's a standalone version:</p>
+                    <div class="docs-component">
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-javascript">// Dropdown toggle functionality
+const dropdownToggles = document.querySelectorAll('.dropdown-toggle, [data-toggle="dropdown"]');
+dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        const dropdown = this.closest('.dropdown');
+        const menu = dropdown ? dropdown.querySelector('.dropdown-menu') : null;
+        
+        if (menu) {
+            const isOpen = menu.classList.contains('show');
+            
+            // Close all other dropdowns
+            document.querySelectorAll('.dropdown-menu.show').forEach(openMenu => {
+                if (openMenu !== menu) {
+                    openMenu.classList.remove('show');
+                }
+            });
+            
+            // Toggle current dropdown
+            menu.classList.toggle('show');
+            this.setAttribute('aria-expanded', !isOpen);
+        }
+    });
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function (event) {
+    if (!event.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
+            menu.classList.remove('show');
+        });
+    }
+});</code></pre>
+                        </div>
+                    </div>
+                    <div class="docs-tip">
+                        <strong>Tip:</strong> This JavaScript is already included in the page if you're using the navbar component. No need to add it twice!
                     </div>
                 </div>
             </section>
