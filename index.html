@@ -14,6 +14,75 @@
 </head>
 
 <body>
+    <!-- Toast Containers -->
+    <div class="toast-container top-right">
+        <div class="toast" id="basicToast">
+            <div class="toast-header">
+                <strong>Notification</strong>
+                <small>just now</small>
+                <button class="toast-close" onclick="hideToast('basicToast')">&times;</button>
+            </div>
+            <div class="toast-body">
+                This is a basic toast notification message.
+            </div>
+        </div>
+        <div class="toast toast-primary" id="toastPrimary">
+            <div class="toast-header">
+                <strong>Primary</strong>
+                <small>just now</small>
+                <button class="toast-close" onclick="hideToast('toastPrimary')">&times;</button>
+            </div>
+            <div class="toast-body">
+                This is a primary toast notification.
+            </div>
+        </div>
+        <div class="toast toast-success" id="toastSuccess">
+            <div class="toast-header">
+                <strong>Success</strong>
+                <small>just now</small>
+                <button class="toast-close" onclick="hideToast('toastSuccess')">&times;</button>
+            </div>
+            <div class="toast-body">
+                Operation completed successfully!
+            </div>
+        </div>
+        <div class="toast toast-danger" id="toastDanger">
+            <div class="toast-header">
+                <strong>Error</strong>
+                <small>just now</small>
+                <button class="toast-close" onclick="hideToast('toastDanger')">&times;</button>
+            </div>
+            <div class="toast-body">
+                An error occurred!
+            </div>
+        </div>
+        <div class="toast toast-warning" id="toastWarning">
+            <div class="toast-header">
+                <strong>Warning</strong>
+                <small>just now</small>
+                <button class="toast-close" onclick="hideToast('toastWarning')">&times;</button>
+            </div>
+            <div class="toast-body">
+                Please be careful!
+            </div>
+        </div>
+        <div class="toast toast-info" id="toastInfo">
+            <div class="toast-header">
+                <strong>Info</strong>
+                <small>just now</small>
+                <button class="toast-close" onclick="hideToast('toastInfo')">&times;</button>
+            </div>
+            <div class="toast-body">
+                Here's some information for you.
+            </div>
+        </div>
+        <div class="toast" id="toastNoHeader">
+            <div class="toast-body">
+                Simple toast message without header.
+            </div>
+        </div>
+    </div>
+
     <div class="docs-container">
         <aside class="docs-sidebar">
             <h1 class="docs-nav-title">Tani</h1>
@@ -29,6 +98,7 @@
                 <li class="docs-nav-item"><a href="#navs-tabs" class="docs-nav-link">Navs & Tabs</a></li>
                 <li class="docs-nav-item"><a href="#dropdowns" class="docs-nav-link">Dropdowns</a></li>
                 <li class="docs-nav-item"><a href="#modals" class="docs-nav-link">Modals</a></li>
+                <li class="docs-nav-item"><a href="#toasts" class="docs-nav-link">Toasts</a></li>
                 <li class="docs-nav-item"><a href="#progress" class="docs-nav-link">Progress</a></li>
                 <li class="docs-nav-item"><a href="#forms" class="docs-nav-link">Forms</a></li>
                 <li class="docs-nav-item"><a href="#pagination" class="docs-nav-link">Pagination</a></li>
@@ -1715,6 +1785,231 @@ document.addEventListener('click', function(event) {
                 </div>
             </section>
 
+            <section id="toasts" class="docs-section">
+                <h2 class="docs-section-title">Toasts</h2>
+                <p>Toasts are lightweight notifications designed to mimic push notifications.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Basic Toast</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-primary" onclick="showToast('basicToast')">Show Toast</button>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="toast-container top-right"&gt;
+  &lt;div class="toast" id="basicToast"&gt;
+    &lt;div class="toast-header"&gt;
+      &lt;strong&gt;Notification&lt;/strong&gt;
+      &lt;small&gt;just now&lt;/small&gt;
+      &lt;button class="toast-close" onclick="hideToast('basicToast')"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="toast-body"&gt;
+      This is a basic toast notification message.
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Toast Variants</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-primary" onclick="showToast('toastPrimary')" style="margin: 5px;">Primary</button>
+                            <button class="btn btn-success" onclick="showToast('toastSuccess')" style="margin: 5px;">Success</button>
+                            <button class="btn btn-danger" onclick="showToast('toastDanger')" style="margin: 5px;">Danger</button>
+                            <button class="btn btn-warning" onclick="showToast('toastWarning')" style="margin: 5px;">Warning</button>
+                            <button class="btn btn-info" onclick="showToast('toastInfo')" style="margin: 5px;">Info</button>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Primary Toast --&gt;
+&lt;div class="toast toast-primary"&gt;
+  &lt;div class="toast-header"&gt;
+    &lt;strong&gt;Primary&lt;/strong&gt;
+    &lt;small&gt;just now&lt;/small&gt;
+    &lt;button class="toast-close"&gt;&times;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="toast-body"&gt;
+    This is a primary toast notification.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Success Toast --&gt;
+&lt;div class="toast toast-success"&gt;
+  &lt;div class="toast-header"&gt;
+    &lt;strong&gt;Success&lt;/strong&gt;
+    &lt;small&gt;just now&lt;/small&gt;
+    &lt;button class="toast-close"&gt;&times;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="toast-body"&gt;
+    Operation completed successfully!
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Danger Toast --&gt;
+&lt;div class="toast toast-danger"&gt;
+  &lt;div class="toast-header"&gt;
+    &lt;strong&gt;Error&lt;/strong&gt;
+    &lt;small&gt;just now&lt;/small&gt;
+    &lt;button class="toast-close"&gt;&times;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="toast-body"&gt;
+    An error occurred!
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Toast Positions</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-secondary" onclick="showPositionToast('top-right')" style="margin: 5px;">Top Right</button>
+                            <button class="btn btn-secondary" onclick="showPositionToast('top-left')" style="margin: 5px;">Top Left</button>
+                            <button class="btn btn-secondary" onclick="showPositionToast('top-center')" style="margin: 5px;">Top Center</button>
+                            <button class="btn btn-secondary" onclick="showPositionToast('bottom-right')" style="margin: 5px;">Bottom Right</button>
+                            <button class="btn btn-secondary" onclick="showPositionToast('bottom-left')" style="margin: 5px;">Bottom Left</button>
+                            <button class="btn btn-secondary" onclick="showPositionToast('bottom-center')" style="margin: 5px;">Bottom Center</button>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Top Right --&gt;
+&lt;div class="toast-container top-right"&gt;
+  &lt;div class="toast"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Top Left --&gt;
+&lt;div class="toast-container top-left"&gt;
+  &lt;div class="toast"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Top Center --&gt;
+&lt;div class="toast-container top-center"&gt;
+  &lt;div class="toast"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Bottom Right --&gt;
+&lt;div class="toast-container bottom-right"&gt;
+  &lt;div class="toast"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Bottom Left --&gt;
+&lt;div class="toast-container bottom-left"&gt;
+  &lt;div class="toast"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Bottom Center --&gt;
+&lt;div class="toast-container bottom-center"&gt;
+  &lt;div class="toast"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Toast without Header</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-dark" onclick="showToast('toastNoHeader')">Show Simple Toast</button>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="toast"&gt;
+  &lt;div class="toast-body"&gt;
+    Simple toast message without header.
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">JavaScript</h3>
+                    <p>Toasts require JavaScript to show and hide. Here's the complete code:</p>
+                    <div class="docs-component">
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-javascript">// Toast functionality
+function showToast(toastId, duration = 5000) {
+    const toast = document.getElementById(toastId);
+    if (!toast) return;
+    
+    toast.classList.add('show');
+    toast.classList.remove('hiding');
+    
+    // Auto hide after duration
+    if (duration > 0) {
+        setTimeout(() => {
+            hideToast(toastId);
+        }, duration);
+    }
+}
+
+function hideToast(toastId) {
+    const toast = document.getElementById(toastId);
+    if (!toast) return;
+    
+    toast.classList.add('hiding');
+    toast.classList.remove('show');
+    
+    // Remove hiding class after animation
+    setTimeout(() => {
+        toast.classList.remove('hiding');
+    }, 300);
+}
+
+// Create toast dynamically
+function createToast(message, type = 'primary', position = 'top-right', duration = 5000) {
+    // Get or create container
+    let container = document.querySelector(`.toast-container.${position}`);
+    if (!container) {
+        container = document.createElement('div');
+        container.className = `toast-container ${position}`;
+        document.body.appendChild(container);
+    }
+    
+    // Create toast
+    const toastId = 'toast-' + Date.now();
+    const toast = document.createElement('div');
+    toast.id = toastId;
+    toast.className = `toast toast-${type}`;
+    toast.innerHTML = `
+        &lt;div class="toast-header"&gt;
+            &lt;strong&gt;${type.charAt(0).toUpperCase() + type.slice(1)}&lt;/strong&gt;
+            &lt;small&gt;just now&lt;/small&gt;
+            &lt;button class="toast-close" onclick="hideToast('${toastId}')"&gt;&times;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class="toast-body"&gt;${message}&lt;/div&gt;
+    `;
+    
+    container.appendChild(toast);
+    
+    // Show toast
+    setTimeout(() => showToast(toastId, duration), 10);
+    
+    // Remove from DOM after hiding
+    setTimeout(() => {
+        if (toast.parentNode) {
+            toast.parentNode.removeChild(toast);
+        }
+    }, duration + 500);
+}</code></pre>
+                        </div>
+                    </div>
+                    <div class="docs-tip">
+                        <strong>Tip:</strong> Use <code>createToast()</code> to dynamically generate toasts, or define them in HTML and show/hide with <code>showToast()</code> and <code>hideToast()</code>.
+                    </div>
+                </div>
+
+                <div class="docs-note">
+                    <strong>Note:</strong> Toasts automatically hide after 5 seconds by default. You can customize the duration or set it to 0 for manual dismissal only.
+                </div>
+            </section>
+
             <section id="progress" class="docs-section">
                 <h2 class="docs-section-title">Progress</h2>
                 <p>Progress bars are used to visualize the completion status of tasks or processes.</p>
@@ -3099,6 +3394,77 @@ function resetProgress() {
             const progressBar = document.getElementById('dynamicProgress');
             progressBar.style.width = '0%';
             progressBar.textContent = '0%';
+        }
+
+        // Toast functionality
+        function showToast(toastId, duration = 5000) {
+            const toast = document.getElementById(toastId);
+            if (!toast) return;
+            
+            toast.classList.add('show');
+            toast.classList.remove('hiding');
+            
+            // Auto hide after duration
+            if (duration > 0) {
+                setTimeout(() => {
+                    hideToast(toastId);
+                }, duration);
+            }
+        }
+
+        function hideToast(toastId) {
+            const toast = document.getElementById(toastId);
+            if (!toast) return;
+            
+            toast.classList.add('hiding');
+            toast.classList.remove('show');
+            
+            // Remove hiding class after animation
+            setTimeout(() => {
+                toast.classList.remove('hiding');
+            }, 300);
+        }
+
+        // Create toast dynamically
+        function createToast(message, type = 'primary', position = 'top-right', duration = 5000) {
+            // Get or create container
+            let container = document.querySelector(`.toast-container.${position}`);
+            if (!container) {
+                container = document.createElement('div');
+                container.className = `toast-container ${position}`;
+                document.body.appendChild(container);
+            }
+            
+            // Create toast
+            const toastId = 'toast-' + Date.now();
+            const toast = document.createElement('div');
+            toast.id = toastId;
+            toast.className = `toast toast-${type}`;
+            toast.innerHTML = `
+                <div class="toast-header">
+                    <strong>${type.charAt(0).toUpperCase() + type.slice(1)}</strong>
+                    <small>just now</small>
+                    <button class="toast-close" onclick="hideToast('${toastId}')">&times;</button>
+                </div>
+                <div class="toast-body">${message}</div>
+            `;
+            
+            container.appendChild(toast);
+            
+            // Show toast
+            setTimeout(() => showToast(toastId, duration), 10);
+            
+            // Remove from DOM after hiding
+            setTimeout(() => {
+                if (toast.parentNode) {
+                    toast.parentNode.removeChild(toast);
+                }
+            }, duration + 500);
+        }
+
+        // Show position toast demo
+        function showPositionToast(position) {
+            createToast(`Toast positioned at ${position.replace('-', ' ')}`, 'secondary', position, 3000);
         }
     </script>
 </body>
