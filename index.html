@@ -26,6 +26,7 @@
                 <li class="docs-nav-item"><a href="#badges" class="docs-nav-link">Badges</a></li>
                 <li class="docs-nav-item"><a href="#cards" class="docs-nav-link">Cards</a></li>
                 <li class="docs-nav-item"><a href="#navbar" class="docs-nav-link">Navbar</a></li>
+                <li class="docs-nav-item"><a href="#navs-tabs" class="docs-nav-link">Navs & Tabs</a></li>
                 <li class="docs-nav-item"><a href="#dropdowns" class="docs-nav-link">Dropdowns</a></li>
                 <li class="docs-nav-item"><a href="#modals" class="docs-nav-link">Modals</a></li>
                 <li class="docs-nav-item"><a href="#forms" class="docs-nav-link">Forms</a></li>
@@ -925,6 +926,313 @@ window.addEventListener('resize', function () {
                         <strong>Tip:</strong> Include this JavaScript code in your page, preferably at the end of the
                         body tag or wrap it in a <code>DOMContentLoaded</code> event listener to ensure it runs after
                         the DOM is fully loaded.
+                    </div>
+                </div>
+            </section>
+
+            <section id="navs-tabs" class="docs-section">
+                <h2 class="docs-section-title">Navs & Tabs</h2>
+                <p>Navigation components for creating tabbed interfaces, pills, and other navigation patterns.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Base Nav</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Active</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Disabled</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;ul class="nav"&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link disabled" href="#"&gt;Disabled&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Tabs</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <ul class="nav nav-tabs" id="myTab">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#" data-tab="home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-tab="profile">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-tab="contact">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Disabled</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="home">
+                                    <p>This is the home tab content. Tabs are great for organizing content into separate views.</p>
+                                </div>
+                                <div class="tab-pane" id="profile">
+                                    <p>This is the profile tab content. Click on different tabs to see the content change.</p>
+                                </div>
+                                <div class="tab-pane" id="contact">
+                                    <p>This is the contact tab content. Each tab can contain any HTML content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link active" href="#" data-tab="home"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link" href="#" data-tab="profile"&gt;Profile&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link" href="#" data-tab="contact"&gt;Contact&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane active" id="home"&gt;
+    &lt;p&gt;Home tab content&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="tab-pane" id="profile"&gt;
+    &lt;p&gt;Profile tab content&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="tab-pane" id="contact"&gt;
+    &lt;p&gt;Contact tab content&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Pills</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <ul class="nav nav-pills" id="myPills">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#" data-tab="pill-home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-tab="pill-profile">Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-tab="pill-contact">Contact</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="pill-home">
+                                    <p>Pills provide a more rounded, button-like appearance for navigation.</p>
+                                </div>
+                                <div class="tab-pane" id="pill-profile">
+                                    <p>Profile content in pills style.</p>
+                                </div>
+                                <div class="tab-pane" id="pill-contact">
+                                    <p>Contact content in pills style.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link active" href="#" data-tab="pill-home"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link" href="#" data-tab="pill-profile"&gt;Profile&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link" href="#" data-tab="pill-contact"&gt;Contact&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane active" id="pill-home"&gt;
+    &lt;p&gt;Home content&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="tab-pane" id="pill-profile"&gt;
+    &lt;p&gt;Profile content&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="tab-pane" id="pill-contact"&gt;
+    &lt;p&gt;Contact content&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Fill and Justify</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <ul class="nav nav-pills nav-fill" style="margin-bottom: 20px;">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Active</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Much longer nav link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-pills nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Active</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Much longer nav link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Fill: proportional width --&gt;
+&lt;ul class="nav nav-pills nav-fill"&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link" href="#"&gt;Much longer nav link&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Justified: equal width --&gt;
+&lt;ul class="nav nav-pills nav-justified"&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link" href="#"&gt;Much longer nav link&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Vertical Nav</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <ul class="nav nav-pills nav-vertical" style="max-width: 200px;">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Active</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#">Disabled</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;ul class="nav nav-pills nav-vertical"&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link active" href="#"&gt;Active&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link disabled" href="#"&gt;Disabled&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">JavaScript</h3>
+                    <p>Tabs require JavaScript to switch between content panes. Here's the complete code:</p>
+                    <div class="docs-component">
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-javascript">// Tab switching functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const tabLinks = document.querySelectorAll('[data-tab]');
+    
+    tabLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('data-tab');
+            const targetPane = document.getElementById(targetId);
+            
+            if (!targetPane) return;
+            
+            // Remove active class from all tabs in this nav
+            const nav = this.closest('.nav');
+            nav.querySelectorAll('.nav-link').forEach(navLink => {
+                navLink.classList.remove('active');
+            });
+            
+            // Add active class to clicked tab
+            this.classList.add('active');
+            
+            // Hide all tab panes in the same tab-content container
+            const tabContent = targetPane.closest('.tab-content');
+            tabContent.querySelectorAll('.tab-pane').forEach(pane => {
+                pane.classList.remove('active', 'show');
+            });
+            
+            // Show target pane
+            targetPane.classList.add('active');
+            
+            // Add fade effect if using fade class
+            if (targetPane.classList.contains('fade')) {
+                setTimeout(() => {
+                    targetPane.classList.add('show');
+                }, 10);
+            }
+        });
+    });
+});</code></pre>
+                        </div>
+                    </div>
+                    <div class="docs-tip">
+                        <strong>Tip:</strong> Add the <code>fade</code> class to <code>.tab-pane</code> elements for smooth transitions between tabs.
                     </div>
                 </div>
             </section>
@@ -1851,6 +2159,45 @@ document.addEventListener('click', function(event) {
     <script>
         // Simple navigation highlighting
         document.addEventListener('DOMContentLoaded', function () {
+            // Tab switching functionality
+            const tabLinks = document.querySelectorAll('[data-tab]');
+            
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('data-tab');
+                    const targetPane = document.getElementById(targetId);
+                    
+                    if (!targetPane) return;
+                    
+                    // Remove active class from all tabs in this nav
+                    const nav = this.closest('.nav');
+                    nav.querySelectorAll('.nav-link').forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Hide all tab panes in the same tab-content container
+                    const tabContent = targetPane.closest('.tab-content');
+                    tabContent.querySelectorAll('.tab-pane').forEach(pane => {
+                        pane.classList.remove('active', 'show');
+                    });
+                    
+                    // Show target pane
+                    targetPane.classList.add('active');
+                    
+                    // Add fade effect if using fade class
+                    if (targetPane.classList.contains('fade')) {
+                        setTimeout(() => {
+                            targetPane.classList.add('show');
+                        }, 10);
+                    }
+                });
+            });
+
             const navLinks = document.querySelectorAll('.docs-nav-link');
             const sections = document.querySelectorAll('.docs-section');
 

@@ -2012,6 +2012,131 @@ p {
     cursor: default;
 }
 
+/* ======================
+   Navs and Tabs
+   ====================== */
+
+/* Base nav styles */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: var(--primary);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--link-hover-color);
+}
+
+.nav-link.disabled {
+    color: var(--gray-500);
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Nav tabs */
+.nav-tabs {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: -1px;
+}
+
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    background-color: transparent;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    border-color: var(--gray-200) var(--gray-200) var(--border-color);
+    isolation: isolate;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--gray-700);
+    background-color: var(--white);
+    border-color: var(--border-color) var(--border-color) var(--white);
+}
+
+.nav-tabs .nav-link.disabled {
+    color: var(--gray-500);
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* Nav pills */
+.nav-pills .nav-link {
+    border-radius: var(--border-radius);
+    background-color: transparent;
+}
+
+.nav-pills .nav-link.active {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+/* Nav fill and justified */
+.nav-fill .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.nav-justified .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Vertical nav */
+.nav-vertical {
+    flex-direction: column;
+}
+
+.nav-vertical .nav-link {
+    width: 100%;
+}
+
+/* Tab content */
+.tab-content {
+    margin-top: 1rem;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+/* Fade animation for tabs */
+.tab-pane.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+
+.tab-pane.fade.show {
+    opacity: 1;
+}
+
+.tab-pane.fade.active {
+    opacity: 1;
+}
+
 /* Responsive behavior */
 @media (max-width: 991.98px) {
     .navbar-expand-lg .navbar-nav {
