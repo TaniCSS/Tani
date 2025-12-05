@@ -25,6 +25,7 @@
                 <li class="docs-nav-item"><a href="#badges" class="docs-nav-link">Badges</a></li>
                 <li class="docs-nav-item"><a href="#cards" class="docs-nav-link">Cards</a></li>
                 <li class="docs-nav-item"><a href="#navbar" class="docs-nav-link">Navbar</a></li>
+                <li class="docs-nav-item"><a href="#modals" class="docs-nav-link">Modals</a></li>
                 <li class="docs-nav-item"><a href="#forms" class="docs-nav-link">Forms</a></li>
                 <li class="docs-nav-item"><a href="#utilities" class="docs-nav-link">Utility Classes</a></li>
                 <li class="docs-nav-item"><a href="#typography" class="docs-nav-link">Typography</a></li>
@@ -34,7 +35,8 @@
         <main class="docs-main">
             <header class="docs-header">
                 <h1 class="docs-title">Tani</h1>
-                <p class="docs-subtitle">Official Documentation for the Tani CSS Framework - A lightweight, utility-first CSS framework with rich component library</p>
+                <p class="docs-subtitle">Official Documentation for the Tani CSS Framework - A lightweight,
+                    utility-first CSS framework with rich component library</p>
                 <div>
                     <span class="docs-badge" style="background-color: #ffab58; color: white;">v1.0.0</span>
                     <span class="docs-badge" style="background-color: #28a745; color: white;">Stable</span>
@@ -707,6 +709,222 @@ window.addEventListener('resize', function () {
                 </div>
             </section>
 
+            <section id="modals" class="docs-section">
+                <h2 class="docs-section-title">Modals</h2>
+                <p>Modals are dialog boxes that overlay the main content to focus user attention on important
+                    information or actions.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Basic Modal</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-primary" onclick="openModal('exampleModal')">Launch Modal</button>
+
+                            <div id="exampleModal" class="modal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Modal Title</h5>
+                                            <button type="button" class="modal-close"
+                                                onclick="closeModal('exampleModal')">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>This is a basic modal dialog. You can put any content here.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                onclick="closeModal('exampleModal')">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;button class="btn btn-primary" onclick="openModal('exampleModal')"&gt;Launch Modal&lt;/button&gt;
+
+&lt;div id="exampleModal" class="modal"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title"&gt;Modal Title&lt;/h5&gt;
+        &lt;button type="button" class="modal-close" onclick="closeModal('exampleModal')"&gt;&times;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;p&gt;This is a basic modal dialog. You can put any content here.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-secondary" onclick="closeModal('exampleModal')"&gt;Close&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Modal Sizes</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-primary" onclick="openModal('smallModal')">Small Modal</button>
+                            <button class="btn btn-primary" onclick="openModal('largeModal')">Large Modal</button>
+                            <button class="btn btn-primary" onclick="openModal('xlModal')">Extra Large Modal</button>
+
+                            <div id="smallModal" class="modal">
+                                <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Small Modal</h5>
+                                            <button type="button" class="modal-close"
+                                                onclick="closeModal('smallModal')">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>This is a small modal.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="largeModal" class="modal">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Large Modal</h5>
+                                            <button type="button" class="modal-close"
+                                                onclick="closeModal('largeModal')">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>This is a large modal with more space for content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="xlModal" class="modal">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Extra Large Modal</h5>
+                                            <button type="button" class="modal-close"
+                                                onclick="closeModal('xlModal')">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>This is an extra large modal for displaying lots of content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Small Modal --&gt;
+&lt;div class="modal-dialog modal-sm"&gt;...&lt;/div&gt;
+
+&lt;!-- Large Modal --&gt;
+&lt;div class="modal-dialog modal-lg"&gt;...&lt;/div&gt;
+
+&lt;!-- Extra Large Modal --&gt;
+&lt;div class="modal-dialog modal-xl"&gt;...&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Centered Modal</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-primary" onclick="openModal('centeredModal')">Centered Modal</button>
+
+                            <div id="centeredModal" class="modal">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Vertically Centered</h5>
+                                            <button type="button" class="modal-close"
+                                                onclick="closeModal('centeredModal')">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>This modal is vertically centered in the viewport.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="modal-dialog modal-dialog-centered"&gt;
+  &lt;div class="modal-content"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Animations</h3>
+                    <p>Modals include smooth fade-in and slide-down animations by default. The backdrop fades in while the modal content slides down from above with a smooth opacity transition.</p>
+                    <div class="docs-note">
+                        <strong>Animation Details:</strong>
+                        <ul>
+                            <li>Backdrop fade: 0.3s ease transition</li>
+                            <li>Modal slide-down: 50px translateY with opacity fade</li>
+                            <li>Box shadow for depth perception</li>
+                            <li>Smooth closing animation with fade-out</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">JavaScript</h3>
+                    <p>Modals require JavaScript to function. Here's the complete code with animation support:</p>
+                    <div class="docs-component">
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-javascript">// Open modal with animation
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'block';
+        modal.classList.remove('fade-out');
+        modal.offsetHeight; // Trigger reflow
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+// Close modal with animation
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('fade-out');
+        modal.classList.remove('show');
+        
+        setTimeout(() => {
+            if (!modal.classList.contains('show')) {
+                modal.style.display = 'none';
+                modal.classList.remove('fade-out');
+            }
+        }, 300);
+        
+        document.body.style.overflow = '';
+    }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('modal')) {
+        closeModal(event.target.id);
+    }
+});</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="forms" class="docs-section">
                 <h2 class="docs-section-title">Forms</h2>
                 <p>Tani provides a comprehensive set of form components for creating beautiful and functional forms.
@@ -1249,6 +1467,44 @@ window.addEventListener('resize', function () {
                     });
                 }
             });
+        });
+
+        // Modal functionality with smooth animations
+        window.openModal = function (modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+                modal.classList.remove('fade-out');
+                // Trigger reflow to ensure animation plays
+                modal.offsetHeight;
+                modal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        };
+
+        window.closeModal = function (modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('fade-out');
+                modal.classList.remove('show');
+                
+                // Wait for animation to complete before hiding
+                setTimeout(() => {
+                    if (!modal.classList.contains('show')) {
+                        modal.style.display = 'none';
+                        modal.classList.remove('fade-out');
+                    }
+                }, 300); // Match the CSS transition duration
+                
+                document.body.style.overflow = '';
+            }
+        };
+
+        // Close modal when clicking outside
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('modal') && event.target.classList.contains('show')) {
+                closeModal(event.target.id);
+            }
         });
     </script>
     <!-- Prism JS -->
