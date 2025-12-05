@@ -2567,6 +2567,114 @@ p {
 }
 
 /* ======================
+   Progress Bars
+   ====================== */
+.progress {
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: 0.75rem;
+    background-color: var(--gray-200);
+    border-radius: var(--border-radius);
+}
+
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--white);
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--primary);
+    transition: width 0.6s ease;
+}
+
+/* Progress bar colors */
+.progress-bar-primary {
+    background-color: var(--primary);
+}
+
+.progress-bar-secondary {
+    background-color: var(--secondary);
+}
+
+.progress-bar-success {
+    background-color: var(--success);
+}
+
+.progress-bar-danger {
+    background-color: var(--danger);
+}
+
+.progress-bar-warning {
+    background-color: var(--warning);
+    color: var(--black);
+}
+
+.progress-bar-info {
+    background-color: var(--info);
+}
+
+.progress-bar-dark {
+    background-color: var(--dark);
+}
+
+/* Progress bar striped */
+.progress-bar-striped {
+    background-image: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.15) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.15) 75%,
+        transparent 75%,
+        transparent
+    );
+    background-size: 1rem 1rem;
+}
+
+/* Progress bar animated */
+.progress-bar-animated {
+    animation: progress-bar-stripes 1s linear infinite;
+}
+
+@keyframes progress-bar-stripes {
+    0% {
+        background-position: 1rem 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Progress sizes */
+.progress-sm {
+    height: 0.5rem;
+    font-size: 0.625rem;
+}
+
+.progress-lg {
+    height: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.progress-xl {
+    height: 2rem;
+    font-size: 1rem;
+}
+
+/* Stacked progress bars */
+.progress-stacked {
+    display: flex;
+}
+
+.progress-stacked .progress-bar {
+    flex-shrink: 0;
+}
+
+/* ======================
    Modals
    ====================== */
 .modal {

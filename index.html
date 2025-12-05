@@ -29,6 +29,7 @@
                 <li class="docs-nav-item"><a href="#navs-tabs" class="docs-nav-link">Navs & Tabs</a></li>
                 <li class="docs-nav-item"><a href="#dropdowns" class="docs-nav-link">Dropdowns</a></li>
                 <li class="docs-nav-item"><a href="#modals" class="docs-nav-link">Modals</a></li>
+                <li class="docs-nav-item"><a href="#progress" class="docs-nav-link">Progress</a></li>
                 <li class="docs-nav-item"><a href="#forms" class="docs-nav-link">Forms</a></li>
                 <li class="docs-nav-item"><a href="#utilities" class="docs-nav-link">Utility Classes</a></li>
                 <li class="docs-nav-item"><a href="#typography" class="docs-nav-link">Typography</a></li>
@@ -1713,6 +1714,294 @@ document.addEventListener('click', function(event) {
                 </div>
             </section>
 
+            <section id="progress" class="docs-section">
+                <h2 class="docs-section-title">Progress</h2>
+                <p>Progress bars are used to visualize the completion status of tasks or processes.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Basic Progress Bar</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 25%"></div>
+                            </div>
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 75%"></div>
+                            </div>
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" style="width: 25%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" style="width: 50%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" style="width: 75%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" style="width: 100%"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Progress Bar with Label</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 25%">25%</div>
+                            </div>
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 60%">60%</div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" style="width: 25%"&gt;25%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" style="width: 60%"&gt;60%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Colored Progress Bars</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="progress" style="margin-bottom: 10px;">
+                                <div class="progress-bar progress-bar-primary" style="width: 25%">Primary</div>
+                            </div>
+                            <div class="progress" style="margin-bottom: 10px;">
+                                <div class="progress-bar progress-bar-secondary" style="width: 35%">Secondary</div>
+                            </div>
+                            <div class="progress" style="margin-bottom: 10px;">
+                                <div class="progress-bar progress-bar-success" style="width: 50%">Success</div>
+                            </div>
+                            <div class="progress" style="margin-bottom: 10px;">
+                                <div class="progress-bar progress-bar-danger" style="width: 65%">Danger</div>
+                            </div>
+                            <div class="progress" style="margin-bottom: 10px;">
+                                <div class="progress-bar progress-bar-warning" style="width: 75%">Warning</div>
+                            </div>
+                            <div class="progress" style="margin-bottom: 10px;">
+                                <div class="progress-bar progress-bar-info" style="width: 85%">Info</div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-dark" style="width: 95%">Dark</div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-primary" style="width: 25%"&gt;Primary&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-secondary" style="width: 35%"&gt;Secondary&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-success" style="width: 50%"&gt;Success&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-danger" style="width: 65%"&gt;Danger&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-warning" style="width: 75%"&gt;Warning&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-info" style="width: 85%"&gt;Info&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-dark" style="width: 95%"&gt;Dark&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Striped Progress Bars</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="progress" style="margin-bottom: 10px;">
+                                <div class="progress-bar progress-bar-striped" style="width: 40%"></div>
+                            </div>
+                            <div class="progress" style="margin-bottom: 10px;">
+                                <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 60%"></div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-striped" style="width: 40%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-success progress-bar-striped" style="width: 60%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 80%"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Animated Progress Bars</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="progress" style="margin-bottom: 10px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 45%"></div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success progress-bar-striped progress-bar-animated" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 45%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-success progress-bar-striped progress-bar-animated" style="width: 70%"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Progress Bar Sizes</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="progress progress-sm" style="margin-bottom: 10px;">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <div class="progress" style="margin-bottom: 10px;">
+                                <div class="progress-bar" style="width: 50%"></div>
+                            </div>
+                            <div class="progress progress-lg" style="margin-bottom: 10px;">
+                                <div class="progress-bar" style="width: 50%">50%</div>
+                            </div>
+                            <div class="progress progress-xl">
+                                <div class="progress-bar" style="width: 50%">50%</div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Small --&gt;
+&lt;div class="progress progress-sm"&gt;
+  &lt;div class="progress-bar" style="width: 50%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Normal --&gt;
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" style="width: 50%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Large --&gt;
+&lt;div class="progress progress-lg"&gt;
+  &lt;div class="progress-bar" style="width: 50%"&gt;50%&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Extra Large --&gt;
+&lt;div class="progress progress-xl"&gt;
+  &lt;div class="progress-bar" style="width: 50%"&gt;50%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Multiple Progress Bars</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-primary" style="width: 15%">15%</div>
+                                <div class="progress-bar progress-bar-success" style="width: 30%">30%</div>
+                                <div class="progress-bar progress-bar-info" style="width: 20%">20%</div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="progress"&gt;
+  &lt;div class="progress-bar progress-bar-primary" style="width: 15%"&gt;15%&lt;/div&gt;
+  &lt;div class="progress-bar progress-bar-success" style="width: 30%"&gt;30%&lt;/div&gt;
+  &lt;div class="progress-bar progress-bar-info" style="width: 20%"&gt;20%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-note">
+                    <strong>Note:</strong> Use the <code>style="width: X%"</code> attribute to set the progress value. You can dynamically update this with JavaScript to create animated progress indicators.
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Dynamic Progress Example</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="progress" style="margin-bottom: 10px;">
+                                <div class="progress-bar" id="dynamicProgress" style="width: 0%">0%</div>
+                            </div>
+                            <button class="btn btn-primary" onclick="startProgress()">Start Progress</button>
+                            <button class="btn btn-secondary" onclick="resetProgress()">Reset</button>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-javascript">function startProgress() {
+    const progressBar = document.getElementById('dynamicProgress');
+    let width = 0;
+    
+    const interval = setInterval(() => {
+        if (width >= 100) {
+            clearInterval(interval);
+        } else {
+            width++;
+            progressBar.style.width = width + '%';
+            progressBar.textContent = width + '%';
+        }
+    }, 20);
+}
+
+function resetProgress() {
+    const progressBar = document.getElementById('dynamicProgress');
+    progressBar.style.width = '0%';
+    progressBar.textContent = '0%';
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="forms" class="docs-section">
                 <h2 class="docs-section-title">Forms</h2>
                 <p>Tani provides a comprehensive set of form components for creating beautiful and functional forms.
@@ -2368,6 +2657,28 @@ document.addEventListener('click', function(event) {
             }).catch(err => {
                 console.error('Failed to copy: ', err);
             });
+        }
+
+        // Progress bar demo functions
+        function startProgress() {
+            const progressBar = document.getElementById('dynamicProgress');
+            let width = 0;
+            
+            const interval = setInterval(() => {
+                if (width >= 100) {
+                    clearInterval(interval);
+                } else {
+                    width++;
+                    progressBar.style.width = width + '%';
+                    progressBar.textContent = width + '%';
+                }
+            }, 20);
+        }
+
+        function resetProgress() {
+            const progressBar = document.getElementById('dynamicProgress');
+            progressBar.style.width = '0%';
+            progressBar.textContent = '0%';
         }
     </script>
 </body>
