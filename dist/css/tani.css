@@ -398,7 +398,121 @@ p {
     border-radius: var(--radius-full);
 }
 
+/* ======================
+   Button Groups
+   ====================== */
+.btn-group {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+}
 
+.btn-group > .btn {
+    position: relative;
+    flex: 1 1 auto;
+}
+
+.btn-group > .btn:hover,
+.btn-group > .btn:focus,
+.btn-group > .btn:active {
+    z-index: 1;
+}
+
+.btn-group > .btn:not(:first-child) {
+    margin-left: -1px;
+}
+
+.btn-group > .btn:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-group > .btn:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Button group sizes */
+.btn-group-sm > .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: var(--radius-sm);
+}
+
+.btn-group-lg > .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: var(--radius-lg);
+}
+
+/* Vertical button group */
+.btn-group-vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.btn-group-vertical > .btn {
+    width: 100%;
+}
+
+.btn-group-vertical > .btn:not(:first-child) {
+    margin-top: -1px;
+    margin-left: 0;
+}
+
+.btn-group-vertical > .btn:not(:last-child) {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.btn-group-vertical > .btn:not(:first-child) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Button toolbar */
+.btn-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.btn-toolbar .btn-group {
+    margin-right: 0.5rem;
+}
+
+.btn-toolbar .btn-group:last-child {
+    margin-right: 0;
+}
+
+/* Button group with dropdown */
+.btn-group > .dropdown {
+    position: relative;
+    flex: 1 1 auto;
+    display: inline-flex;
+}
+
+.btn-group > .dropdown > .btn {
+    position: relative;
+}
+
+.btn-group > .dropdown:not(:first-child) > .btn {
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.btn-group > .dropdown:not(:last-child) > .btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-group > .dropdown > .btn:hover,
+.btn-group > .dropdown > .btn:focus,
+.btn-group > .dropdown > .btn:active {
+    z-index: 1;
+}
 
 /* ======================
    Badges - Enhanced variety

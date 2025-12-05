@@ -22,6 +22,7 @@
                 <li class="docs-nav-item"><a href="#installation" class="docs-nav-link">Installation</a></li>
                 <li class="docs-nav-item"><a href="#color-palette" class="docs-nav-link">Color Palette</a></li>
                 <li class="docs-nav-item"><a href="#buttons" class="docs-nav-link">Buttons</a></li>
+                <li class="docs-nav-item"><a href="#button-groups" class="docs-nav-link">Button Groups</a></li>
                 <li class="docs-nav-item"><a href="#badges" class="docs-nav-link">Badges</a></li>
                 <li class="docs-nav-item"><a href="#cards" class="docs-nav-link">Cards</a></li>
                 <li class="docs-nav-item"><a href="#navbar" class="docs-nav-link">Navbar</a></li>
@@ -244,6 +245,224 @@
 &lt;button class="btn btn-primary"&gt;Active&lt;/button&gt;</code></pre>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section id="button-groups" class="docs-section">
+                <h2 class="docs-section-title">Button Groups</h2>
+                <p>Group a series of buttons together on a single line or stack them vertically.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Basic Button Group</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="btn-group">
+                                <button class="btn btn-primary">Left</button>
+                                <button class="btn btn-primary">Middle</button>
+                                <button class="btn btn-primary">Right</button>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="btn-group"&gt;
+  &lt;button class="btn btn-primary"&gt;Left&lt;/button&gt;
+  &lt;button class="btn btn-primary"&gt;Middle&lt;/button&gt;
+  &lt;button class="btn btn-primary"&gt;Right&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Mixed Button Styles</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="btn-group">
+                                <button class="btn btn-danger">Delete</button>
+                                <button class="btn btn-warning">Edit</button>
+                                <button class="btn btn-success">Save</button>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="btn-group"&gt;
+  &lt;button class="btn btn-danger"&gt;Delete&lt;/button&gt;
+  &lt;button class="btn btn-warning"&gt;Edit&lt;/button&gt;
+  &lt;button class="btn btn-success"&gt;Save&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Outline Button Groups</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="btn-group">
+                                <button class="btn btn-outline-primary">One</button>
+                                <button class="btn btn-outline-primary">Two</button>
+                                <button class="btn btn-outline-primary">Three</button>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="btn-group"&gt;
+  &lt;button class="btn btn-outline-primary"&gt;One&lt;/button&gt;
+  &lt;button class="btn btn-outline-primary"&gt;Two&lt;/button&gt;
+  &lt;button class="btn btn-outline-primary"&gt;Three&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Button Group Sizes</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="btn-group btn-group-sm" style="margin-bottom: 10px;">
+                                <button class="btn btn-primary">Small</button>
+                                <button class="btn btn-primary">Small</button>
+                                <button class="btn btn-primary">Small</button>
+                            </div>
+                            <br>
+                            <div class="btn-group" style="margin-bottom: 10px;">
+                                <button class="btn btn-primary">Normal</button>
+                                <button class="btn btn-primary">Normal</button>
+                                <button class="btn btn-primary">Normal</button>
+                            </div>
+                            <br>
+                            <div class="btn-group btn-group-lg">
+                                <button class="btn btn-primary">Large</button>
+                                <button class="btn btn-primary">Large</button>
+                                <button class="btn btn-primary">Large</button>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="btn-group btn-group-sm"&gt;
+  &lt;button class="btn btn-primary"&gt;Small&lt;/button&gt;
+  &lt;button class="btn btn-primary"&gt;Small&lt;/button&gt;
+  &lt;button class="btn btn-primary"&gt;Small&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn btn-primary"&gt;Normal&lt;/button&gt;
+  &lt;button class="btn btn-primary"&gt;Normal&lt;/button&gt;
+  &lt;button class="btn btn-primary"&gt;Normal&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="btn-group btn-group-lg"&gt;
+  &lt;button class="btn btn-primary"&gt;Large&lt;/button&gt;
+  &lt;button class="btn btn-primary"&gt;Large&lt;/button&gt;
+  &lt;button class="btn btn-primary"&gt;Large&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Vertical Button Group</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="btn-group btn-group-vertical">
+                                <button class="btn btn-primary">Top</button>
+                                <button class="btn btn-primary">Middle</button>
+                                <button class="btn btn-primary">Bottom</button>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="btn-group btn-group-vertical"&gt;
+  &lt;button class="btn btn-primary"&gt;Top&lt;/button&gt;
+  &lt;button class="btn btn-primary"&gt;Middle&lt;/button&gt;
+  &lt;button class="btn btn-primary"&gt;Bottom&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Button Toolbar</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="btn-toolbar">
+                                <div class="btn-group">
+                                    <button class="btn btn-primary">1</button>
+                                    <button class="btn btn-primary">2</button>
+                                    <button class="btn btn-primary">3</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-secondary">4</button>
+                                    <button class="btn btn-secondary">5</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-success">6</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn btn-primary"&gt;1&lt;/button&gt;
+    &lt;button class="btn btn-primary"&gt;2&lt;/button&gt;
+    &lt;button class="btn btn-primary"&gt;3&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn btn-secondary"&gt;4&lt;/button&gt;
+    &lt;button class="btn btn-secondary"&gt;5&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn btn-success"&gt;6&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Button Group with Dropdown</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="btn-group">
+                                <button class="btn btn-primary">Action</button>
+                                <button class="btn btn-primary">Another</button>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="btn-group"&gt;
+  &lt;button class="btn btn-primary"&gt;Action&lt;/button&gt;
+  &lt;button class="btn btn-primary"&gt;Another&lt;/button&gt;
+  &lt;div class="dropdown"&gt;
+    &lt;button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"&gt;
+      Dropdown
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-note">
+                    <strong>Note:</strong> Button groups automatically handle border radius and spacing between buttons. Buttons in a group share borders for a seamless appearance.
                 </div>
             </section>
 
