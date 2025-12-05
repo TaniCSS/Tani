@@ -104,6 +104,7 @@
                 <li class="docs-nav-item"><a href="#spinners" class="docs-nav-link">Spinners</a></li>
                 <li class="docs-nav-item"><a href="#forms" class="docs-nav-link">Forms</a></li>
                 <li class="docs-nav-item"><a href="#pagination" class="docs-nav-link">Pagination</a></li>
+                <li class="docs-nav-item"><a href="#accordion" class="docs-nav-link">Accordion</a></li>
                 <li class="docs-nav-item"><a href="#utilities" class="docs-nav-link">Utility Classes</a></li>
                 <li class="docs-nav-item"><a href="#typography" class="docs-nav-link">Typography</a></li>
             </ul>
@@ -3513,6 +3514,468 @@ function resetProgress() {
                 </div>
             </section>
 
+            <section id="accordion" class="docs-section">
+                <h2 class="docs-section-title">Accordion</h2>
+                <p>Accordions allow users to toggle the display of sections of content.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Basic Accordion</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="accordion" id="accordionBasic">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-accordion="collapseOne">
+                                            Accordion Item #1
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse show">
+                                        <div class="accordion-body">
+                                            This is the first item's accordion body. It is shown by default.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="collapseTwo">
+                                            Accordion Item #2
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            This is the second item's accordion body. It is hidden by default.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="collapseThree">
+                                            Accordion Item #3
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            This is the third item's accordion body. It is hidden by default.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="accordion" id="accordionBasic"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button class="accordion-button" type="button" data-accordion="collapseOne"&gt;
+        Accordion Item #1
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id="collapseOne" class="accordion-collapse show"&gt;
+      &lt;div class="accordion-body"&gt;
+        This is the first item's accordion body.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button class="accordion-button collapsed" type="button" data-accordion="collapseTwo"&gt;
+        Accordion Item #2
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id="collapseTwo" class="accordion-collapse"&gt;
+      &lt;div class="accordion-body"&gt;
+        This is the second item's accordion body.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Flush Accordion</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="accordion accordion-flush" id="accordionFlush">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="flushOne">
+                                            Flush Item #1
+                                        </button>
+                                    </h2>
+                                    <div id="flushOne" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            Flush accordion removes borders and rounded corners.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="flushTwo">
+                                            Flush Item #2
+                                        </button>
+                                    </h2>
+                                    <div id="flushTwo" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            Perfect for sidebars or minimal designs.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="accordion accordion-flush"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button class="accordion-button collapsed" type="button" data-accordion="flushOne"&gt;
+        Flush Item #1
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id="flushOne" class="accordion-collapse"&gt;
+      &lt;div class="accordion-body"&gt;
+        Flush accordion removes borders and rounded corners.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Bordered Accordion</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="accordion accordion-bordered" id="accordionBordered">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="borderedOne">
+                                            Bordered Item #1
+                                        </button>
+                                    </h2>
+                                    <div id="borderedOne" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            Each item has its own border and spacing.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="borderedTwo">
+                                            Bordered Item #2
+                                        </button>
+                                    </h2>
+                                    <div id="borderedTwo" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            Great for card-like appearance.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="accordion accordion-bordered"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button class="accordion-button collapsed" type="button" data-accordion="borderedOne"&gt;
+        Bordered Item #1
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id="borderedOne" class="accordion-collapse"&gt;
+      &lt;div class="accordion-body"&gt;
+        Each item has its own border and spacing.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Accordion with Icons</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="accordion accordion-icon" id="accordionIcon">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="iconOne">
+                                            Icon Item #1
+                                        </button>
+                                    </h2>
+                                    <div id="iconOne" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            Accordion with plus/minus icon indicators.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="iconTwo">
+                                            Icon Item #2
+                                        </button>
+                                    </h2>
+                                    <div id="iconTwo" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            The icon rotates when expanded.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="accordion accordion-icon"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button class="accordion-button collapsed" type="button" data-accordion="iconOne"&gt;
+        Icon Item #1
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id="iconOne" class="accordion-collapse"&gt;
+      &lt;div class="accordion-body"&gt;
+        Accordion with plus/minus icon indicators.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Colored Accordions</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="accordion accordion-primary" id="accordionPrimary" style="margin-bottom: 15px;">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="primaryOne">
+                                            Primary Accordion
+                                        </button>
+                                    </h2>
+                                    <div id="primaryOne" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            Active header has primary color background.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion accordion-secondary" id="accordionSecondary" style="margin-bottom: 15px;">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="secondaryOne">
+                                            Secondary Accordion
+                                        </button>
+                                    </h2>
+                                    <div id="secondaryOne" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            Active header has secondary color background.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion accordion-success" id="accordionSuccess" style="margin-bottom: 15px;">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="successOne">
+                                            Success Accordion
+                                        </button>
+                                    </h2>
+                                    <div id="successOne" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            Active header has success color background.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion accordion-dark" id="accordionDark">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="darkOne">
+                                            Dark Accordion
+                                        </button>
+                                    </h2>
+                                    <div id="darkOne" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            Active header has dark color background.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Primary --&gt;
+&lt;div class="accordion accordion-primary"&gt;...&lt;/div&gt;
+
+&lt;!-- Secondary --&gt;
+&lt;div class="accordion accordion-secondary"&gt;...&lt;/div&gt;
+
+&lt;!-- Success --&gt;
+&lt;div class="accordion accordion-success"&gt;...&lt;/div&gt;
+
+&lt;!-- Dark --&gt;
+&lt;div class="accordion accordion-dark"&gt;...&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Accordion with Shadow</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="accordion accordion-shadow" id="accordionShadow">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="shadowOne">
+                                            Shadow Item #1
+                                        </button>
+                                    </h2>
+                                    <div id="shadowOne" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            Accordion with elevated shadow effect.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="shadowTwo">
+                                            Shadow Item #2
+                                        </button>
+                                    </h2>
+                                    <div id="shadowTwo" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            Adds depth to the accordion.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="accordion accordion-shadow"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button class="accordion-button collapsed" type="button" data-accordion="shadowOne"&gt;
+        Shadow Item #1
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id="shadowOne" class="accordion-collapse"&gt;
+      &lt;div class="accordion-body"&gt;
+        Accordion with elevated shadow effect.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Combined Styles</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="accordion accordion-primary accordion-bordered accordion-shadow" id="accordionCombined">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="combinedOne">
+                                            Combined Styles
+                                        </button>
+                                    </h2>
+                                    <div id="combinedOne" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            Primary + Bordered + Shadow combined together.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-accordion="combinedTwo">
+                                            Multiple Modifiers
+                                        </button>
+                                    </h2>
+                                    <div id="combinedTwo" class="accordion-collapse">
+                                        <div class="accordion-body">
+                                            Mix and match different styles for unique designs.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="accordion accordion-primary accordion-bordered accordion-shadow"&gt;
+  &lt;div class="accordion-item"&gt;
+    &lt;h2 class="accordion-header"&gt;
+      &lt;button class="accordion-button collapsed" type="button" data-accordion="combinedOne"&gt;
+        Combined Styles
+      &lt;/button&gt;
+    &lt;/h2&gt;
+    &lt;div id="combinedOne" class="accordion-collapse"&gt;
+      &lt;div class="accordion-body"&gt;
+        Primary + Bordered + Shadow combined together.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">JavaScript</h3>
+                    <p>Accordions require JavaScript to toggle content. Here's the complete code:</p>
+                    <div class="docs-component">
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-javascript">// Accordion functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionButtons = document.querySelectorAll('[data-accordion]');
+    
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-accordion');
+            const target = document.getElementById(targetId);
+            const accordion = this.closest('.accordion');
+            
+            if (!target) return;
+            
+            // Check if we should close others (default behavior)
+            const closeOthers = !accordion.hasAttribute('data-allow-multiple');
+            
+            if (closeOthers) {
+                // Close all other items in this accordion
+                accordion.querySelectorAll('.accordion-collapse.show').forEach(collapse => {
+                    if (collapse !== target) {
+                        collapse.classList.remove('show');
+                        const btn = accordion.querySelector(`[data-accordion="${collapse.id}"]`);
+                        if (btn) btn.classList.add('collapsed');
+                    }
+                });
+            }
+            
+            // Toggle current item
+            target.classList.toggle('show');
+            this.classList.toggle('collapsed');
+        });
+    });
+});</code></pre>
+                        </div>
+                    </div>
+                    <div class="docs-tip">
+                        <strong>Tip:</strong> Add <code>data-allow-multiple</code> attribute to the accordion container to allow multiple items to be open at once.
+                    </div>
+                </div>
+
+                <div class="docs-note">
+                    <strong>Note:</strong> By default, only one accordion item can be open at a time. The open item will automatically close when another is opened.
+                </div>
+            </section>
+
             <section id="utilities" class="docs-section">
                 <h2 class="docs-section-title">Utility Classes</h2>
                 <p>Tani provides a comprehensive set of utility classes for common styling needs.</p>
@@ -3976,6 +4439,37 @@ function resetProgress() {
             progressBar.style.width = '0%';
             progressBar.textContent = '0%';
         }
+
+        // Accordion functionality
+        const accordionButtons = document.querySelectorAll('[data-accordion]');
+        
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-accordion');
+                const target = document.getElementById(targetId);
+                const accordion = this.closest('.accordion');
+                
+                if (!target) return;
+                
+                // Check if we should close others (default behavior)
+                const closeOthers = !accordion.hasAttribute('data-allow-multiple');
+                
+                if (closeOthers) {
+                    // Close all other items in this accordion
+                    accordion.querySelectorAll('.accordion-collapse.show').forEach(collapse => {
+                        if (collapse !== target) {
+                            collapse.classList.remove('show');
+                            const btn = accordion.querySelector(`[data-accordion="${collapse.id}"]`);
+                            if (btn) btn.classList.add('collapsed');
+                        }
+                    });
+                }
+                
+                // Toggle current item
+                target.classList.toggle('show');
+                this.classList.toggle('collapsed');
+            });
+        });
 
         // Toast functionality
         function showToast(toastId, duration = 5000) {
