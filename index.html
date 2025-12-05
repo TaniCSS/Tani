@@ -100,6 +100,7 @@
                 <li class="docs-nav-item"><a href="#modals" class="docs-nav-link">Modals</a></li>
                 <li class="docs-nav-item"><a href="#toasts" class="docs-nav-link">Toasts</a></li>
                 <li class="docs-nav-item"><a href="#progress" class="docs-nav-link">Progress</a></li>
+                <li class="docs-nav-item"><a href="#spinners" class="docs-nav-link">Spinners</a></li>
                 <li class="docs-nav-item"><a href="#forms" class="docs-nav-link">Forms</a></li>
                 <li class="docs-nav-item"><a href="#pagination" class="docs-nav-link">Pagination</a></li>
                 <li class="docs-nav-item"><a href="#utilities" class="docs-nav-link">Utility Classes</a></li>
@@ -2295,6 +2296,270 @@ function resetProgress() {
 }</code></pre>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section id="spinners" class="docs-section">
+                <h2 class="docs-section-title">Spinners</h2>
+                <p>Spinners are loading indicators that show content is being loaded or processed.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Border Spinner</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="spinner-border" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="spinner-border" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Growing Spinner</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="spinner-grow" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="spinner-grow" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Spinner Colors</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="spinner-border spinner-primary" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-border spinner-secondary" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-border spinner-success" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-border spinner-danger" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-border spinner-warning" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-border spinner-info" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-border spinner-dark" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="spinner-border spinner-primary" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="spinner-border spinner-secondary" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="spinner-border spinner-success" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="spinner-border spinner-danger" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="spinner-border spinner-warning" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="spinner-border spinner-info" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="spinner-border spinner-dark" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Growing Spinner Colors</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="spinner-grow spinner-primary" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow spinner-secondary" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow spinner-success" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow spinner-danger" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow spinner-warning" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow spinner-info" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow spinner-dark" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="spinner-grow spinner-primary" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="spinner-grow spinner-secondary" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="spinner-grow spinner-success" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Spinner Sizes</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="spinner-border spinner-border-sm spinner-primary" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-border spinner-primary" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-border spinner-border-lg spinner-primary" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-border spinner-border-xl spinner-primary" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Small --&gt;
+&lt;div class="spinner-border spinner-border-sm" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Normal --&gt;
+&lt;div class="spinner-border" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Large --&gt;
+&lt;div class="spinner-border spinner-border-lg" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Extra Large --&gt;
+&lt;div class="spinner-border spinner-border-xl" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Growing Spinner Sizes</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="spinner-grow spinner-grow-sm spinner-success" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow spinner-success" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow spinner-grow-lg spinner-success" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <div class="spinner-grow spinner-grow-xl spinner-success" role="status" style="margin: 10px;">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Small --&gt;
+&lt;div class="spinner-grow spinner-grow-sm" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Normal --&gt;
+&lt;div class="spinner-grow" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Large --&gt;
+&lt;div class="spinner-grow spinner-grow-lg" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Extra Large --&gt;
+&lt;div class="spinner-grow spinner-grow-xl" role="status"&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Spinners in Buttons</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <button class="btn btn-primary" disabled>
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Loading...
+                            </button>
+                            <button class="btn btn-success" disabled style="margin-left: 10px;">
+                                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                Loading...
+                            </button>
+                            <button class="btn btn-secondary" disabled style="margin-left: 10px;">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;button class="btn btn-primary" disabled&gt;
+  &lt;span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+  Loading...
+&lt;/button&gt;
+
+&lt;button class="btn btn-success" disabled&gt;
+  &lt;span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+  Loading...
+&lt;/button&gt;
+
+&lt;button class="btn btn-secondary" disabled&gt;
+  &lt;span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-note">
+                    <strong>Note:</strong> Always include <code>&lt;span class="sr-only"&gt;Loading...&lt;/span&gt;</code> for accessibility. This provides context for screen readers.
                 </div>
             </section>
 
