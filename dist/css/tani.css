@@ -82,7 +82,7 @@ html {
 }
 
 /* Layout container */
-.container {
+/* .container {
     max-width: var(--container-max);
     margin-left: auto;
     margin-right: auto;
@@ -94,7 +94,7 @@ html {
     width: 100%;
     padding-left: calc(var(--gutter) * 0.5);
     padding-right: calc(var(--gutter) * 0.5);
-}
+} */
 
 /* ======================
    Typography
@@ -156,7 +156,7 @@ p {
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     border-radius: var(--border-radius);
-    /* Removed transition for no animations */
+    font-family: inherit;
 }
 
 .btn:hover {
@@ -1178,6 +1178,9 @@ p {
 .text-white {
     color: var(--white) !important;
 }
+.text-decoration-none {
+    text-decoration: none !important;
+}
 
 /* Background */
 .bg-primary {
@@ -1531,6 +1534,51 @@ p {
 
 .rounded-0 {
     border-radius: 0 !important;
+}
+.rounded-1 {
+    border-radius: 5px !important;
+}
+.rounded-2 {
+    border-radius: 10px !important;
+}
+.rounded-3 {
+    border-radius: 15px !important;
+}
+.rounded-4 {
+    border-radius: 20px !important;
+}
+.rounded-5 {
+    border-radius: 25px !important;
+}
+
+/* Font Sizes */
+.fs-1 {
+    font-size: 1.5rem !important;
+}
+
+.fs-2 {
+    font-size: 1.25rem !important;
+}
+
+.fs-3 {
+    font-size: 1.12rem !important;
+}
+
+.fs-4 {
+    font-size: 0.87rem !important;
+}
+
+.fs-5 {
+    font-size: 0.75rem !important;
+}
+
+/* Font Weights */
+.font-bold {
+    font-weight: bold !important;
+}
+
+.font-normal {
+    font-weight: normal !important;
 }
 
 /* Shadows */
@@ -2012,9 +2060,104 @@ p {
     cursor: default;
 }
 
+
 /* ======================
    Navs and Tabs
    ====================== */
+
+.tab {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.tab .nav-tab {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.tab .nav-tab:last-child {
+    margin-right: 0;
+}
+
+.tab-link {
+    display: block;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    text-decoration: none;
+    color: var(--dark);
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.tab-link:hover,
+.tab-link:focus {
+    color: var(--link-hover-color);
+}
+
+.tab-link.disabled {
+    color: var(--gray-500);
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Active style mirrors .nav-tabs .nav-link.active */
+.tab-link.active {
+    color: var(--gray-700);
+    background-color: var(--white);
+}
+
+/* Pills variant */
+.tab-pills .tab-link {
+    border-radius: var(--border-radius);
+    background-color: transparent;
+}
+
+.tab-pills .tab-link.active {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+/* Fill / justified */
+.tab-fill {
+    display: flex;
+}
+
+.tab-fill .nav-tab {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.tab-justified .nav-tab {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Vertical */
+.tab-vertical {
+    flex-direction: column;
+}
+
+.tab-vertical .tab-link {
+    width: 100%;
+}
+
+.tab-content .tab-pane {
+    display: none;
+}
+.tab-content .tab-pane.active {
+    display: block;
+}
+.tab-content .tab-pane.fade {
+    opacity: 0;
+    transition: opacity 180ms linear;
+}
+.tab-content .tab-pane.fade.show {
+    opacity: 1;
+}
+
 
 /* Base nav styles */
 .nav {
@@ -2029,7 +2172,7 @@ p {
     display: block;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    color: var(--primary);
+    color: var(--dark);
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
@@ -2044,20 +2187,21 @@ p {
     cursor: default;
 }
 
+.nav-link.active {
+    color: var(--primary);
+}
+
 /* Nav tabs */
 .nav-tabs {
     border-bottom: 1px solid var(--border-color);
 }
 
-.nav-tabs .nav-item {
-    margin-bottom: -1px;
-}
-
 .nav-tabs .nav-link {
+    margin-bottom: -1px;
+    background: none;
     border: 1px solid transparent;
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
-    background-color: transparent;
 }
 
 .nav-tabs .nav-link:hover,
@@ -2066,35 +2210,40 @@ p {
     isolation: isolate;
 }
 
-.nav-tabs .nav-link.active {
-    color: var(--gray-700);
-    background-color: var(--white);
-    border-color: var(--border-color) var(--border-color) var(--white);
-}
-
 .nav-tabs .nav-link.disabled {
     color: var(--gray-500);
     background-color: transparent;
     border-color: transparent;
 }
 
-/* Nav pills */
-.nav-pills .nav-link {
-    border-radius: var(--border-radius);
-    background-color: transparent;
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: var(--gray-700);
+    background-color: var(--white);
+    border-color: var(--border-color) var(--border-color) var(--white);
 }
 
-.nav-pills .nav-link.active {
+/* Nav pills */
+.nav-pills .nav-link {
+    background: none;
+    border: 0;
+    border-radius: var(--border-radius);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .nav-item.show .nav-link {
     color: var(--white);
     background-color: var(--primary);
 }
 
 /* Nav fill and justified */
+.nav-fill > .nav-link,
 .nav-fill .nav-item {
     flex: 1 1 auto;
     text-align: center;
 }
 
+.nav-justified > .nav-link,
 .nav-justified .nav-item {
     flex-basis: 0;
     flex-grow: 1;
@@ -2110,32 +2259,7 @@ p {
     width: 100%;
 }
 
-/* Tab content */
-.tab-content {
-    margin-top: 1rem;
-}
 
-.tab-pane {
-    display: none;
-}
-
-.tab-pane.active {
-    display: block;
-}
-
-/* Fade animation for tabs */
-.tab-pane.fade {
-    opacity: 0;
-    transition: opacity 0.15s linear;
-}
-
-.tab-pane.fade.show {
-    opacity: 1;
-}
-
-.tab-pane.fade.active {
-    opacity: 1;
-}
 
 /* Responsive behavior */
 @media (max-width: 991.98px) {

@@ -1408,13 +1408,13 @@ window.addEventListener('resize', function () {
 &lt;/ul&gt;
 &lt;div class="tab-content"&gt;
   &lt;div class="tab-pane active" id="home"&gt;
-    &lt;p&gt;Home tab content&lt;/p&gt;
+    &lt;p&gt;This is the home tab content. Tabs are great for organizing content into separate views.&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="tab-pane" id="profile"&gt;
-    &lt;p&gt;Profile tab content&lt;/p&gt;
+    &lt;p&gt;This is the profile tab content. Click on different tabs to see the content change.&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="tab-pane" id="contact"&gt;
-    &lt;p&gt;Contact tab content&lt;/p&gt;
+    &lt;p&gt;This is the contact tab content. Each tab can contain any HTML content.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                         </div>
@@ -1463,13 +1463,13 @@ window.addEventListener('resize', function () {
 &lt;/ul&gt;
 &lt;div class="tab-content"&gt;
   &lt;div class="tab-pane active" id="pill-home"&gt;
-    &lt;p&gt;Home content&lt;/p&gt;
+    &lt;p&gt;Pills provide a more rounded, button-like appearance for navigation.&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="tab-pane" id="pill-profile"&gt;
-    &lt;p&gt;Profile content&lt;/p&gt;
+    &lt;p&gt;Profile content in pills style.&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="tab-pane" id="pill-contact"&gt;
-    &lt;p&gt;Contact content&lt;/p&gt;
+    &lt;p&gt;Contact content in pills style.&lt;/p&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                         </div>
@@ -1579,50 +1579,106 @@ window.addEventListener('resize', function () {
                     <div class="docs-component">
                         <div class="docs-component-code">
                             <button class="copy-button" onclick="copyCode(this)">Copy</button>
-                            <pre><code class="language-javascript">// Tab switching functionality
+                            <pre><code class="language-javascript">// Enhanced Tab switching functionality with automatic initialization
 document.addEventListener('DOMContentLoaded', function() {
-    const tabLinks = document.querySelectorAll('[data-tab]');
-    
-    tabLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('data-tab');
-            const targetPane = document.getElementById(targetId);
-            
-            if (!targetPane) return;
-            
-            // Remove active class from all tabs in this nav
-            const nav = this.closest('.nav');
-            nav.querySelectorAll('.nav-link').forEach(navLink => {
-                navLink.classList.remove('active');
+    // Initialize tab states on page load - ensures proper setup
+    document.querySelectorAll('.tab-content').forEach(tabContent => {
+        const activePanes = tabContent.querySelectorAll('.tab-pane.active');
+        if (activePanes.length === 0) {
+            // No active pane found, activate the first one
+            const first = tabContent.querySelector('.tab-pane');
+            if (first) first.classList.add('active');
+        } else if (activePanes.length > 1) {
+            // Multiple active panes found, keep only the first active
+            activePanes.forEach((p, i) => { 
+                if (i > 0) p.classList.remove('active', 'show'); 
             });
-            
-            // Add active class to clicked tab
-            this.classList.add('active');
-            
-            // Hide all tab panes in the same tab-content container
-            const tabContent = targetPane.closest('.tab-content');
-            tabContent.querySelectorAll('.tab-pane').forEach(pane => {
-                pane.classList.remove('active', 'show');
-            });
-            
-            // Show target pane
-            targetPane.classList.add('active');
-            
-            // Add fade effect if using fade class
-            if (targetPane.classList.contains('fade')) {
-                setTimeout(() => {
-                    targetPane.classList.add('show');
-                }, 10);
-            }
-        });
+        }
+        // Add show class for fade panes that are active
+        tabContent.querySelectorAll('.tab-pane.active.fade').forEach(p => p.classList.add('show'));
     });
+});
+
+// Delegated click handler for tabs — works for any element with [data-tab]
+document.addEventListener('click', function(e) {
+    const link = e.target.closest('[data-tab]');
+    if (!link) return;
+    
+    e.preventDefault();
+    const targetId = link.getAttribute('data-tab');
+    const targetPane = document.getElementById(targetId);
+    if (!targetPane) return;
+    
+    // Find nav container — supports .nav, .tab, and generic ul elements
+    const navContainer = link.closest('.nav, .tab, ul');
+    if (navContainer) {
+        navContainer.querySelectorAll('.nav-link, .tab-link').forEach(navLink => 
+            navLink.classList.remove('active')
+        );
+    }
+    
+    // Activate clicked link
+    link.classList.add('active');
+    
+    // Hide other panes in same tab-content container
+    const tabContent = targetPane.closest('.tab-content');
+    if (tabContent) {
+        tabContent.querySelectorAll('.tab-pane').forEach(pane => 
+            pane.classList.remove('active', 'show')
+        );
+        targetPane.classList.add('active');
+        if (targetPane.classList.contains('fade')) {
+            // Small timeout to trigger smooth transition
+            setTimeout(() => targetPane.classList.add('show'), 10);
+        }
+    } else {
+        // Global fallback for tabs without proper container structure
+        document.querySelectorAll('.tab-pane').forEach(pane => 
+            pane.classList.remove('active', 'show')
+        );
+        targetPane.classList.add('active');
+        if (targetPane.classList.contains('fade')) {
+            setTimeout(() => targetPane.classList.add('show'), 10);
+        }
+    }
 });</code></pre>
                         </div>
                     </div>
                     <div class="docs-tip">
-                        <strong>Tip:</strong> Add the <code>fade</code> class to <code>.tab-pane</code> elements for smooth transitions between tabs.
+                        <strong>Key Features:</strong> This enhanced version includes automatic initialization, supports multiple nav container types (.nav, .tab, ul), handles fade transitions smoothly, and uses event delegation for better performance. It also prevents multiple active panes and ensures proper fallback behavior.
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Enhanced Features</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <p><strong>Automatic Initialization:</strong> The script automatically ensures each tab group has exactly one active pane on page load.</p>
+                            <p><strong>Fade Transitions:</strong> Add the <code>fade</code> class to tab panes for smooth opacity transitions.</p>
+                            <p><strong>Event Delegation:</strong> Uses a single event listener for all tabs, improving performance with many tab groups.</p>
+                            <p><strong>Flexible Containers:</strong> Works with <code>.nav</code>, <code>.tab</code>, or any <code>ul</code> element as the tab container.</p>
+                            <p><strong>Robust Fallbacks:</strong> Handles edge cases like missing containers or multiple active panes gracefully.</p>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;!-- Example with fade transitions --&gt;
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link active" href="#" data-tab="fade-home"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item"&gt;
+    &lt;a class="nav-link" href="#" data-tab="fade-profile"&gt;Profile&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane fade active show" id="fade-home"&gt;
+    &lt;p&gt;Home content with fade transition&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="tab-pane fade" id="fade-profile"&gt;
+    &lt;p&gt;Profile content with fade transition&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -4382,6 +4438,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     </script>
+    <script src="./assets/script.js"></script>
+    
     <!-- Prism JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
     <script
