@@ -105,6 +105,7 @@
                 <li class="docs-nav-item"><a href="#forms" class="docs-nav-link">Forms</a></li>
                 <li class="docs-nav-item"><a href="#pagination" class="docs-nav-link">Pagination</a></li>
                 <li class="docs-nav-item"><a href="#accordion" class="docs-nav-link">Accordion</a></li>
+                <li class="docs-nav-item"><a href="#alerts" class="docs-nav-link">Alerts</a></li>
                 <li class="docs-nav-item"><a href="#utilities" class="docs-nav-link">Utility Classes</a></li>
                 <li class="docs-nav-item"><a href="#typography" class="docs-nav-link">Typography</a></li>
             </ul>
@@ -116,7 +117,7 @@
                 <p class="docs-subtitle">Official Documentation for the Tani CSS Framework - A lightweight,
                     utility-first CSS framework with rich component library</p>
                 <div>
-                    <span class="docs-badge" style="background-color: #ffab58; color: white;">v1.12.0</span>
+                    <span class="docs-badge" style="background-color: #ffab58; color: white;">v1.13.0</span>
                     <span class="docs-badge" style="background-color: #28a745; color: white;">Stable</span>
                 </div>
             </header>
@@ -4029,6 +4030,169 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 <div class="docs-note">
                     <strong>Note:</strong> By default, only one accordion item can be open at a time. The open item will automatically close when another is opened.
+                </div>
+            </section>
+
+            <section id="alerts" class="docs-section">
+                <h2 class="docs-section-title">Alerts</h2>
+                <p>Alerts provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.</p>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Basic Alert</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="alert" role="alert">
+                                A simple default alert—check it out!
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="alert" role="alert"&gt;
+  A simple default alert—check it out!
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Alert Variants</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="alert alert-primary" role="alert">
+                                This is a primary alert—check it out!
+                            </div>
+                            <div class="alert alert-secondary" role="alert">
+                                This is a secondary alert—check it out!
+                            </div>
+                            <div class="alert alert-success" role="alert">
+                                This is a success alert—check it out!
+                            </div>
+                            <div class="alert alert-danger" role="alert">
+                                This is a danger alert—check it out!
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                This is a warning alert—check it out!
+                            </div>
+                            <div class="alert alert-info" role="alert">
+                                This is an info alert—check it out!
+                            </div>
+                            <div class="alert alert-light" role="alert">
+                                This is a light alert—check it out!
+                            </div>
+                            <div class="alert alert-dark" role="alert">
+                                This is a dark alert—check it out!
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="alert alert-primary" role="alert"&gt;
+  This is a primary alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-secondary" role="alert"&gt;
+  This is a secondary alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-success" role="alert"&gt;
+  This is a success alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger" role="alert"&gt;
+  This is a danger alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-warning" role="alert"&gt;
+  This is a warning alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-info" role="alert"&gt;
+  This is an info alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-light" role="alert"&gt;
+  This is a light alert—check it out!
+&lt;/div&gt;
+
+&lt;div class="alert alert-dark" role="alert"&gt;
+  This is a dark alert—check it out!
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Alert with Heading</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">Well done!</h4>
+                                <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                                <hr>
+                                <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="alert alert-success" role="alert"&gt;
+  &lt;h4 class="alert-heading"&gt;Well done!&lt;/h4&gt;
+  &lt;p&gt;Aww yeah, you successfully read this important alert message.&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;p class="mb-0"&gt;Whenever you need to, be sure to use margin utilities.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Alert with Links</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="alert alert-primary" role="alert">
+                                A simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                            </div>
+                            <div class="alert alert-success" role="alert">
+                                A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="alert alert-primary" role="alert"&gt;
+  A simple primary alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+&lt;/div&gt;
+
+&lt;div class="alert alert-success" role="alert"&gt;
+  A simple success alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="docs-subsection">
+                    <h3 class="docs-subsection-title">Dismissible Alerts</h3>
+                    <div class="docs-component">
+                        <div class="docs-component-preview">
+                            <div class="alert alert-warning alert-dismissible" role="alert" id="dismissibleAlert1">
+                                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                                <button type="button" class="alert-close" onclick="this.parentElement.style.display='none'" aria-label="Close">&times;</button>
+                            </div>
+                            <div class="alert alert-danger alert-dismissible" role="alert" id="dismissibleAlert2">
+                                <strong>Oh snap!</strong> Change a few things up and try submitting again.
+                                <button type="button" class="alert-close" onclick="this.parentElement.style.display='none'" aria-label="Close">&times;</button>
+                            </div>
+                        </div>
+                        <div class="docs-component-code">
+                            <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            <pre><code class="language-html">&lt;div class="alert alert-warning alert-dismissible" role="alert"&gt;
+  &lt;strong&gt;Holy guacamole!&lt;/strong&gt; You should check in on some of those fields below.
+  &lt;button type="button" class="alert-close" onclick="this.parentElement.style.display='none'" aria-label="Close"&gt;&times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert alert-danger alert-dismissible" role="alert"&gt;
+  &lt;strong&gt;Oh snap!&lt;/strong&gt; Change a few things up and try submitting again.
+  &lt;button type="button" class="alert-close" onclick="this.parentElement.style.display='none'" aria-label="Close"&gt;&times;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
                 </div>
             </section>
 
