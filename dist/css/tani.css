@@ -2,7 +2,7 @@
     Name: Tani
     Description: A utility-first framework with rich component library
     Author: Raymond Baghumian
-    Version: 1.13.0
+    Version: 1.14.0
     License: MIT
 */
 
@@ -407,39 +407,39 @@ p {
     vertical-align: middle;
 }
 
-.btn-group > .btn {
+.btn-group>.btn {
     position: relative;
     flex: 1 1 auto;
 }
 
-.btn-group > .btn:hover,
-.btn-group > .btn:focus,
-.btn-group > .btn:active {
+.btn-group>.btn:hover,
+.btn-group>.btn:focus,
+.btn-group>.btn:active {
     z-index: 1;
 }
 
-.btn-group > .btn:not(:first-child) {
+.btn-group>.btn:not(:first-child) {
     margin-left: -1px;
 }
 
-.btn-group > .btn:not(:last-child) {
+.btn-group>.btn:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.btn-group > .btn:not(:first-child) {
+.btn-group>.btn:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
 /* Button group sizes */
-.btn-group-sm > .btn {
+.btn-group-sm>.btn {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
     border-radius: var(--radius-sm);
 }
 
-.btn-group-lg > .btn {
+.btn-group-lg>.btn {
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
     border-radius: var(--radius-lg);
@@ -452,21 +452,21 @@ p {
     justify-content: center;
 }
 
-.btn-group-vertical > .btn {
+.btn-group-vertical>.btn {
     width: 100%;
 }
 
-.btn-group-vertical > .btn:not(:first-child) {
+.btn-group-vertical>.btn:not(:first-child) {
     margin-top: -1px;
     margin-left: 0;
 }
 
-.btn-group-vertical > .btn:not(:last-child) {
+.btn-group-vertical>.btn:not(:last-child) {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn:not(:first-child) {
+.btn-group-vertical>.btn:not(:first-child) {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
@@ -487,30 +487,30 @@ p {
 }
 
 /* Button group with dropdown */
-.btn-group > .dropdown {
+.btn-group>.dropdown {
     position: relative;
     flex: 1 1 auto;
     display: inline-flex;
 }
 
-.btn-group > .dropdown > .btn {
+.btn-group>.dropdown>.btn {
     position: relative;
 }
 
-.btn-group > .dropdown:not(:first-child) > .btn {
+.btn-group>.dropdown:not(:first-child)>.btn {
     margin-left: -1px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-.btn-group > .dropdown:not(:last-child) > .btn {
+.btn-group>.dropdown:not(:last-child)>.btn {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
 
-.btn-group > .dropdown > .btn:hover,
-.btn-group > .dropdown > .btn:focus,
-.btn-group > .dropdown > .btn:active {
+.btn-group>.dropdown>.btn:hover,
+.btn-group>.dropdown>.btn:focus,
+.btn-group>.dropdown>.btn:active {
     z-index: 1;
 }
 
@@ -878,6 +878,211 @@ p {
     width: 100%;
     border-bottom-right-radius: calc(var(--border-radius) - 1px);
     border-bottom-left-radius: calc(var(--border-radius) - 1px);
+}
+
+/* ======================
+   Tables
+   ====================== */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: var(--body-color);
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid var(--border-color);
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--border-color);
+    font-weight: 600;
+}
+
+.table tbody+tbody {
+    border-top: 2px solid var(--border-color);
+}
+
+/* Table bordered */
+.table-bordered {
+    border: 1px solid var(--border-color);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid var(--border-color);
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+    border-bottom-width: 2px;
+}
+
+/* Table borderless */
+.table-borderless th,
+.table-borderless td,
+.table-borderless thead th,
+.table-borderless tbody+tbody {
+    border: 0;
+}
+
+/* Table striped */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Table hover */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Table sizes */
+.table-sm th,
+.table-sm td {
+    padding: 0.3rem;
+}
+
+.table-lg th,
+.table-lg td {
+    padding: 1rem;
+}
+
+/* Table colors */
+.table-primary {
+    background-color: rgba(255, 171, 88, 0.1);
+}
+
+.table-primary th,
+.table-primary td,
+.table-primary thead th,
+.table-primary tbody+tbody {
+    border-color: rgba(255, 171, 88, 0.2);
+}
+
+.table-secondary {
+    background-color: rgba(23, 128, 180, 0.1);
+}
+
+.table-secondary th,
+.table-secondary td,
+.table-secondary thead th,
+.table-secondary tbody+tbody {
+    border-color: rgba(23, 128, 180, 0.2);
+}
+
+.table-success {
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.table-success th,
+.table-success td,
+.table-success thead th,
+.table-success tbody+tbody {
+    border-color: rgba(40, 167, 69, 0.2);
+}
+
+.table-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.table-danger th,
+.table-danger td,
+.table-danger thead th,
+.table-danger tbody+tbody {
+    border-color: rgba(220, 53, 69, 0.2);
+}
+
+.table-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.table-warning th,
+.table-warning td,
+.table-warning thead th,
+.table-warning tbody+tbody {
+    border-color: rgba(255, 193, 7, 0.2);
+}
+
+.table-info {
+    background-color: rgba(6, 182, 212, 0.1);
+}
+
+.table-info th,
+.table-info td,
+.table-info thead th,
+.table-info tbody+tbody {
+    border-color: rgba(6, 182, 212, 0.2);
+}
+
+.table-dark {
+    background-color: rgba(36, 41, 46, 0.1);
+}
+
+.table-dark th,
+.table-dark td,
+.table-dark thead th,
+.table-dark tbody+tbody {
+    border-color: rgba(36, 41, 46, 0.2);
+}
+
+.table-light {
+    background-color: var(--gray-100);
+}
+
+.table-light th,
+.table-light td,
+.table-light thead th,
+.table-light tbody+tbody {
+    border-color: var(--border-color);
+}
+
+/* Table row colors */
+.table tbody tr.table-primary {
+    background-color: rgba(255, 171, 88, 0.1);
+}
+
+.table tbody tr.table-secondary {
+    background-color: rgba(23, 128, 180, 0.1);
+}
+
+.table tbody tr.table-success {
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.table tbody tr.table-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+.table tbody tr.table-warning {
+    background-color: rgba(255, 193, 7, 0.1);
+}
+
+.table tbody tr.table-info {
+    background-color: rgba(6, 182, 212, 0.1);
+}
+
+.table tbody tr.table-dark {
+    background-color: rgba(36, 41, 46, 0.1);
+}
+
+.table tbody tr.table-light {
+    background-color: var(--gray-100);
+}
+
+/* Responsive table */
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive>.table {
+    margin-bottom: 0;
 }
 
 /* ======================
@@ -1301,6 +1506,7 @@ p {
 .text-white {
     color: var(--white) !important;
 }
+
 .text-decoration-none {
     text-decoration: none !important;
 }
@@ -1658,18 +1864,23 @@ p {
 .rounded-0 {
     border-radius: 0 !important;
 }
+
 .rounded-1 {
     border-radius: 5px !important;
 }
+
 .rounded-2 {
     border-radius: 10px !important;
 }
+
 .rounded-3 {
     border-radius: 15px !important;
 }
+
 .rounded-4 {
     border-radius: 20px !important;
 }
+
 .rounded-5 {
     border-radius: 25px !important;
 }
@@ -1719,6 +1930,20 @@ p {
 
 .shadow-none {
     box-shadow: none !important;
+}
+
+/* Floats */
+
+.float-left {
+    float: left !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
+.float-none {
+    float: none !important;
 }
 
 /* ======================
@@ -2270,13 +2495,16 @@ p {
 .tab-content .tab-pane {
     display: none;
 }
+
 .tab-content .tab-pane.active {
     display: block;
 }
+
 .tab-content .tab-pane.fade {
     opacity: 0;
     transition: opacity 180ms linear;
 }
+
 .tab-content .tab-pane.fade.show {
     opacity: 1;
 }
@@ -2360,13 +2588,13 @@ p {
 }
 
 /* Nav fill and justified */
-.nav-fill > .nav-link,
+.nav-fill>.nav-link,
 .nav-fill .nav-item {
     flex: 1 1 auto;
     text-align: center;
 }
 
-.nav-justified > .nav-link,
+.nav-justified>.nav-link,
 .nav-justified .nav-item {
     flex-basis: 0;
     flex-grow: 1;
@@ -2869,16 +3097,14 @@ p {
 
 /* Progress bar striped */
 .progress-bar-striped {
-    background-image: linear-gradient(
-        45deg,
-        rgba(255, 255, 255, 0.15) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.15) 50%,
-        rgba(255, 255, 255, 0.15) 75%,
-        transparent 75%,
-        transparent
-    );
+    background-image: linear-gradient(45deg,
+            rgba(255, 255, 255, 0.15) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.15) 75%,
+            transparent 75%,
+            transparent);
     background-size: 1rem 1rem;
 }
 
@@ -2891,6 +3117,7 @@ p {
     0% {
         background-position: 1rem 0;
     }
+
     100% {
         background-position: 0 0;
     }
@@ -3385,9 +3612,11 @@ p {
         transform: scale(0);
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         transform: scale(1);
         opacity: 0;
@@ -3467,11 +3696,11 @@ p {
     align-items: center;
 }
 
-.breadcrumb-item + .breadcrumb-item {
+.breadcrumb-item+.breadcrumb-item {
     padding-left: 0.5rem;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     display: inline-block;
     padding-right: 0.5rem;
     color: var(--gray-600);
@@ -3494,23 +3723,23 @@ p {
 }
 
 /* Breadcrumb with arrows */
-.breadcrumb-arrow .breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-arrow .breadcrumb-item+.breadcrumb-item::before {
     content: "›";
     font-size: 1.2em;
 }
 
 /* Breadcrumb with chevrons */
-.breadcrumb-chevron .breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-chevron .breadcrumb-item+.breadcrumb-item::before {
     content: "»";
 }
 
 /* Breadcrumb with dots */
-.breadcrumb-dot .breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-dot .breadcrumb-item+.breadcrumb-item::before {
     content: "•";
 }
 
 /* Breadcrumb with dashes */
-.breadcrumb-dash .breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-dash .breadcrumb-item+.breadcrumb-item::before {
     content: "-";
 }
 
@@ -3582,7 +3811,7 @@ p {
     color: var(--gray-400);
 }
 
-.breadcrumb-dark .breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-dark .breadcrumb-item+.breadcrumb-item::before {
     color: var(--gray-400);
 }
 
