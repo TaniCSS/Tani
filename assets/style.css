@@ -1,342 +1,524 @@
+/* ==========================================================================
+   TANI DOCS - GOD MODE DOCUMENTATION STYLES
+   Compatible with Tani CSS Framework v2.0
+   ========================================================================== */
+
 :root {
-            --docs-bg: #f8f9fa;
-            --docs-sidebar-bg: #ffffff;
-            --docs-border: #e9ecef;
-            --docs-text: #212529;
-            --docs-heading: #495057;
-        }
+    /* Docs-specific variables (using Tani tokens) */
+    --docs-bg: var(--body-bg);
+    --docs-sidebar-bg: var(--surface-elevated, var(--body-bg));
+    --docs-border: var(--border-color);
+    --docs-text: var(--body-color);
+    --docs-heading: var(--gray-700);
+    --docs-code-bg: #1e1e1e;
+    --docs-code-text: #d4d4d4;
+    
+    /* Fluid spacing */
+    --docs-spacing-xs: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+    --docs-spacing-sm: clamp(0.75rem, 0.6rem + 0.75vw, 1rem);
+    --docs-spacing-md: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+    --docs-spacing-lg: clamp(1.5rem, 1.2rem + 1.5vw, 2.5rem);
+    --docs-spacing-xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+}
 
-        /* Override default code block styles to use Prism dark theme */
-        .docs-component-code {
-            padding: 20px;
-            overflow-x: auto;
-            border-top: 1px solid #444;
-            position: relative;
-            background-color: #1e1e1e !important;
-            font-family: 'Ubuntu Mono', 'Courier New', monospace;
-        }
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --docs-code-bg: #0d1117;
+        --docs-code-text: #c9d1d9;
+        --docs-sidebar-bg: oklch(18% 0.01 250);
+    }
+}
 
-        /* Copy button styling */
-        .copy-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #2d2d2d;
-            color: #d4d4d4;
-            border: 1px solid #444;
-            border-radius: 4px;
-            padding: 5px 10px;
-            font-size: 0.8rem;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            z-index: 10;
-        }
+/* ==========================================================================
+   BASE STYLES
+   ========================================================================== */
+body {
+    background-color: var(--docs-bg);
+    color: var(--docs-text);
+    font-family: "Ubuntu Mono", "Courier New", monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color var(--transition-normal), color var(--transition-normal);
+}
 
-        .copy-button:hover {
-            background-color: #3d3d3d;
-        }
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
+.docs-container {
+    display: flex;
+    min-height: 100vh;
+}
 
-        .copy-button.copied {
-            background-color: #28a745;
-            color: white;
-        }
+.docs-sidebar {
+    width: 280px;
+    background-color: var(--docs-sidebar-bg);
+    border-inline-end: 1px solid var(--docs-border);
+    padding: var(--docs-spacing-md);
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    transition: background-color var(--transition-normal);
+    z-index: 100;
+}
 
-        /* Prism overrides for dark theme */
-        .docs-component-code pre {
-            margin: 0;
-            padding: 0;
-            background: transparent !important;
-        }
+.docs-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
 
-        .docs-component-code code {
-            font-size: 0.9rem;
-            border-radius: 0;
-        }
+.docs-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
 
-        body {
-            background-color: var(--docs-bg);
-            color: var(--docs-text);
-            font-family: "Ubuntu Mono", "Courier New", monospace;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
+.docs-sidebar::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 3px;
+}
 
-        .docs-container {
-            display: flex;
-            min-height: 100vh;
-        }
+.docs-main {
+    flex: 1;
+    margin-inline-start: 280px;
+    padding: var(--docs-spacing-lg);
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
-        .docs-sidebar {
-            width: 280px;
-            background-color: var(--docs-sidebar-bg);
-            border-right: 1px solid var(--docs-border);
-            padding: 20px;
-            position: fixed;
-            height: 100vh;
-            overflow-y: auto;
-        }
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.docs-header {
+    background-color: var(--docs-sidebar-bg);
+    border-bottom: 1px solid var(--docs-border);
+    padding: var(--docs-spacing-md) var(--docs-spacing-lg);
+    margin: calc(var(--docs-spacing-lg) * -1) calc(var(--docs-spacing-lg) * -1) var(--docs-spacing-lg) calc(var(--docs-spacing-lg) * -1);
+    transition: background-color var(--transition-normal);
+}
 
-        .docs-main {
-            flex: 1;
-            margin-left: 280px;
-            padding: 30px;
-        }
+.docs-title {
+    color: var(--docs-heading);
+    margin: 0 0 var(--docs-spacing-xs) 0;
+    font-size: var(--text-3xl);
+    font-weight: 700;
+}
 
-        .docs-header {
-            background-color: #ffffff;
-            border-bottom: 1px solid var(--docs-border);
-            padding: 20px 30px;
-            margin: -30px -30px 30px -30px;
-        }
+.docs-subtitle {
+    color: var(--gray-600);
+    margin: 0 0 var(--docs-spacing-md) 0;
+    font-size: var(--text-lg);
+}
 
-        .docs-title {
-            color: var(--docs-heading);
-            margin: 0 0 10px 0;
-        }
+.docs-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    margin-inline-end: 8px;
+    transition: transform var(--transition-fast);
+}
 
-        .docs-subtitle {
-            color: #6c757d;
-            margin: 0 0 20px 0;
-            font-size: 1.1rem;
-        }
+.docs-badge:hover {
+    transform: translateY(-2px);
+}
 
-        .docs-section {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid var(--docs-border);
-        }
+/* ==========================================================================
+   SECTIONS
+   ========================================================================== */
+.docs-section {
+    margin-bottom: var(--docs-spacing-xl);
+    padding-bottom: var(--docs-spacing-lg);
+    border-bottom: 1px solid var(--docs-border);
+}
 
-        .docs-section:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
+.docs-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 
-        .docs-section-title {
-            color: var(--docs-heading);
-            font-size: 1.8rem;
-            margin: 0 0 20px 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--primary);
-        }
+.docs-section-title {
+    color: var(--docs-heading);
+    font-size: var(--text-2xl);
+    margin: 0 0 var(--docs-spacing-md) 0;
+    padding-bottom: var(--docs-spacing-sm);
+    border-bottom: 3px solid var(--primary);
+    position: relative;
+}
 
-        .docs-subsection {
-            margin: 30px 0;
-        }
+.docs-subsection {
+    margin: var(--docs-spacing-lg) 0;
+}
 
-        .docs-subsection-title {
-            color: var(--docs-heading);
-            font-size: 1.4rem;
-            margin: 0 0 15px 0;
-        }
+.docs-subsection-title {
+    color: var(--docs-heading);
+    font-size: var(--text-xl);
+    margin: 0 0 var(--docs-spacing-sm) 0;
+}
 
-        .docs-component {
-            background-color: #ffffff;
-            border: 1px solid var(--docs-border);
-            border-radius: 8px;
-            margin-bottom: 20px;
-            overflow: hidden;
-        }
+/* ==========================================================================
+   COMPONENTS
+   ========================================================================== */
+.docs-component {
+    background-color: var(--docs-sidebar-bg);
+    border: 1px solid var(--docs-border);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--docs-spacing-md);
+    overflow: hidden;
+    transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
 
-        .docs-component-preview {
-            padding: 25px;
-            border-bottom: 1px solid var(--docs-border);
-        }
+.docs-component:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
 
-        .docs-component-code {
-            background-color: #f8f9fa;
-            padding: 20px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            overflow-x: auto;
-            border-top: 1px solid var(--docs-border);
-            background-color: #212529;
-        }
+.docs-component-preview {
+    padding: var(--docs-spacing-lg);
+    border-bottom: 1px solid var(--docs-border);
+    background-color: var(--body-bg);
+}
 
-        /* Prism overrides */
-        .docs-component-code pre {
-            margin: 0;
-            padding: 0;
-            background: transparent !important;
-        }
+.docs-component-code {
+    padding: var(--docs-spacing-md);
+    overflow-x: auto;
+    position: relative;
+    background-color: var(--docs-code-bg) !important;
+    font-family: 'Ubuntu Mono', 'Courier New', monospace;
+    border-top: 1px solid oklch(30% 0 0);
+}
 
-        .docs-component-code code {
-            font-size: 0.9rem;
-            border-radius: 0;
-        }
+.docs-component-code pre {
+    margin: 0;
+    padding: 0;
+    background: transparent !important;
+}
 
-        .docs-nav-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin: 0 0 15px 0;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--docs-border);
-            color: var(--docs-heading);
-        }
+.docs-component-code code {
+    font-size: var(--text-sm);
+    border-radius: 0;
+    color: var(--docs-code-text);
+}
 
-        .docs-nav-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 25px 0;
-        }
+/* Copy button */
+.copy-button {
+    position: absolute;
+    top: var(--docs-spacing-sm);
+    inset-inline-end: var(--docs-spacing-sm);
+    background-color: oklch(25% 0 0);
+    color: var(--docs-code-text);
+    border: 1px solid oklch(35% 0 0);
+    border-radius: var(--radius-sm);
+    padding: 6px 12px;
+    font-size: var(--text-xs);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    z-index: 10;
+    font-family: inherit;
+}
 
-        .docs-nav-item {
-            margin-bottom: 8px;
-        }
+.copy-button:hover {
+    background-color: oklch(30% 0 0);
+    transform: translateY(-1px);
+}
 
-        .docs-nav-link {
-            text-decoration: none;
-            color: #495057;
-            display: block;
-            padding: 6px 12px;
-            border-radius: 4px;
-            transition: all 0.2s;
-        }
+.copy-button.copied {
+    background-color: var(--success);
+    color: white;
+    border-color: var(--success);
+}
 
-        .docs-nav-link:hover {
-            background-color: #e9ecef;
-            color: var(--primary);
-        }
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+.docs-nav-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin: 0 0 var(--docs-spacing-sm) 0;
+    padding-bottom: var(--docs-spacing-sm);
+    border-bottom: 1px solid var(--docs-border);
+    color: var(--docs-heading);
+}
 
-        .docs-nav-link.active {
-            background-color: var(--primary);
-            color: white;
-        }
+.docs-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--docs-spacing-md) 0;
+}
 
-        .docs-color-palette {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 20px 0;
-        }
+.docs-nav-item {
+    margin-bottom: 6px;
+}
 
-        .docs-color-item {
-            flex: 1;
-            min-width: 120px;
-            text-align: center;
-        }
+.docs-nav-link {
+    text-decoration: none;
+    color: var(--docs-text);
+    display: block;
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    font-size: var(--text-sm);
+}
 
-        .docs-color-swatch {
-            height: 80px;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+.docs-nav-link:hover {
+    background-color: var(--gray-100);
+    color: var(--primary);
+    transform: translateX(4px);
+}
 
-        .docs-color-name {
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
+.docs-nav-link.active {
+    background-color: var(--primary);
+    color: white;
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+}
 
-        .docs-color-value {
-            font-size: 0.85rem;
-            color: #6c757d;
-        }
+/* ==========================================================================
+   COLOR PALETTE
+   ========================================================================== */
+.docs-color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--docs-spacing-md);
+    margin: var(--docs-spacing-md) 0;
+}
 
+.docs-color-item {
+    text-align: center;
+    transition: transform var(--transition-fast);
+}
 
-        .docs-utility-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
+.docs-color-item:hover {
+    transform: translateY(-4px);
+}
 
-        .docs-utility-table th,
-        .docs-utility-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #e9ecef;
-        }
+.docs-color-swatch {
+    height: 80px;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--docs-spacing-xs);
+    box-shadow: var(--shadow-md);
+    transition: box-shadow var(--transition-fast);
+}
 
-        .docs-utility-table th {
-            background-color: #f8f9fa;
-            font-weight: 600;
-        }
+.docs-color-item:hover .docs-color-swatch {
+    box-shadow: var(--shadow-xl);
+}
 
-        .docs-installation-steps {
-            counter-reset: step-counter;
-            list-style: none;
-            padding: 0;
-        }
+.docs-color-name {
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: var(--text-sm);
+}
 
-        .docs-installation-steps li {
-            counter-increment: step-counter;
-            margin-bottom: 25px;
-            padding-left: 50px;
-            position: relative;
-        }
+.docs-color-value {
+    font-size: var(--text-xs);
+    color: var(--gray-600);
+    font-family: 'Ubuntu Mono', monospace;
+}
 
-        .docs-installation-steps li:before {
-            content: counter(step-counter);
-            position: absolute;
-            left: 0;
-            top: 0;
-            background-color: var(--primary);
-            color: white;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+.docs-utility-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--docs-spacing-md) 0;
+    background-color: var(--docs-sidebar-bg);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
 
-        .docs-code-block {
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.95rem;
-            overflow-x: auto;
-            margin: 20px 0;
-        }
+.docs-utility-table th,
+.docs-utility-table td {
+    padding: 12px 15px;
+    text-align: start;
+    border-bottom: 1px solid var(--docs-border);
+}
 
-        .docs-badge {
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin: 0 5px;
-        }
+.docs-utility-table th {
+    background-color: var(--gray-100);
+    font-weight: 600;
+    color: var(--docs-heading);
+}
 
-        .docs-note {
-            background-color: #fff8e1;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 4px 4px 0;
-        }
+.docs-utility-table tr:last-child td {
+    border-bottom: none;
+}
 
-        .docs-tip {
-            background-color: #e8f5e9;
-            border-left: 4px solid #28a745;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 0 4px 4px 0;
-        }
+.docs-utility-table tr:hover {
+    background-color: oklch(from var(--primary) l c h / 0.05);
+}
 
-        @media (max-width: 992px) {
-            .docs-container {
-                flex-direction: column;
-            }
+/* ==========================================================================
+   INSTALLATION STEPS
+   ========================================================================== */
+.docs-installation-steps {
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+}
 
-            .docs-sidebar {
-                width: 100%;
-                position: relative;
-                height: auto;
-            }
+.docs-installation-steps li {
+    counter-increment: step-counter;
+    margin-bottom: var(--docs-spacing-md);
+    padding-inline-start: 50px;
+    position: relative;
+}
 
-            .docs-main {
-                margin-left: 0;
-            }
-        }
+.docs-installation-steps li:before {
+    content: counter(step-counter);
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    background-color: var(--primary);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-fast);
+}
 
-        /* Footer */
-        .site-footer {
-            padding: 20px;
-            border-top: 1px solid var(--border-color);
-            color: var(--body-color);
-            background: transparent;
-        }
+.docs-installation-steps li:hover:before {
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   CODE BLOCKS
+   ========================================================================== */
+.docs-code-block {
+    background-color: var(--docs-code-bg);
+    padding: var(--docs-spacing-md);
+    border-radius: var(--radius-lg);
+    font-family: 'Ubuntu Mono', 'Courier New', monospace;
+    font-size: var(--text-sm);
+    overflow-x: auto;
+    margin: var(--docs-spacing-md) 0;
+    color: var(--docs-code-text);
+    box-shadow: var(--shadow-md);
+}
+
+/* ==========================================================================
+   NOTES & TIPS
+   ========================================================================== */
+.docs-note {
+    background-color: oklch(from var(--warning) l c h / 0.1);
+    border-inline-start: 4px solid var(--warning);
+    padding: var(--docs-spacing-md);
+    margin: var(--docs-spacing-md) 0;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    transition: transform var(--transition-fast);
+}
+
+.docs-note:hover {
+    transform: translateX(4px);
+}
+
+.docs-tip {
+    background-color: oklch(from var(--success) l c h / 0.1);
+    border-inline-start: 4px solid var(--success);
+    padding: var(--docs-spacing-md);
+    margin: var(--docs-spacing-md) 0;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    transition: transform var(--transition-fast);
+}
+
+.docs-tip:hover {
+    transform: translateX(4px);
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 992px) {
+    .docs-container {
+        flex-direction: column;
+    }
+
+    .docs-sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        border-inline-end: none;
+        border-bottom: 1px solid var(--docs-border);
+    }
+
+    .docs-main {
+        margin-inline-start: 0;
+        padding: var(--docs-spacing-md);
+    }
+
+    .docs-header {
+        margin: calc(var(--docs-spacing-md) * -1) calc(var(--docs-spacing-md) * -1) var(--docs-spacing-md) calc(var(--docs-spacing-md) * -1);
+        padding: var(--docs-spacing-md);
+    }
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+    padding: var(--docs-spacing-md);
+    border-top: 1px solid var(--docs-border);
+    color: var(--gray-600);
+    background: transparent;
+    text-align: center;
+    margin-top: var(--docs-spacing-xl);
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.docs-section {
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* ==========================================================================
+   SCROLLBAR
+   ========================================================================== */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--body-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-400);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-500);
+}
+
+/* ==========================================================================
+   SELECTION
+   ========================================================================== */
+::selection {
+    background-color: var(--primary);
+    color: white;
+}
+
+::-moz-selection {
+    background-color: var(--primary);
+    color: white;
+}
