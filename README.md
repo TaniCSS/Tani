@@ -1,7 +1,4 @@
-```markdown
-<div align="center">
-
-# 🚀 Tani CSS Framework
+# Tani CSS Framework
 
 ### The Most Advanced CSS Framework in History — God Mode Edition
 
@@ -14,30 +11,26 @@
 
 **A lightweight, utility-first CSS framework with God Mode features that no other framework offers.**
 
-[📖 Documentation](#-documentation) • [🚀 Quick Start](#-quick-start) • [✨ Features](#-god-mode-features) • [📊 Comparison](#-comparison) • [🎯 Examples](#-examples)
-
-</div>
+[Documentation](#-documentation) • [Quick Start](#-quick-start) • [Features](#-god-mode-features) • [Comparison](#-comparison) • [Examples](#-examples)
 
 ---
 
-## 🎯 Overview
+## Overview
 
 Tani is a **next-generation CSS framework** that combines the best of modern CSS features with a utility-first approach. Built with **2026 standards**, it includes features that **no other framework offers**:
 
-- ✅ **Scroll-Driven Animations** (Pure CSS, no JS)
-- ✅ **Container Queries** (Component-aware responsiveness)
-- ✅ **OKLCH Color System** (Perceptually uniform colors with auto-generated variants)
-- ✅ **Zero-JS Components** (Modal, Accordion, Dropdown using native HTML)
-- ✅ **Native Dark Mode** (System-preference based, zero JS)
-- ✅ **RTL/LTR Support** (Logical Properties, built-in)
-- ✅ **Fluid Typography** (clamp-based scaling, no media queries)
-- ✅ **Debug Mode** (Visual layout inspector)
-- ✅ **GPU-Accelerated Utilities** (Hardware-accelerated animations)
-- ✅ **Anchor Positioning** (Smart tooltips without JS)
+- **Scroll-Driven Animations** (Pure CSS, no JS)
+- **Container Queries** (Component-aware responsiveness)
+- **OKLCH Color System** (Perceptually uniform colors with auto-generated variants)
+- **Zero-JS Components** (Modal, Accordion, Dropdown using native HTML)
+- **Native Dark Mode** (System-preference based, zero JS)
+- **RTL/LTR Support** (Logical Properties, built-in)
+- **Fluid Typography** (clamp-based scaling, no media queries)
+- **Debug Mode** (Visual layout inspector)
+- **GPU-Accelerated Utilities** (Hardware-accelerated animations)
+- **Anchor Positioning** (Smart tooltips without JS)
 
----
-
-## ⚡ Quick Start
+## Quick Start
 
 ### Installation
 
@@ -47,11 +40,13 @@ Tani is a **next-generation CSS framework** that combines the best of modern CSS
 ```
 
 **Option 2: Download**
+
 ```html
 <link rel="stylesheet" href="./dist/css/tani.css">
 ```
 
 **Option 3: NPM (Coming Soon)**
+
 ```bash
 npm install tanicss
 ```
@@ -78,9 +73,9 @@ npm install tanicss
 
 ---
 
-## 🔥 God Mode Features
+## God Mode Features
 
-### 1. 🌊 Scroll-Driven Animations
+### 1. Scroll-Driven Animations
 
 Animate elements as they scroll into view — **no JavaScript required**!
 
@@ -107,7 +102,7 @@ Animate elements as they scroll into view — **no JavaScript required**!
 
 ---
 
-### 2. 📦 Container Queries
+### 2. Container Queries
 
 Components adapt based on their **container size**, not viewport:
 
@@ -129,7 +124,7 @@ Components adapt based on their **container size**, not viewport:
 
 ---
 
-### 3. 🎨 OKLCH Color System
+### 3. OKLCH Color System
 
 Perceptually uniform colors with **automatic hover states**:
 
@@ -145,6 +140,7 @@ Perceptually uniform colors with **automatic hover states**:
 ```
 
 **Benefits:**
+
 - Better color accuracy than HEX/RGB
 - Automatic variant generation
 - Zero extra code for hover states
@@ -152,7 +148,7 @@ Perceptually uniform colors with **automatic hover states**:
 
 ---
 
-### 4. ⚡ Zero-JS Components
+### 4. Zero-JS Components
 
 Modals, accordions, and dropdowns work **without JavaScript**:
 
@@ -189,7 +185,7 @@ Modals, accordions, and dropdowns work **without JavaScript**:
 
 ---
 
-### 5. 🌙 Native Dark Mode
+### 5. Native Dark Mode
 
 Automatically adapts to system preferences — **no toggle needed**:
 
@@ -206,7 +202,7 @@ Just include Tani, and dark mode works automatically based on the user's OS sett
 
 ---
 
-### 6. 🌐 RTL/LTR Support
+### 6. RTL/LTR Support
 
 Built-in support for right-to-left languages using **Logical Properties**:
 
@@ -222,6 +218,7 @@ Built-in support for right-to-left languages using **Logical Properties**:
 ```
 
 **Usage:**
+
 ```html
 <!-- For RTL languages (Arabic, Hebrew, Persian, etc.) -->
 <html lang="ar" dir="rtl">
@@ -233,7 +230,7 @@ Built-in support for right-to-left languages using **Logical Properties**:
 
 ---
 
-### 7. 📏 Fluid Typography
+### 7. Fluid Typography
 
 Smooth scaling from mobile to 4K using `clamp()`:
 
@@ -252,7 +249,7 @@ Smooth scaling from mobile to 4K using `clamp()`:
 
 ---
 
-### 8. 🐛 Debug Mode
+### 8. Debug Mode
 
 Visual layout inspector for debugging:
 
@@ -266,7 +263,7 @@ Adds colored outlines to all elements for easy debugging of spacing, alignment, 
 
 ---
 
-### 9. 🎯 Anchor Positioning
+### 9. Anchor Positioning
 
 Smart tooltips that automatically find the best position:
 
@@ -287,7 +284,7 @@ Smart tooltips that automatically find the best position:
 
 ---
 
-### 10. 🚀 GPU-Accelerated Utilities
+### 10. GPU-Accelerated Utilities
 
 Hardware-accelerated animations for 60fps performance:
 
@@ -303,7 +300,7 @@ Hardware-accelerated animations for 60fps performance:
 
 ---
 
-## 📊 Comparison
+## Comparison
 
 | Feature | Tani v2.0 | Tailwind v4 | Bootstrap 5 | Bulma |
 |---------|-----------|-------------|-------------|-------|
@@ -321,7 +318,7 @@ Hardware-accelerated animations for 60fps performance:
 
 ---
 
-## 🎨 Components
+## Components
 
 Tani includes a comprehensive set of components:
 
@@ -476,15 +473,15 @@ Tani includes a comprehensive set of components:
 
 ---
 
-## 🌐 Browser Support
+## Browser Support
 
 Tani supports all modern browsers:
 
-- ✅ Chrome (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Edge (latest)
-- ✅ Opera (latest)
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Opera (latest)
 
 **Note:** Some advanced features (Scroll-Driven Animations, Container Queries, Anchor Positioning) require modern browsers. Graceful fallbacks are provided for older browsers.
 
@@ -500,7 +497,7 @@ Open `index.html` in your browser to view the complete documentation with exampl
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting a pull request.
 
@@ -519,22 +516,22 @@ open index.html
 
 ### What to Contribute
 
-- 🐛 Bug fixes
-- ✨ New components
-- 📝 Documentation improvements
-- 🎨 Design enhancements
-- 🌍 Translations
-- ⚡ Performance optimizations
+- Bug fixes
+- New components
+- Documentation improvements
+- Design enhancements
+- Translations
+- Performance optimizations
 
 ---
 
-## 📝 License
+## License
 
 Tani is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built with modern CSS standards (2026)
 - Inspired by Tailwind CSS, Bootstrap, and Bulma
@@ -543,7 +540,7 @@ Tani is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 📬 Contact
+## Contact
 
 - **GitHub Issues:** [Report a bug](https://github.com/TaniCSS/Tani/issues)
 - **Discussions:** [Ask a question](https://github.com/TaniCSS/Tani/discussions)
@@ -560,4 +557,3 @@ Tani is licensed under the [MIT License](LICENSE).
 [⭐ Star this repo](https://github.com/TaniCSS/Tani) • [🍔 Fork this repo](https://github.com/TaniCSS/Tani/fork) • [📖 Read the docs](https://tanicss.github.io/docs)
 
 </div>
-```
