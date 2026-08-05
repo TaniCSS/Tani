@@ -2476,6 +2476,28 @@ dialog.modal[open] {
     inset-inline-end: 1rem;
 }
 
+.toast-container.top-left {
+    top: 1rem;
+    inset-inline-start: 1rem;
+}
+
+.toast-container.top-center {
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.toast-container.bottom-left {
+    bottom: 1rem;
+    inset-inline-start: 1rem;
+}
+
+.toast-container.bottom-center {
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .toast {
     pointer-events: auto;
     max-width: 350px;
@@ -2497,6 +2519,12 @@ dialog.modal[open] {
     opacity: 1;
     transform: translateY(0);
     display: block;
+}
+
+.toast.hiding {
+    display: block !important;
+    opacity: 0;
+    transform: translateY(-20px);
 }
 
 .toast-header {
@@ -2530,6 +2558,72 @@ dialog.modal[open] {
     color: var(--body-color);
     opacity: 0.5;
     cursor: pointer;
+}
+
+.toast-primary {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.toast-primary .toast-header {
+    background-color: oklch(from var(--primary) calc(l + 10%) c h);
+    color: var(--primary);
+}
+
+.toast-secondary {
+    background-color: var(--secondary);
+    color: white;
+    border-color: var(--secondary);
+}
+
+.toast-secondary .toast-header {
+    background-color: oklch(from var(--secondary) calc(l + 10%) c h);
+    color: var(--secondary);
+}
+
+.toast-success {
+    background-color: var(--success);
+    color: white;
+    border-color: var(--success);
+}
+
+.toast-success .toast-header {
+    background-color: oklch(from var(--success) calc(l + 10%) c h);
+    color: var(--success);
+}
+
+.toast-danger {
+    background-color: var(--danger);
+    color: white;
+    border-color: var(--danger);
+}
+
+.toast-danger .toast-header {
+    background-color: oklch(from var(--danger) calc(l + 10%) c h);
+    color: var(--danger);
+}
+
+.toast-warning {
+    background-color: var(--warning);
+    color: var(--black);
+    border-color: var(--warning);
+}
+
+.toast-warning .toast-header {
+    background-color: oklch(from var(--warning) calc(l - 10%) c h);
+    color: var(--black);
+}
+
+.toast-info {
+    background-color: var(--info);
+    color: white;
+    border-color: var(--info);
+}
+
+.toast-info .toast-header {
+    background-color: oklch(from var(--info) calc(l + 10%) c h);
+    color: var(--info);
 }
 
 /* ==========================================================================
