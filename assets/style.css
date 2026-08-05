@@ -229,6 +229,27 @@ body {
 }
 
 /* ==========================================================================
+   WHAT'S NEW GRID (4 Columns with Dark Mode)
+   ========================================================================== */
+.whats-new-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 992px) {
+    .whats-new-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .whats-new-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
    NAVIGATION
    ========================================================================== */
 .docs-nav-title {
