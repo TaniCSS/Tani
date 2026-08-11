@@ -27,6 +27,38 @@
         --docs-code-bg: #0d1117;
         --docs-code-text: #c9d1d9;
         --docs-sidebar-bg: oklch(18% 0.01 250);
+        --docs-heading: oklch(90% 0.01 250);
+        --docs-border: var(--gray-700);
+    }
+
+    .docs-subtitle {
+        color: var(--gray-400);
+    }
+
+    .docs-nav-link:hover {
+        background-color: var(--gray-800);
+        color: var(--primary);
+    }
+
+    .docs-color-value {
+        color: var(--gray-400);
+    }
+
+    .docs-utility-table th {
+        background-color: var(--gray-800);
+        color: var(--gray-100);
+    }
+
+    .site-footer {
+        color: var(--gray-400);
+    }
+
+    .docs-component-preview {
+        background-color: var(--gray-900);
+    }
+
+    .docs-component-code {
+        border-top-color: var(--gray-700);
     }
 }
 
@@ -477,6 +509,19 @@ body {
     .docs-header {
         margin: calc(var(--docs-spacing-md) * -1) calc(var(--docs-spacing-md) * -1) var(--docs-spacing-md) calc(var(--docs-spacing-md) * -1);
         padding: var(--docs-spacing-md);
+    }
+}
+
+/* ==========================================================================
+   NAVBAR OVERRIDES
+   ========================================================================== */
+.navbar-cream {
+    background-color: oklch(97% 0.01 80) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    .navbar-cream {
+        background-color: var(--gray-800) !important;
     }
 }
 

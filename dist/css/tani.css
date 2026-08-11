@@ -108,6 +108,10 @@
         --gray-100: oklch(20% 0.02 250);
         --gray-200: oklch(25% 0.02 250);
         --gray-300: oklch(30% 0.02 250);
+        --gray-400: oklch(45% 0.02 250);
+        --gray-500: oklch(55% 0.02 250);
+        --gray-600: oklch(65% 0.02 250);
+        --gray-700: oklch(75% 0.02 250);
         --gray-800: oklch(80% 0.02 250);
         --gray-900: oklch(90% 0.02 250);
         --shadow-sm: 0 1px 2px 0 oklch(0% 0 0 / 0.3);
@@ -1862,7 +1866,7 @@ figure {
 
 .nav-link:hover {
     color: var(--primary);
-    background-color: var(--gray-100);
+    background-color: oklch(from var(--body-bg) calc(l + 10%) c h);
 }
 
 .nav-link.active {
@@ -1890,8 +1894,8 @@ figure {
 }
 
 .navbar-toggler:hover {
-    background-color: var(--gray-100);
-    border-color: var(--gray-300);
+    background-color: oklch(from var(--body-bg) calc(l + 10%) c h);
+    border-color: var(--border-color);
 }
 
 .navbar-toggler-icon {
@@ -2764,9 +2768,9 @@ details.accordion-item>div {
     padding: 1rem 1.25rem;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--dark);
+    color: var(--body-color);
     text-align: left;
-    background-color: var(--white);
+    background-color: var(--body-bg);
     border: 0;
     border-radius: 0;
     overflow-anchor: none;
@@ -2776,7 +2780,7 @@ details.accordion-item>div {
 }
 
 .accordion-button:hover {
-    background-color: var(--gray-100);
+    background-color: oklch(from var(--body-bg) calc(l + 10%) c h);
 }
 
 .accordion-button:focus-visible {
@@ -2790,7 +2794,7 @@ details.accordion-item>div {
     height: 1.25rem;
     margin-left: auto;
     content: "";
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='currentColor'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-size: 1.25rem;
     transition: transform 0.2s ease-in-out;
@@ -2802,7 +2806,7 @@ details.accordion-item>div {
 }
 
 .accordion-button.collapsed {
-    background-color: var(--white);
+    background-color: var(--body-bg);
 }
 
 .accordion-collapse {
