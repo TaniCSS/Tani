@@ -114,9 +114,3 @@ open index.html
 - Design enhancements
 - Translations
 - Performance optimizations
-
----
-
-[⭐ Star this repo](https://github.com/TaniCSS/Tani) • [🍔 Fork this repo](https://github.com/TaniCSS/Tani/fork) • [📖 Read the docs](https://tanicss.github.io/docs)
-
-</div>
