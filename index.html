@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tani v2.0 - God Mode Documentation</title>
+    <title>Tani - God Mode Documentation</title>
     <link rel="stylesheet" href="./dist/css/tani.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet" />
@@ -87,8 +87,15 @@
 
     <div class="docs-container">
         <aside class="docs-sidebar">
-            <h1 class="docs-nav-title">Tani v2.0</h1>
+            <div class="docs-nav-title text-center">
+                <h1 class="font-bold">Tani</h1> 
+                <span class="badge badge-success">v2.10.0</span>
+                <span class="badge badge-primary">Stable</span>
+            </div>
             <ul class="docs-nav-list">
+                <li class="docs-nav-item">
+                    <a href="#installation" class="docs-nav-link">Installation</a>
+                </li>
                 <li class="docs-nav-item">
                     <a href="#accordion" class="docs-nav-link">Accordion</a>
                 </li>
@@ -120,23 +127,12 @@
                     <a href="#dark-mode" class="docs-nav-link">Dark Mode</a>
                 </li>
                 <li class="docs-nav-item">
-                    <a href="#debug-mode" class="docs-nav-link">Debug Mode</a>
-                </li>
-                <li class="docs-nav-item">
                     <a href="#dropdowns" class="docs-nav-link">Dropdowns</a>
                 </li>
                 <li class="docs-nav-item">
                     <a href="#forms" class="docs-nav-link">Forms</a>
                 </li>
-                <li class="docs-nav-item">
-                    <a href="#installation" class="docs-nav-link">Installation</a>
-                </li>
-                <li class="docs-nav-item">
-                    <a href="#introduction" class="docs-nav-link">Introduction</a>
-                </li>
-                <li class="docs-nav-item">
-                    <a href="#migration" class="docs-nav-link">Migration Guide</a>
-                </li>
+            
                 <li class="docs-nav-item">
                     <a href="#modals" class="docs-nav-link">Modals</a>
                 </li>
@@ -172,13 +168,6 @@
                 </li>
                 <li class="docs-nav-item">
                     <a href="#utilities" class="docs-nav-link">Utility Classes</a>
-                </li>
-
-                <li class="docs-nav-item">
-                    <a href="#whats-new" class="docs-nav-link">What's New</a>
-                </li>
-                <li class="docs-nav-item">
-                    <a href="#zero-js" class="docs-nav-link">Zero-JS Components</a>
                 </li>
             </ul>
         </aside>
@@ -2174,7 +2163,7 @@ Dropdown
             <section id="dark-mode" class="docs-section">
                 <h2 class="docs-section-title">Dark Mode</h2>
                 <p>
-                    Tani v2.0 includes
+                    Tani includes
                     <strong>native dark mode</strong> that automatically
                     adapts to the user's system preferences. No JavaScript
                     toggle required!
@@ -2237,41 +2226,6 @@ function toggleDarkMode() {
   --body-color: oklch(95% 0.01 250);
 }</code></pre>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- DEBUG MODE -->
-            <section id="debug-mode" class="docs-section">
-                <h2 class="docs-section-title">Debug Mode</h2>
-                <p>
-                    Visual layout inspector that helps you debug spacing,
-                    alignment, and component boundaries.
-                </p>
-
-                <div class="docs-subsection">
-                    <h3 class="docs-subsection-title">Enable Debug Mode</h3>
-                    <p>
-                        Simply add the <code>tani-debug</code> class to your
-                        <code>&lt;body&gt;</code> tag:
-                    </p>
-
-                    <div class="docs-component">
-                        <div class="docs-component-code">
-                            <button class="copy-button" onclick="copyCode(this)">
-                                Copy
-                            </button>
-                            <pre><code class="language-html">&lt;body class="tani-debug"&gt;
-  &lt;!-- Your content --&gt;
-&lt;/body&gt;</code></pre>
-                        </div>
-                    </div>
-
-                    <div class="docs-tip">
-                        <strong>Tip:</strong> Debug mode adds colored
-                        outlines to all elements, making it easy to see
-                        spacing issues, misaligned components, and layout
-                        problems.
                     </div>
                 </div>
             </section>
@@ -2897,128 +2851,6 @@ dropdownToggles.forEach(toggle =&gt; {
                         </div>
                     </li>
                 </ol>
-            </section>
-
-            <!-- INTRODUCTION -->
-            <section id="introduction" class="docs-section">
-                <h2 class="docs-section-title">Introduction</h2>
-                <p>
-                    Tani is a modern CSS framework that provides a
-                    comprehensive set of utility classes and components to
-                    build responsive, beautiful web interfaces quickly and
-                    efficiently.
-                </p>
-
-                <div class="docs-subsection">
-                    <h3 class="docs-subsection-title">Features</h3>
-                    <ul>
-                        <li>
-                            Utility-first approach for rapid development
-                        </li>
-                        <li>
-                            Rich component library (buttons, cards, badges,
-                            navbar, etc.)
-                        </li>
-                        <li>Comprehensive color palette with OKLCH</li>
-                        <li>
-                            Extensive utility classes for spacing,
-                            typography, and more
-                        </li>
-                        <li>
-                            No JavaScript dependencies for core components
-                        </li>
-                        <li>Lightweight and performant</li>
-                        <li>Native Dark Mode support</li>
-                        <li>RTL/LTR support out of the box</li>
-                    </ul>
-                </div>
-
-                <div class="docs-subsection">
-                    <h3 class="docs-subsection-title">Browser Support</h3>
-                    <p>Tani supports all modern browsers:</p>
-                    <ul>
-                        <li>Chrome (latest)</li>
-                        <li>Firefox (latest)</li>
-                        <li>Safari (latest)</li>
-                        <li>Edge (latest)</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- MIGRATION GUIDE -->
-            <section id="migration" class="docs-section">
-                <h2 class="docs-section-title">
-                    Migration Guide (v1 → v2)
-                </h2>
-                <p>
-                    Upgrading from Tani v1.15.0 to v2.0 is
-                    <strong>fully backward compatible</strong>. All your
-                    existing code will continue to work!
-                </p>
-
-                <div class="docs-subsection">
-                    <h3 class="docs-subsection-title">What's Changed</h3>
-                    <ul>
-                        <li>
-                            <strong>Colors:</strong> Migrated from HEX to
-                            OKLCH (better color accuracy)
-                        </li>
-                        <li>
-                            <strong>Spacing:</strong> Now uses fluid values
-                            with <code>clamp()</code>
-                        </li>
-                        <li>
-                            <strong>Typography:</strong> Fluid scaling from
-                            mobile to 4K
-                        </li>
-                        <li>
-                            <strong>Dark Mode:</strong> Native support (no
-                            JS needed)
-                        </li>
-                        <li>
-                            <strong>RTL:</strong> Built-in support using
-                            logical properties
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="docs-subsection">
-                    <h3 class="docs-subsection-title">What's New</h3>
-                    <ul>
-                        <li>
-                            Scroll-driven animations
-                            (<code>.tani-fade-in</code>,
-                            <code>.tani-scale-in</code>)
-                        </li>
-                        <li>Container queries for cards</li>
-                        <li>
-                            Zero-JS components (native
-                            <code>&lt;dialog&gt;</code> and
-                            <code>&lt;details&gt;</code>)
-                        </li>
-                        <li>Debug mode (<code>.tani-debug</code>)</li>
-                        <li>
-                            GPU-accelerated utilities
-                            (<code>.tani-gpu</code>,
-                            <code>.tani-content-visibility</code>)
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="docs-subsection">
-                    <h3 class="docs-subsection-title">Breaking Changes</h3>
-                    <p>
-                        <strong>None!</strong> Tani v2.0 is 100% backward
-                        compatible with v1.15.0. All existing classes and
-                        components continue to work exactly as before.
-                    </p>
-                </div>
-
-                <div class="docs-tip">
-                    <strong>Tip:</strong> You can upgrade to v2.0 without
-                    changing any existing code. New features are opt-in and
-                    can be adopted gradually.
-                </div>
             </section>
 
             <!-- MODALS -->
@@ -4647,7 +4479,7 @@ function resetProgress() {
             <section id="rtl-support" class="docs-section">
                 <h2 class="docs-section-title">RTL/LTR Support</h2>
                 <p>
-                    Tani v2.0 has <strong>native RTL support</strong> using
+                    Tani has <strong>native RTL support</strong> using
                     CSS Logical Properties. No extra classes or
                     configuration needed!
                 </p>
@@ -6496,263 +6328,6 @@ function hideToast(toastId) {
                 </div>
             </section>
 
-            <!-- WHAT'S NEW IN V2.0 -->
-            <section id="whats-new" class="docs-section">
-                <h2 class="docs-section-title">What's New in Tani v2.0</h2>
-                <p>
-                    Tani v2.0 introduces
-                    <strong>10 lethal features</strong> that make it the
-                    most advanced CSS framework in history:
-                </p>
-
-                <div class="docs-component">
-                    <div class="docs-component-preview whats-new-grid">
-                        <div class="card bg-dark text-light">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    1. OKLCH Color System
-                                </h5>
-                                <p class="card-text">
-                                    Perceptually uniform colors with
-                                    automatic hover states using Relative
-                                    Colors.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="card bg-dark text-light">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    2. Native Dark Mode
-                                </h5>
-                                <p class="card-text">
-                                    Zero-JS dark mode that automatically
-                                    adapts to system preferences.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="card bg-dark text-light">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    3. Scroll-Driven Animations
-                                </h5>
-                                <p class="card-text">
-                                    Animate elements as they scroll into
-                                    view - no JavaScript required!
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="card bg-dark text-light">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    4. Container Queries
-                                </h5>
-                                <p class="card-text">
-                                    Components that adapt based on their
-                                    container size, not viewport.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="card bg-dark text-light">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    5. Zero-JS Components
-                                </h5>
-                                <p class="card-text">
-                                    Modals, accordions, and dropdowns work
-                                    without JavaScript using native HTML
-                                    elements.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="card bg-dark text-light">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    6. Fluid Typography & Spacing
-                                </h5>
-                                <p class="card-text">
-                                    Smooth scaling from mobile to 4K using
-                                    CSS clamp() function.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="card bg-dark text-light">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    7. Native RTL/LTR Support
-                                </h5>
-                                <p class="card-text">
-                                    Built-in support for right-to-left
-                                    languages using CSS Logical Properties.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="card bg-dark text-light">
-                            <div class="card-body">
-                                <h5 class="card-title">8. Debug Mode</h5>
-                                <p class="card-text">
-                                    Visual layout inspector for debugging
-                                    spacing and alignment issues.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="card bg-dark text-light">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    9. GPU-Accelerated Utilities
-                                </h5>
-                                <p class="card-text">
-                                    Hardware-accelerated animations for
-                                    60fps performance.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="card bg-dark text-light">
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    10. Anchor Positioning
-                                </h5>
-                                <p class="card-text">
-                                    Smart tooltips that automatically find
-                                    the best position without JavaScript.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ZERO-JS COMPONENTS -->
-            <section id="zero-js" class="docs-section">
-                <h2 class="docs-section-title">⚡ Zero-JS Components</h2>
-                <p>
-                    Tani v2.0 includes components that work
-                    <strong>without JavaScript</strong> using native HTML
-                    elements.
-                </p>
-
-                <div class="docs-subsection">
-                    <h3 class="docs-subsection-title">
-                        Native Modal (using &lt;dialog&gt;)
-                    </h3>
-                    <div class="docs-component">
-                        <div class="docs-component-preview">
-                            <button class="btn btn-primary"
-                                onclick="document.getElementById('nativeModal').showModal()">
-                                Open Native Modal
-                            </button>
-
-                            <dialog id="nativeModal" class="modal">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">
-                                            Zero-JS Modal
-                                        </h5>
-                                        <button class="modal-close"
-                                            onclick="document.getElementById('nativeModal').close()">
-                                            &times;
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>
-                                            This modal uses the native HTML
-                                            &lt;dialog&gt; element. No
-                                            JavaScript framework needed!
-                                        </p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn btn-secondary"
-                                            onclick="document.getElementById('nativeModal').close()">
-                                            Close
-                                        </button>
-                                    </div>
-                                </div>
-                            </dialog>
-                        </div>
-                        <div class="docs-component-code">
-                            <button class="copy-button" onclick="copyCode(this)">
-                                Copy
-                            </button>
-                            <pre><code class="language-html">&lt;button class="btn btn-primary" onclick="document.getElementById('myModal').showModal()"&gt;
-  Open Modal
-&lt;/button&gt;
-
-&lt;dialog id="myModal" class="modal"&gt;
-  &lt;div class="modal-content"&gt;
-    &lt;div class="modal-header"&gt;
-      &lt;h5 class="modal-title"&gt;Modal Title&lt;/h5&gt;
-      &lt;button onclick="document.getElementById('myModal').close()"&gt;&times;&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;div class="modal-body"&gt;
-      &lt;p&gt;Modal content here...&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/dialog&gt;</code></pre>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="docs-subsection">
-                    <h3 class="docs-subsection-title">
-                        Native Accordion (using &lt;details&gt;)
-                    </h3>
-                    <div class="docs-component">
-                        <div class="docs-component-preview">
-                            <details class="accordion-item">
-                                <summary>Click to expand</summary>
-                                <div>
-                                    <p>
-                                        This accordion uses the native HTML
-                                        &lt;details&gt; element. It works
-                                        even if JavaScript is disabled!
-                                    </p>
-                                </div>
-                            </details>
-
-                            <details class="accordion-item">
-                                <summary>Another section</summary>
-                                <div>
-                                    <p>
-                                        Multiple sections can be opened
-                                        independently.
-                                    </p>
-                                </div>
-                            </details>
-                        </div>
-                        <div class="docs-component-code">
-                            <button class="copy-button" onclick="copyCode(this)">
-                                Copy
-                            </button>
-                            <pre><code class="language-html">&lt;details class="accordion-item"&gt;
-  &lt;summary&gt;Click to expand&lt;/summary&gt;
-  &lt;div&gt;
-    &lt;p&gt;Content here...&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/details&gt;
-&lt;details class="accordion-item"&gt;
-  &lt;summary&gt;Another section&lt;/summary&gt;
-  &lt;div&gt;
-    &lt;p&gt;Multiple sections can be opened independently.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/details&gt;</code></pre>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="docs-note">
-                    <strong>Note:</strong> Zero-JS components are more
-                    accessible, work offline, and have better performance
-                    than JavaScript-based alternatives.
-                </div>
-            </section>
         </main>
     </div>
 
