@@ -1,17 +1,6 @@
 # Tani CSS Framework
 
-### The Most Advanced CSS Framework in History — God Mode Edition
-
-[![Version](https://img.shields.io/badge/version-2.0.0-orange?style=for-the-badge&logo=semver)](https://github.com/TaniCSS/Tani/releases)
-[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
-[![Size](https://img.shields.io/badge/gzip-~15KB-green?style=for-the-badge)](https://github.com/TaniCSS/Tani)
-[![CSS Modern](https://img.shields.io/badge/CSS-Modern%202026-purple?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![Zero JS](https://img.shields.io/badge/Zero-JS%20Components-red?style=for-the-badge)](#-god-mode-features)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](http://makeapullrequest.com)
-
 **A lightweight, utility-first CSS framework with God Mode features that no other framework offers.**
-
-[Documentation](#-documentation) • [Quick Start](#-quick-start) • [Features](#-god-mode-features) • [Comparison](#-comparison) • [Examples](#-examples)
 
 ---
 
@@ -22,11 +11,9 @@ Tani is a **next-generation CSS framework** that combines the best of modern CSS
 - **Scroll-Driven Animations** (Pure CSS, no JS)
 - **Container Queries** (Component-aware responsiveness)
 - **OKLCH Color System** (Perceptually uniform colors with auto-generated variants)
-- **Zero-JS Components** (Modal, Accordion, Dropdown using native HTML)
 - **Native Dark Mode** (System-preference based, zero JS)
 - **RTL/LTR Support** (Logical Properties, built-in)
 - **Fluid Typography** (clamp-based scaling, no media queries)
-- **Debug Mode** (Visual layout inspector)
 - **GPU-Accelerated Utilities** (Hardware-accelerated animations)
 - **Anchor Positioning** (Smart tooltips without JS)
 
@@ -129,27 +116,6 @@ open index.html
 - Performance optimizations
 
 ---
-
-## License
-
-Tani is licensed under the [MIT License](LICENSE).
-
----
-
-## Acknowledgments
-
-- Built with modern CSS standards (2026)
-- Inspired by Tailwind CSS, Bootstrap, and Bulma
-- Uses [Prism.js](https://prismjs.com/) for syntax highlighting in documentation
-- Thanks to all contributors who help make Tani better
-
----
-
-<div align="center">
-
-**Made with ❤️ for the web community**
-
-**If you find Tani useful, please consider giving it a ⭐ star!**
 
 [⭐ Star this repo](https://github.com/TaniCSS/Tani) • [🍔 Fork this repo](https://github.com/TaniCSS/Tani/fork) • [📖 Read the docs](https://tanicss.github.io/docs)
 
