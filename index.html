@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tani v2.0 - God Mode Documentation</title>
+<title>Tani v2.1 - God Mode Documentation</title>
 <link rel="stylesheet" href="./dist/css/tani.css" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet" />
@@ -67,7 +67,7 @@
 
 <div class="docs-container">
 <aside class="docs-sidebar">
-<h1 class="docs-nav-title">Tani v2.0</h1>
+<h1 class="docs-nav-title">Tani v2.1</h1>
 <ul class="docs-nav-list">
 <li class="docs-nav-item"><a href="#whats-new" class="docs-nav-link">🔥 What's New</a></li>
 <li class="docs-nav-item"><a href="#dark-mode" class="docs-nav-link">🌙 Dark Mode</a></li>
@@ -99,6 +99,20 @@
 <li class="docs-nav-item"><a href="#tables" class="docs-nav-link">Tables</a></li>
 <li class="docs-nav-item"><a href="#utilities" class="docs-nav-link">Utility Classes</a></li>
 <li class="docs-nav-item"><a href="#typography" class="docs-nav-link">Typography</a></li>
+<li class="docs-nav-item"><a href="#grid" class="docs-nav-link">Grid</a></li>
+<li class="docs-nav-item"><a href="#flexbox" class="docs-nav-link">Flexbox</a></li>
+<li class="docs-nav-item"><a href="#spacing" class="docs-nav-link">Spacing</a></li>
+<li class="docs-nav-item"><a href="#transforms" class="docs-nav-link">Transforms & Transitions</a></li>
+<li class="docs-nav-item"><a href="#shadow-glow" class="docs-nav-link">Shadows & Glows</a></li>
+<li class="docs-nav-item"><a href="#tabs" class="docs-nav-link">Tabs (Zero-JS)</a></li>
+<li class="docs-nav-item"><a href="#tooltips" class="docs-nav-link">Tooltips (Zero-JS)</a></li>
+<li class="docs-nav-item"><a href="#switch" class="docs-nav-link">Toggle Switch</a></li>
+<li class="docs-nav-item"><a href="#skeleton" class="docs-nav-link">Skeletons</a></li>
+<li class="docs-nav-item"><a href="#avatars" class="docs-nav-link">Avatars</a></li>
+<li class="docs-nav-item"><a href="#stat-cards" class="docs-nav-link">Stat Cards</a></li>
+<li class="docs-nav-item"><a href="#timeline" class="docs-nav-link">Timeline</a></li>
+<li class="docs-nav-item"><a href="#steps" class="docs-nav-link">Steps / Wizard</a></li>
+<li class="docs-nav-item"><a href="#advanced-modes" class="docs-nav-link">Print & High Contrast</a></li>
 </ul>
 </aside>
 
@@ -107,7 +121,7 @@
 <h1 class="docs-title">Tani CSS Framework</h1>
 <p class="docs-subtitle">God Mode Edition - The most advanced CSS framework with modern features</p>
 <div>
-<span class="docs-badge" style="background-color: #ffab58; color: white">v2.0.0</span>
+<span class="docs-badge" style="background-color: #ffab58; color: white">v2.1.0</span>
 <span class="docs-badge" style="background-color: #28a745; color: white">God Mode</span>
 <span class="docs-badge" style="background-color: #6f42c1; color: white">Zero-JS</span>
 </div>
@@ -115,8 +129,8 @@
 
 <!-- WHAT'S NEW IN V2.0 -->
 <section id="whats-new" class="docs-section">
-<h2 class="docs-section-title">🔥 What's New in Tani v2.0</h2>
-<p>Tani v2.0 introduces <strong>10 lethal features</strong> that make it the most advanced CSS framework in history:</p>
+<h2 class="docs-section-title">🔥 What's New in Tani v2.1</h2>
+<p>Tani v2.1 introduces <strong>10 lethal features</strong> plus a complete utility library, grid system, and 10 new zero-JS components. It remains the most advanced CSS framework in history:</p>
 
 <div class="docs-component">
 <div class="docs-component-preview">
@@ -196,7 +210,7 @@
 <!-- DARK MODE -->
 <section id="dark-mode" class="docs-section">
 <h2 class="docs-section-title">🌙 Dark Mode</h2>
-<p>Tani v2.0 includes <strong>native dark mode</strong> that automatically adapts to the user's system preferences. No JavaScript toggle required!</p>
+<p>Tani v2.1 includes <strong>native dark mode</strong> that automatically adapts to the user's system preferences. No JavaScript toggle required!</p>
 
 <div class="docs-subsection">
 <h3 class="docs-subsection-title">How It Works</h3>
@@ -350,7 +364,7 @@ function toggleDarkMode() {
 <!-- ZERO-JS COMPONENTS -->
 <section id="zero-js" class="docs-section">
 <h2 class="docs-section-title">⚡ Zero-JS Components</h2>
-<p>Tani v2.0 includes components that work <strong>without JavaScript</strong> using native HTML elements.</p>
+<p>Tani v2.1 includes components that work <strong>without JavaScript</strong> using native HTML elements.</p>
 
 <div class="docs-subsection">
 <h3 class="docs-subsection-title">Native Modal (using &lt;dialog&gt;)</h3>
@@ -458,7 +472,7 @@ Open Native Modal
 <!-- RTL SUPPORT -->
 <section id="rtl-support" class="docs-section">
 <h2 class="docs-section-title">🌐 RTL/LTR Support</h2>
-<p>Tani v2.0 has <strong>native RTL support</strong> using CSS Logical Properties. No extra classes or configuration needed!</p>
+<p>Tani v2.1 has <strong>native RTL support</strong> using CSS Logical Properties. No extra classes or configuration needed!</p>
 
 <div class="docs-subsection">
 <h3 class="docs-subsection-title">How It Works</h3>
@@ -509,8 +523,8 @@ Open Native Modal
 
 <!-- MIGRATION GUIDE -->
 <section id="migration" class="docs-section">
-<h2 class="docs-section-title">📋 Migration Guide (v1 → v2)</h2>
-<p>Upgrading from Tani v1.15.0 to v2.0 is <strong>fully backward compatible</strong>. All your existing code will continue to work!</p>
+<h2 class="docs-section-title">📋 Migration Guide (v1 → v2.1)</h2>
+<p>Upgrading from Tani v1.15.0 to v2.1 is <strong>fully backward compatible</strong>. All your existing code will continue to work!</p>
 
 <div class="docs-subsection">
 <h3 class="docs-subsection-title">What's Changed</h3>
@@ -536,11 +550,11 @@ Open Native Modal
 
 <div class="docs-subsection">
 <h3 class="docs-subsection-title">Breaking Changes</h3>
-<p><strong>None!</strong> Tani v2.0 is 100% backward compatible with v1.15.0. All existing classes and components continue to work exactly as before.</p>
+<p><strong>None!</strong> Tani v2.1 is 100% backward compatible with v1.15.0. All existing classes and components continue to work exactly as before.</p>
 </div>
 
 <div class="docs-tip">
-<strong>Tip:</strong> You can upgrade to v2.0 without changing any existing code. New features are opt-in and can be adopted gradually.
+<strong>Tip:</strong> You can upgrade to v2.1 without changing any existing code. New features are opt-in and can be adopted gradually.
 </div>
 </section>
 
@@ -5189,8 +5203,529 @@ This is a muted paragraph using the <code>.text-muted</code> class.
 </div>
 </section>
 
+<!-- GRID -->
+<section id="grid" class="docs-section">
+<h2 class="docs-section-title">Grid</h2>
+<p>Powerful 12-column CSS Grid utilities - responsive by default, works with container queries and any gap scale.</p>
+
+<div class="docs-subsection">
+<h3 class="docs-subsection-title">Equal Columns</h3>
+<div class="docs-component">
+<div class="docs-component-preview">
+<div class="grid grid-cols-3 gap-3">
+<div class="p-3 rounded bg-primary text-white text-center">1/3</div>
+<div class="p-3 rounded bg-secondary text-white text-center">1/3</div>
+<div class="p-3 rounded bg-success text-white text-center">1/3</div>
+</div>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;div class="grid grid-cols-3 gap-3"&gt;
+  &lt;div class="p-3 rounded bg-primary text-white text-center"&gt;1/3&lt;/div&gt;
+  &lt;div class="p-3 rounded bg-secondary text-white text-center"&gt;1/3&lt;/div&gt;
+  &lt;div class="p-3 rounded bg-success text-white text-center"&gt;1/3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+
+<div class="docs-subsection">
+<h3 class="docs-subsection-title">Spans</h3>
+<div class="docs-component">
+<div class="docs-component-preview">
+<div class="grid grid-cols-4 gap-3">
+<div class="col-span-2 p-3 rounded bg-primary text-white text-center">col-span-2</div>
+<div class="p-3 rounded bg-secondary text-white text-center">1</div>
+<div class="p-3 rounded bg-secondary text-white text-center">1</div>
+<div class="col-span-3 p-3 rounded bg-success text-white text-center">col-span-3</div>
+<div class="p-3 rounded bg-danger text-white text-center">1</div>
+</div>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;div class="grid grid-cols-4 gap-3"&gt;
+  &lt;div class="col-span-2 p-3 rounded bg-primary text-white"&gt;col-span-2&lt;/div&gt;
+  &lt;div class="p-3 rounded bg-secondary text-white"&gt;1&lt;/div&gt;
+  &lt;div class="p-3 rounded bg-secondary text-white"&gt;1&lt;/div&gt;
+  &lt;div class="col-span-3 p-3 rounded bg-success text-white"&gt;col-span-3&lt;/div&gt;
+  &lt;div class="p-3 rounded bg-danger text-white"&gt;1&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+
+<div class="docs-subsection">
+<h3 class="docs-subsection-title">Placement</h3>
+<div class="docs-component">
+<div class="docs-component-preview">
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 rounded bg-primary text-white">Item A</div>
+<div class="p-3 rounded bg-warning">Item B (centered)</div>
+<div class="p-3 rounded bg-info text-white col-span-full text-center">col-span-full</div>
+</div>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;div class="grid grid-cols-2 gap-3"&gt;
+  &lt;div class="p-3 rounded bg-primary text-white"&gt;Item A&lt;/div&gt;
+  &lt;div class="p-3 rounded bg-warning justify-self-center"&gt;Item B&lt;/div&gt;
+  &lt;div class="p-3 rounded bg-info text-white col-span-full text-center"&gt;col-span-full&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</div>
+
+<div class="docs-tip">
+<strong>Tip:</strong> Combine with <code>auto-fill</code> style layouts via <code>justify-items-*</code>, <code>place-items-center</code> and <code>row-span-*</code> for dashboards and card walls.
+</div>
+</section>
+
+<!-- FLEXBOX -->
+<section id="flexbox" class="docs-section">
+<h2 class="docs-section-title">Flexbox</h2>
+<p>Complete flex helpers: direction, wrap, alignment, ordering, grow/shrink and self-alignment.</p>
+
+<div class="docs-component">
+<div class="docs-component-preview">
+<div class="d-flex justify-content-between align-items-center gap-3 flex-wrap">
+<div class="p-3 rounded bg-primary text-white">One</div>
+<div class="p-3 rounded bg-secondary text-white">Two</div>
+<div class="p-3 rounded bg-success text-white flex-grow-1">flex-grow-1</div>
+</div>
+<div class="d-flex flex-column gap-2 mt-3">
+<div class="p-2 rounded bg-light">Column item 1</div>
+<div class="p-2 rounded bg-light">Column item 2</div>
+</div>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;div class="d-flex justify-content-between align-items-center gap-3 flex-wrap"&gt;
+  &lt;div class="p-3 rounded bg-primary text-white"&gt;One&lt;/div&gt;
+  &lt;div class="p-3 rounded bg-secondary text-white"&gt;Two&lt;/div&gt;
+  &lt;div class="p-3 rounded bg-success text-white flex-grow-1"&gt;flex-grow-1&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="d-flex flex-column gap-2"&gt;
+  &lt;div class="p-2 rounded bg-light"&gt;Column item 1&lt;/div&gt;
+  &lt;div class="p-2 rounded bg-light"&gt;Column item 2&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+
+<div class="docs-note">
+<strong>Utilities:</strong> <code>.d-flex</code>, <code>.d-inline-flex</code>, <code>.flex-row/-column</code>, <code>.flex-wrap/-nowrap</code>, <code>.flex-1</code>, <code>.flex-grow-*</code>, <code>.flex-shrink-*</code>, <code>.align-self-*</code>, <code>.order-1..12</code>, <code>.justify-content-*</code>, <code>.align-items-*</code>.
+</div>
+</section>
+
+<!-- SPACING -->
+<section id="spacing" class="docs-section">
+<h2 class="docs-section-title">Spacing</h2>
+<p>Full spacing scale (0, 1-6, 8, 10, 12, auto, px) using logical properties for automatic RTL support.</p>
+
+<div class="docs-component">
+<div class="docs-component-preview">
+<div class="d-flex gap-3 flex-wrap align-items-center">
+<div class="p-1 rounded bg-primary text-white">p-1</div>
+<div class="p-2 rounded bg-primary text-white">p-2</div>
+<div class="p-3 rounded bg-primary text-white">p-3</div>
+<div class="p-4 rounded bg-primary text-white">p-4</div>
+<div class="p-5 rounded bg-primary text-white">p-5</div>
+<div class="p-6 rounded bg-primary text-white">p-6</div>
+</div>
+<div class="d-flex gap-2 mt-3">
+<div class="m-1 rounded bg-light">m-1</div>
+<div class="m-2 rounded bg-light">m-2</div>
+<div class="m-3 rounded bg-light">m-3</div>
+<div class="m-4 rounded bg-light">m-4</div>
+</div>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;div class="p-4 rounded bg-primary text-white"&gt;p-4 (1.5rem)&lt;/div&gt;
+&lt;div class="m-3 rounded bg-light"&gt;m-3 (1rem)&lt;/div&gt;
+&lt;div class="mx-auto" style="max-width: 300px"&gt;mx-auto centers block&lt;/div&gt;
+&lt;div class="pt-2 pb-4 px-3"&gt;per-side control&lt;/div&gt;
+&lt;div class="gap-4"&gt;gap for flex/grid&lt;/div&gt;</code></pre>
+</div>
+</div>
+
+<div class="docs-tip">
+<strong>Tip:</strong> All spacing utilities map to logical properties (<code>margin-block-start</code>, <code>padding-inline</code>), so they flip automatically in <code>dir="rtl"</code> documents.
+</div>
+</section>
+
+<!-- TRANSFORMS -->
+<section id="transforms" class="docs-section">
+<h2 class="docs-section-title">Transforms &amp; Transitions</h2>
+<p>Modern CSS <code>scale</code>, <code>rotate</code> and <code>translate</code> properties (they don't break your hover transforms!) plus a full transition system.</p>
+
+<div class="docs-component">
+<div class="docs-component-preview">
+<div class="d-flex gap-4 align-items-center flex-wrap">
+<div class="p-3 rounded bg-primary text-white scale-110">scale-110</div>
+<div class="p-3 rounded bg-secondary text-white rotate-45">rotate-45</div>
+<div class="p-3 rounded bg-success text-white translate-y-2">translate-y-2</div>
+<div class="p-3 rounded bg-warning transition rotate-hover" style="cursor: pointer">hover → rotate</div>
+</div>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;div class="scale-110"&gt;scale-110&lt;/div&gt;
+&lt;div class="rotate-45"&gt;rotate-45&lt;/div&gt;
+&lt;div class="translate-y-2"&gt;translate-y-2&lt;/div&gt;
+&lt;div class="transition rotate-hover"&gt;hover → rotates 180°&lt;/div&gt;</code></pre>
+</div>
+</div>
+
+<div class="docs-note">
+<strong>Utilities:</strong> <code>.scale-50..150</code>, <code>.rotate-0/45/90/180</code>, <code>.rotate-n45/n90</code>, <code>.translate-x/y-*</code>, <code>.translate-x-half/full/nhalf/nfull</code>, <code>.transition</code>, <code>.transition-fast/slow</code>, <code>.duration-150/300/500</code>, <code>.ease-in/out/in-out/linear</code>, <code>.delay-150/300</code>.
+</div>
+</section>
+
+<!-- SHADOWS & GLOWS -->
+<section id="shadow-glow" class="docs-section">
+<h2 class="docs-section-title">Shadows &amp; Glows</h2>
+<p>Depth scale plus branded glow effects using relative colors - glows automatically match your theme.</p>
+
+<div class="docs-component">
+<div class="docs-component-preview">
+<div class="d-flex gap-4 flex-wrap">
+<div class="card shadow-xs" style="width: 160px"><div class="card-body text-center">shadow-xs</div></div>
+<div class="card shadow-sm" style="width: 160px"><div class="card-body text-center">shadow-sm</div></div>
+<div class="card shadow-lg" style="width: 160px"><div class="card-body text-center">shadow-lg</div></div>
+<div class="card shadow-2xl" style="width: 160px"><div class="card-body text-center">shadow-2xl</div></div>
+<div class="card glow" style="width: 160px"><div class="card-body text-center">glow</div></div>
+</div>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;div class="card shadow-xs"&gt;shadow-xs&lt;/div&gt;
+&lt;div class="card shadow-2xl"&gt;shadow-2xl&lt;/div&gt;
+&lt;div class="card glow"&gt;glow (primary tint)&lt;/div&gt;
+&lt;div class="card glow-success"&gt;glow-success&lt;/div&gt;</code></pre>
+</div>
+</div>
+</section>
+
+<!-- TABS -->
+<section id="tabs" class="docs-section">
+<h2 class="docs-section-title">Tabs (Zero-JS)</h2>
+<p>Pure CSS tabs powered by <code>&lt;input type="radio"&gt;</code> + <code>:checked</code>. Keyboard accessible, no JavaScript.</p>
+
+<div class="docs-component">
+<div class="docs-component-preview">
+<div class="tabs">
+<input id="tab1" class="tab-input" type="radio" name="demo-tabs" checked>
+<label for="tab1" class="tab-label">Home</label>
+<input id="tab2" class="tab-input" type="radio" name="demo-tabs">
+<label for="tab2" class="tab-label">Profile</label>
+<input id="tab3" class="tab-input" type="radio" name="demo-tabs">
+<label for="tab3" class="tab-label">Settings</label>
+<div class="tab-panels">
+<div class="tab-panel"><p class="mb-0">Home panel content - pure CSS tab!</p></div>
+<div class="tab-panel"><p class="mb-0">Profile panel content.</p></div>
+<div class="tab-panel"><p class="mb-0">Settings panel content.</p></div>
+</div>
+</div>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;div class="tabs"&gt;
+  &lt;input id="tab1" class="tab-input" type="radio" name="tabs" checked&gt;
+  &lt;label for="tab1" class="tab-label"&gt;Home&lt;/label&gt;
+  &lt;input id="tab2" class="tab-input" type="radio" name="tabs"&gt;
+  &lt;label for="tab2" class="tab-label"&gt;Profile&lt;/label&gt;
+  &lt;input id="tab3" class="tab-input" type="radio" name="tabs"&gt;
+  &lt;label for="tab3" class="tab-label"&gt;Settings&lt;/label&gt;
+  &lt;div class="tab-panels"&gt;
+    &lt;div class="tab-panel"&gt;Home content&lt;/div&gt;
+    &lt;div class="tab-panel"&gt;Profile content&lt;/div&gt;
+    &lt;div class="tab-panel"&gt;Settings content&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</section>
+
+<!-- TOOLTIPS -->
+<section id="tooltips" class="docs-section">
+<h2 class="docs-section-title">Tooltips (Zero-JS)</h2>
+<p>Tooltips via <code>data-tooltip</code> attributes. Fully CSS, no positioning library, supports four directions.</p>
+
+<div class="docs-component">
+<div class="docs-component-preview">
+<div class="d-flex gap-3 flex-wrap">
+<button class="btn btn-primary" data-tooltip="I am a tooltip">Top tooltip</button>
+<button class="btn btn-secondary" data-tooltip="bottom">Bottom</button>
+<button class="btn btn-success" data-tooltip="start">Start (RTL aware)</button>
+<button class="btn btn-danger" data-tooltip="end">End</button>
+</div>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;button class="btn btn-primary" data-tooltip="I am a tooltip"&gt;Top tooltip&lt;/button&gt;
+&lt;button class="btn btn-secondary" data-tooltip="bottom"&gt;Bottom&lt;/button&gt;
+&lt;button class="btn btn-success" data-tooltip="start"&gt;Start&lt;/button&gt;
+&lt;button class="btn btn-danger" data-tooltip="end"&gt;End&lt;/button&gt;</code></pre>
+</div>
+</div>
+</section>
+
+<!-- TOGGLE SWITCH -->
+<section id="switch" class="docs-section">
+<h2 class="docs-section-title">Toggle Switch</h2>
+<p>Accessible switch built on a real checkbox - works with the existing <code>.form-check-input</code> focus/checked states.</p>
+
+<div class="docs-component">
+<div class="docs-component-preview">
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="switch1" checked>
+<label class="form-check-label" for="switch1">Enable notifications</label>
+</div>
+<div class="form-check form-switch">
+<input class="form-check-input" type="checkbox" id="switch2">
+<label class="form-check-label" for="switch2">Dark mode (manual toggle)</label>
+</div>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;div class="form-check form-switch"&gt;
+  &lt;input class="form-check-input" type="checkbox" id="switch1" checked&gt;
+  &lt;label class="form-check-label" for="switch1"&gt;Enable notifications&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</section>
+
+<!-- SKELETONS -->
+<section id="skeleton" class="docs-section">
+<h2 class="docs-section-title">Skeletons</h2>
+<p>Shimmering loading placeholders - the fastest way to signal content is coming.</p>
+
+<div class="docs-component">
+<div class="docs-component-preview">
+<div class="card" style="max-width: 320px">
+<div class="card-body">
+<div class="skeleton skeleton-circle" style="width: 3rem; height: 3rem; margin-block-end: 1rem"></div>
+<div class="skeleton skeleton-text"></div>
+<div class="skeleton skeleton-text" style="width: 75%"></div>
+<div class="skeleton skeleton-text" style="width: 50%"></div>
+<div class="skeleton skeleton-button" style="margin-block-start: 1rem"></div>
+</div>
+</div>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;div class="card" style="max-width: 320px"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;div class="skeleton skeleton-circle" style="width: 3rem; height: 3rem"&gt;&lt;/div&gt;
+    &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+    &lt;div class="skeleton skeleton-text" style="width: 75%"&gt;&lt;/div&gt;
+    &lt;div class="skeleton skeleton-button"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</section>
+
+<!-- AVATARS -->
+<section id="avatars" class="docs-section">
+<h2 class="docs-section-title">Avatars</h2>
+<p>Avatar with optional online/offline/busy status indicators and overlapping groups.</p>
+
+<div class="docs-component">
+<div class="docs-component-preview">
+<div class="d-flex gap-3 align-items-center flex-wrap">
+<div class="avatar avatar-status">JB</div>
+<div class="avatar avatar-status offline">SW</div>
+<div class="avatar avatar-status busy">RS</div>
+<div class="avatar avatar-lg avatar-status">LM</div>
+<div class="avatar-group">
+<div class="avatar">JB</div>
+<div class="avatar">SW</div>
+<div class="avatar">+9</div>
+</div>
+</div>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;div class="avatar avatar-status"&gt;JB&lt;/div&gt;
+&lt;div class="avatar avatar-status offline"&gt;SW&lt;/div&gt;
+&lt;div class="avatar avatar-status busy"&gt;RS&lt;/div&gt;
+&lt;div class="avatar-group"&gt;
+  &lt;div class="avatar"&gt;JB&lt;/div&gt;
+  &lt;div class="avatar"&gt;SW&lt;/div&gt;
+  &lt;div class="avatar"&gt;+9&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</section>
+
+<!-- STAT CARDS -->
+<section id="stat-cards" class="docs-section">
+<h2 class="docs-section-title">Stat Cards</h2>
+<p>Dashboard-ready stat cards with icon, value, and trend indicator.</p>
+
+<div class="docs-component">
+<div class="docs-component-preview">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem">
+<div class="stat">
+<div class="stat-icon">&#128200;</div>
+<div>
+<p class="stat-label">Revenue</p>
+<div class="stat-value">$24,500</div>
+<span class="stat-change stat-up">&uarr; 12.4%</span>
+</div>
+</div>
+<div class="stat">
+<div class="stat-icon">&#128101;</div>
+<div>
+<p class="stat-label">Users</p>
+<div class="stat-value">8,120</div>
+<span class="stat-change stat-up">&uarr; 3.1%</span>
+</div>
+</div>
+<div class="stat">
+<div class="stat-icon">&#9889;</div>
+<div>
+<p class="stat-label">Uptime</p>
+<div class="stat-value">99.9%</div>
+<span class="stat-change stat-down">&darr; 0.1%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;div class="stat"&gt;
+  &lt;div class="stat-icon"&gt;📈&lt;/div&gt;
+  &lt;div&gt;
+    &lt;p class="stat-label"&gt;Revenue&lt;/p&gt;
+    &lt;div class="stat-value"&gt;$24,500&lt;/div&gt;
+    &lt;span class="stat-change stat-up"&gt;↑ 12.4%&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="docs-section">
+<h2 class="docs-section-title">Timeline</h2>
+<p>Vertical timeline with markers for events and processes.</p>
+
+<div class="docs-component">
+<div class="docs-component-preview">
+<ul class="timeline">
+<li class="timeline-item">
+<div class="timeline-marker marker-done">&#10003;</div>
+<div class="timeline-content">
+<h4>Build completed</h4>
+<p class="text-muted mb-0">12 minutes ago</p>
+</div>
+</li>
+<li class="timeline-item">
+<div class="timeline-marker">2</div>
+<div class="timeline-content">
+<h4>Deploying to production</h4>
+<p class="text-muted mb-0">In progress...</p>
+</div>
+</li>
+<li class="timeline-item">
+<div class="timeline-marker">3</div>
+<div class="timeline-content">
+<h4>Health checks</h4>
+<p class="text-muted mb-0">Queued</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;ul class="timeline"&gt;
+  &lt;li class="timeline-item"&gt;
+    &lt;div class="timeline-marker marker-done"&gt;✓&lt;/div&gt;
+    &lt;div class="timeline-content"&gt;
+      &lt;h4&gt;Build completed&lt;/h4&gt;
+      &lt;p class="text-muted mb-0"&gt;12 minutes ago&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class="timeline-item"&gt;...&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+</div>
+</section>
+
+<!-- STEPS -->
+<section id="steps" class="docs-section">
+<h2 class="docs-section-title">Steps / Wizard</h2>
+<p>Multi-step indicator with active and completed states - great for wizards and checkout flows.</p>
+
+<div class="docs-component">
+<div class="docs-component-preview">
+<ol class="steps">
+<li class="step step-done">
+<span class="step-label">Account</span>
+<span class="step-description">Create account</span>
+</li>
+<li class="step step-active">
+<span class="step-label">Profile</span>
+<span class="step-description">Add details</span>
+</li>
+<li class="step">
+<span class="step-label">Payment</span>
+<span class="step-description">Checkout</span>
+</li>
+<li class="step">
+<span class="step-label">Done</span>
+<span class="step-description">Finish</span>
+</li>
+</ol>
+</div>
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">&lt;ol class="steps"&gt;
+  &lt;li class="step step-done"&gt;
+    &lt;span class="step-label"&gt;Account&lt;/span&gt;
+    &lt;span class="step-description"&gt;Create account&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class="step step-active"&gt;
+    &lt;span class="step-label"&gt;Profile&lt;/span&gt;
+    &lt;span class="step-description"&gt;Add details&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li class="step"&gt;...&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+</div>
+</div>
+</section>
+
+<!-- ADVANCED MODES -->
+<section id="advanced-modes" class="docs-section">
+<h2 class="docs-section-title">Print &amp; High Contrast</h2>
+<p>Built-in <code>@media print</code> and <code>prefers-contrast</code> support - no extra CSS required.</p>
+
+<div class="docs-component">
+<div class="docs-component-code">
+<button class="copy-button" onclick="copyCode(this)">Copy</button>
+<pre><code class="language-html">/* Automatic - nothing to configure */
+@media print {
+  .no-print, .navbar, .sidebar, .toast-container, .dropdown-menu { display: none; }
+  a[href]::after { content: " (" attr(href) ")"; }
+}
+
+@media (prefers-contrast: more) {
+  .btn, .card, .alert { border-width: 2px; } /* stronger borders for contrast */
+}</code></pre>
+</div>
+</div>
+
+<div class="docs-note">
+<strong>Accessibility:</strong> Tani respects <code>prefers-reduced-motion</code> (disables all animations/transitions), provides universal <code>:focus-visible</code> rings, and all default text/background pairs meet WCAG AA contrast.
+</div>
+</section>
+
 <footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #e9ecef; text-align: center; color: #6c757d;">
-<p>© 2026 Tani Framework v2.0 - God Mode Edition</p>
+<p>© 2026 Tani Framework v2.1 - God Mode Edition</p>
 </footer>
 </main>
 </div>

@@ -5,18 +5,39 @@
 
 ### The Most Advanced CSS Framework in History — God Mode Edition
 
-[![Version](https://img.shields.io/badge/version-2.0.0-orange?style=for-the-badge&logo=semver)](https://github.com/TaniCSS/Tani/releases)
+[![Version](https://img.shields.io/badge/version-2.1.0-orange?style=for-the-badge&logo=semver)](https://github.com/TaniCSS/Tani/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
-[![Size](https://img.shields.io/badge/gzip-~15KB-green?style=for-the-badge)](https://github.com/TaniCSS/Tani)
+[![Size](https://img.shields.io/badge/min-~80KB-green?style=for-the-badge)](https://github.com/TaniCSS/Tani)
+[![Size](https://img.shields.io/badge/gzip-~14KB-green?style=for-the-badge)](https://github.com/TaniCSS/Tani)
 [![CSS Modern](https://img.shields.io/badge/CSS-Modern%202026-purple?style=for-the-badge)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![Zero JS](https://img.shields.io/badge/Zero-JS%20Components-red?style=for-the-badge)](#-god-mode-features)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](http://makeapullrequest.com)
 
 **A lightweight, utility-first CSS framework with God Mode features that no other framework offers.**
 
-[📖 Documentation](#-documentation) • [🚀 Quick Start](#-quick-start) • [✨ Features](#-god-mode-features) • [📊 Comparison](#-comparison) • [🎯 Examples](#-examples)
+[📖 Documentation](#-documentation) • [🚀 Quick Start](#-quick-start) • [✨ Features](#-god-mode-features) • [📊 Comparison](#-comparison) • [🎯 Examples](#-examples) • [🆕 v2.1](#-whats-new-in-v21)
 
 </div>
+
+---
+
+## 🆕 What's New in v2.1
+
+A complete utility library + 10 new zero-JS components, with every bug from v2.0 fixed:
+
+- ✅ **12-column Grid system** (`grid-cols-1..12`, `col-span-*`, `gap-*`)
+- ✅ **Full Flexbox helpers** (`flex-1`, `flex-grow-*`, `align-self-*`, `order-*`)
+- ✅ **Complete spacing scale** (0–5, 6, 8, 10, 12, auto, px — all logical properties)
+- ✅ **Typography scale** (`text-xs..7xl`, `font-*`, `leading-*`, `tracking-*`)
+- ✅ **Full OKLCH color utilities** (`bg-*`, `text-*`, `border-*` for the whole palette)
+- ✅ **Shadows & Glows** (`shadow-xs..2xl`, `glow`, `glow-*`)
+- ✅ **Transforms & Transitions** (`scale-*`, `rotate-*`, `translate-*`, `duration-*`, `ease-*`)
+- ✅ **Z-index, overflow, opacity, position + inset utilities**
+- ✅ **Zero-JS Tabs** (`:checked` + radio inputs)
+- ✅ **Zero-JS Tooltips** (`data-tooltip` attributes)
+- ✅ **Toggle switch** (accessible checkbox-based)
+- ✅ **Skeletons, Avatars (+status), Stat cards, Timeline, Steps/Wizard**
+- ✅ **Print styles & high-contrast mode**
 
 ---
 
@@ -27,13 +48,16 @@ Tani is a **next-generation CSS framework** that combines the best of modern CSS
 - ✅ **Scroll-Driven Animations** (Pure CSS, no JS)
 - ✅ **Container Queries** (Component-aware responsiveness)
 - ✅ **OKLCH Color System** (Perceptually uniform colors with auto-generated variants)
-- ✅ **Zero-JS Components** (Modal, Accordion, Dropdown using native HTML)
+- ✅ **Zero-JS Components** (Modal, Accordion, Dropdown, Tabs, Tooltip using native HTML)
 - ✅ **Native Dark Mode** (System-preference based, zero JS)
 - ✅ **RTL/LTR Support** (Logical Properties, built-in)
 - ✅ **Fluid Typography** (clamp-based scaling, no media queries)
 - ✅ **Debug Mode** (Visual layout inspector)
 - ✅ **GPU-Accelerated Utilities** (Hardware-accelerated animations)
 - ✅ **Anchor Positioning** (Smart tooltips without JS)
+- ✅ **Complete Grid System** (12-col, spans, placement)
+- ✅ **Skeletons, Avatars, Stat Cards, Timeline, Steps**
+- ✅ **Print & High-Contrast support**
 
 ---
 
@@ -43,7 +67,7 @@ Tani is a **next-generation CSS framework** that combines the best of modern CSS
 
 **Option 1: CDN (Coming Soon)**
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TaniCSS/Tani@v2.0.0/dist/css/tani.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TaniCSS/Tani@v2.1.0/dist/css/tani.min.css">
 ```
 
 **Option 2: Download**
@@ -305,7 +329,7 @@ Hardware-accelerated animations for 60fps performance:
 
 ## 📊 Comparison
 
-| Feature | Tani v2.0 | Tailwind v4 | Bootstrap 5 | Bulma |
+| Feature | Tani v2.1 | Tailwind v4 | Bootstrap 5 | Bulma |
 |---------|-----------|-------------|-------------|-------|
 | **Scroll-Driven Animations** | ✅ | ❌ | ❌ | ❌ |
 | **Container Queries** | ✅ | ❌ | ❌ | ❌ |
@@ -316,7 +340,12 @@ Hardware-accelerated animations for 60fps performance:
 | **Native Dark Mode** | ✅ | ✅ | ❌ | ❌ |
 | **Debug Mode** | ✅ | ❌ | ❌ | ❌ |
 | **Anchor Positioning** | ✅ | ❌ | ❌ | ❌ |
-| **Size (Gzip)** | ~15KB | ~10KB | ~25KB | ~20KB |
+| **Zero-JS Tabs** | ✅ | ❌ | ❌ | ❌ |
+| **Zero-JS Tooltips** | ✅ | ❌ | ❌ | ❌ |
+| **Grid System** | ✅ | ✅ | ✅ | ✅ |
+| **Skeletons & Avatars** | ✅ | ✅ | ❌ | ❌ |
+| **Timeline & Steps** | ✅ | ❌ | ❌ | ❌ |
+| **Size (Gzip)** | ~14KB | ~10KB | ~25KB | ~20KB |
 | **JS Dependency** | ❌ None | ⚠️ Purge | ✅ Bundle | ❌ None |
 
 ---
@@ -472,6 +501,108 @@ Tani includes a comprehensive set of components:
 ```html
 <div class="bg-primary text-white p-3">Primary background</div>
 <div class="bg-success text-white p-3">Success background</div>
+```
+
+## 📐 Grid & Flexbox
+
+```html
+<!-- 12-column grid -->
+<div class="grid grid-cols-3 gap-4">
+    <div class="card">One</div>
+    <div class="card">Two</div>
+    <div class="card">Three</div>
+</div>
+
+<!-- Spans -->
+<div class="grid grid-cols-4 gap-3">
+    <div class="col-span-2">Wide</div>
+    <div class="col-span-1">Narrow</div>
+    <div class="col-span-1">Narrow</div>
+</div>
+
+<!-- Flexbox helpers -->
+<div class="d-flex justify-content-between align-items-center gap-3">
+    <div class="flex-1">Grows</div>
+    <div>Static</div>
+</div>
+```
+
+## 🆕 Zero-JS Components
+
+### Tabs (via `:checked`)
+
+```html
+<div class="tabs">
+    <input id="t1" class="tab-input" type="radio" name="tabs" checked>
+    <label for="t1" class="tab-label">Home</label>
+    <input id="t2" class="tab-input" type="radio" name="tabs">
+    <label for="t2" class="tab-label">Profile</label>
+    <div class="tab-panels">
+        <div class="tab-panel">Home content</div>
+        <div class="tab-panel">Profile content</div>
+    </div>
+</div>
+```
+
+### Tooltips (via `data-tooltip`)
+
+```html
+<button class="btn btn-primary" data-tooltip="I'm a tooltip">Hover me</button>
+<button data-tooltip="bottom">Bottom</button>
+```
+
+### Toggle Switch
+
+```html
+<div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="s1" checked>
+    <label class="form-check-label" for="s1">Enable</label>
+</div>
+```
+
+## 🧩 Data Components
+
+### Skeletons
+
+```html
+<div class="skeleton skeleton-text"></div>
+<div class="skeleton skeleton-circle" style="width: 3rem; height: 3rem"></div>
+```
+
+### Avatars
+
+```html
+<div class="avatar avatar-status">JB</div>
+<div class="avatar avatar-status offline">SW</div>
+<div class="avatar-group">
+    <div class="avatar">JB</div>
+    <div class="avatar">+9</div>
+</div>
+```
+
+### Stat Cards / Timeline / Steps
+
+```html
+<div class="stat">
+    <div class="stat-icon">📈</div>
+    <div>
+        <p class="stat-label">Revenue</p>
+        <div class="stat-value">$24,500</div>
+        <span class="stat-change stat-up">↑ 12.4%</span>
+    </div>
+</div>
+
+<ul class="timeline">
+    <li class="timeline-item">
+        <div class="timeline-marker marker-done">✓</div>
+        <div class="timeline-content"><h4>Shipped</h4></div>
+    </li>
+</ul>
+
+<ol class="steps">
+    <li class="step step-done"><span class="step-label">Account</span></li>
+    <li class="step step-active"><span class="step-label">Profile</span></li>
+</ol>
 ```
 
 ---
