@@ -2,7 +2,7 @@
     Name: Tani
     Description: The Advanced CSS Framework - God Mode v2.1 (zero-JS, zero-build)
     Author: Raymond Baghumian & hesam-oxe
-    Version: 2.1.1
+    Version: 2.2.0
     License: MIT
     Size: ~55KB raw / ~15KB gzip
 */
@@ -66,6 +66,11 @@
     --warning: oklch(85% 0.18 90); --warning-hover: oklch(from var(--warning) calc(l - 8%) c h);
     --info: var(--cyan); --info-hover: oklch(from var(--info) calc(l - 8%) c h);
     --light: var(--gray-100); --dark: var(--gray-900);
+
+    /* Premium accent (gold) */
+    --gold: oklch(82% 0.13 85); --gold-2: oklch(72% 0.14 78);
+    --gold-3: oklch(64% 0.13 70); --gold-hover: oklch(from var(--gold) calc(l - 8%) c h);
+    --gold-glow: 0 0 16px 2px oklch(from var(--gold) l c h / 0.45);
 
     /* Component variables */
     --body-bg: var(--white); --body-color: var(--gray-900);
@@ -3968,3 +3973,229 @@ details.accordion-item > div { padding: 1rem 1.25rem; }
     .d-xs-none { display: none !important; } .d-xs-block { display: block !important; }
     .d-xs-flex { display: flex !important; } .text-xs-center { text-align: center !important; }
 }
+
+/* ==========================================================================
+   52. POPOVER (zero-JS — hover & focus, 4 directions, glass, gold)
+   ========================================================================== */
+.popover-trigger { position: relative; display: inline-block; }
+
+.popover {
+    position: absolute; z-index: 1080; display: none;
+    min-width: 12rem; max-width: 20rem; padding: 0.75rem 1rem;
+    background-color: var(--body-bg); color: var(--body-color);
+    border: 1px solid var(--border-color); border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl); text-align: start; font-size: var(--text-sm);
+    transform-origin: center;
+}
+.popover-trigger:hover .popover,
+.popover-trigger:focus-within .popover,
+.popover-trigger:focus .popover { display: block; animation: popoverIn 0.18s var(--ease) both; }
+
+@keyframes popoverIn { from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: scale(1); } }
+
+/* Directions */
+.popover-top { bottom: calc(100% + 0.5rem); inset-inline-start: 50%; translate: -50% 0; }
+.popover-bottom { top: calc(100% + 0.5rem); inset-inline-start: 50%; translate: -50% 0; }
+.popover-start { inset-inline-end: calc(100% + 0.5rem); top: 50%; translate: 0 -50%; }
+.popover-end { inset-inline-start: calc(100% + 0.5rem); top: 50%; translate: 0 -50%; }
+
+/* Arrows */
+.popover::after {
+    content: ""; position: absolute; width: 0.6rem; height: 0.6rem;
+    background-color: inherit; border: inherit; border-inline-end: 0; border-block-start: 0;
+    rotate: 45deg;
+}
+.popover-top::after { bottom: -0.3rem; inset-inline-start: 50%; translate: -50% 0; }
+.popover-bottom::after { top: -0.3rem; inset-inline-start: 50%; translate: -50% 0; rotate: 225deg; }
+.popover-start::after { inset-inline-end: -0.3rem; top: 50%; translate: 0 -50%; rotate: 135deg; }
+.popover-end::after { inset-inline-start: -0.3rem; top: 50%; translate: 0 -50%; rotate: 315deg; }
+
+/* Variants */
+.popover-glass {
+    background-color: oklch(from var(--body-bg) l c h / 0.7);
+    backdrop-filter: blur(14px) saturate(160%); -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border-color: oklch(100% 0 0 / 0.25);
+}
+.popover-glass::after { background-color: oklch(from var(--body-bg) l c h / 0.7); border-color: oklch(100% 0 0 / 0.25); }
+.popover-gold { border-color: var(--gold); box-shadow: var(--shadow-lg), var(--gold-glow); }
+.popover-gold::after { border-color: var(--gold); }
+.popover-header { font-weight: 700; margin-block-end: 0.25rem; color: var(--body-color); }
+.popover-body { color: var(--gray-600); }
+.popover-gold .popover-header { color: var(--gold-3); }
+
+/* ==========================================================================
+   53. CAROUSEL (zero-JS — scroll-snap + autoplay marquee)
+   ========================================================================== */
+.carousel { position: relative; }
+.carousel-viewport { overflow: hidden; }
+.carousel-track {
+    display: flex; gap: var(--sp-4); overflow-x: auto; scroll-snap-type: x mandatory;
+    scroll-behavior: smooth; -webkit-overflow-scrolling: touch; padding-block-end: 0.5rem;
+    scrollbar-width: thin;
+}
+.carousel-slide {
+    scroll-snap-align: center; flex: 0 0 100%; min-width: 0;
+    display: flex; align-items: center; justify-content: center;
+}
+.carousel-cols-2 .carousel-slide { flex-basis: 50%; }
+.carousel-cols-3 .carousel-slide { flex-basis: 33.3333%; }
+.carousel-cols-4 .carousel-slide { flex-basis: 25%; }
+.carousel-arrow, .carousel-dot {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 2.5rem; height: 2.5rem; border-radius: var(--radius-full);
+    background-color: var(--body-bg); color: var(--body-color); border: 1px solid var(--border-color);
+    cursor: pointer; text-decoration: none; transition: all var(--transition-fast);
+}
+.carousel-arrow:hover, .carousel-dot:hover { background-color: var(--primary); color: var(--white); border-color: var(--primary); }
+.carousel-arrow { position: absolute; top: 50%; translate: 0 -50%; z-index: 2; }
+.carousel-prev { inset-inline-start: 0.5rem; }
+.carousel-next { inset-inline-end: 0.5rem; }
+.carousel-dots { display: flex; gap: 0.5rem; justify-content: center; margin-block-start: 0.75rem; }
+.carousel-dot { width: 0.75rem; height: 0.75rem; border-radius: var(--radius-full); padding: 0; }
+.carousel-dot.active { background-color: var(--primary); width: 1.5rem; border-radius: var(--radius-full); }
+
+/* Autoplay marquee carousel (duplicate slides, pause on hover) */
+.carousel-auto .carousel-track { overflow: visible; scroll-snap-type: none; animation: carouselMarquee 24s linear infinite; }
+.carousel-auto:hover .carousel-track { animation-play-state: paused; }
+@keyframes carouselMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ==========================================================================
+   54. ANIMATIONS LIBRARY (mount, hover-3D, marquee, typewriter, pulse,
+       shimmer, float, spin, bounce) — all honor reduced-motion
+   ========================================================================== */
+.animate-fade-in { animation: animFadeIn 0.6s var(--ease) both; }
+.animate-slide-up { animation: animSlideUp 0.6s var(--ease) both; }
+.animate-scale-in { animation: animScaleIn 0.5s var(--ease) both; }
+@keyframes animFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes animSlideUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes animScaleIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+
+.animate-pulse { animation: animPulse 2s var(--ease) infinite; }
+@keyframes animPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+.animate-float { animation: animFloat 3s ease-in-out infinite; }
+@keyframes animFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+.animate-spin { animation: spinner-border 1s linear infinite; }
+.animate-bounce { animation: animBounce 1s var(--ease) infinite; }
+@keyframes animBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+
+.animate-shimmer { position: relative; overflow: hidden; }
+.animate-shimmer::after {
+    content: ""; position: absolute; inset: 0; translate: -100% 0;
+    background: linear-gradient(90deg, transparent, oklch(100% 0 0 / 0.45), transparent);
+    animation: taniShimmer 1.5s infinite;
+}
+
+/* Marquee text */
+.marquee { overflow: hidden; white-space: nowrap; width: 100%; }
+.marquee-content { display: inline-block; padding-inline-end: 1rem; animation: marqueeScroll 18s linear infinite; }
+.marquee:hover .marquee-content { animation-play-state: paused; }
+@keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* Typewriter (set --tw-chars to character count) */
+.typewriter {
+    overflow: hidden; white-space: nowrap; border-inline-end: 2px solid var(--primary);
+    width: calc(var(--tw-chars, 20) * 1ch); animation: typewriter 3s steps(var(--tw-chars, 20)) forwards, caretBlink 0.8s step-end infinite;
+}
+@keyframes typewriter { from { width: 0; } to { width: calc(var(--tw-chars, 20) * 1ch); } }
+@keyframes caretBlink { 50% { border-color: transparent; } }
+
+/* 3D hover lift */
+.perspective { perspective: 1000px; }
+.preserve-3d { transform-style: preserve-3d; }
+.hover-lift { transition: transform var(--transition-normal); transform-style: preserve-3d; will-change: transform; }
+.hover-lift:hover { transform: translateY(-8px) rotateX(5deg) rotateY(-5deg); }
+.hover-lift-sm:hover { transform: translateY(-4px) rotateX(3deg) rotateY(-3deg); }
+
+/* ==========================================================================
+   55. CONTAINER QUERIES (component-based responsive)
+   ========================================================================== */
+.cq { container-type: inline-size; container-name: tani; }
+
+@container tani (min-width: 400px) {
+    .cq-sm-flex { display: flex !important; }
+    .cq-sm-grid { display: grid !important; }
+    .cq-sm-block { display: block !important; }
+    .cq-sm-hidden { display: none !important; }
+    .cq-sm-text-center { text-align: center !important; }
+    .cq-sm-gap-4 { gap: var(--sp-4); }
+}
+@container tani (min-width: 560px) {
+    .cq-md-flex { display: flex !important; }
+    .cq-md-grid { display: grid !important; }
+    .cq-md-block { display: block !important; }
+    .cq-md-hidden { display: none !important; }
+    .cq-md-text-center { text-align: center !important; }
+    .cq-md-gap-6 { gap: var(--sp-6); }
+    .cq-md-grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@container tani (min-width: 768px) {
+    .cq-lg-flex { display: flex !important; }
+    .cq-lg-grid { display: grid !important; }
+    .cq-lg-block { display: block !important; }
+    .cq-lg-hidden { display: none !important; }
+    .cq-lg-grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@container tani (min-width: 1024px) {
+    .cq-xl-flex { display: flex !important; }
+    .cq-xl-grid { display: grid !important; }
+    .cq-xl-grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* ==========================================================================
+   56. SUBGRID
+   ========================================================================== */
+.grid-subgrid { grid-template-columns: subgrid; grid-template-rows: subgrid; }
+.grid-cols-subgrid { grid-template-columns: subgrid; }
+.grid-rows-subgrid { grid-template-rows: subgrid; }
+.col-subgrid { grid-column: span 1 / span 1; grid-template-columns: subgrid; }
+.row-subgrid { grid-row: span 1 / span 1; grid-template-rows: subgrid; }
+
+/* ==========================================================================
+   57. PREMIUM POLISH — glass, gold, gradient text, 3D, glow
+   ========================================================================== */
+.glass {
+    background-color: oklch(from var(--body-bg) l c h / 0.6);
+    backdrop-filter: blur(14px) saturate(160%); -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1px solid oklch(100% 0 0 / 0.22);
+}
+.glass-dark {
+    background-color: oklch(20% 0.02 250 / 0.5);
+    backdrop-filter: blur(14px) saturate(160%); -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1px solid oklch(100% 0 0 / 0.15); color: var(--white);
+}
+.glass-strong { backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); background-color: oklch(from var(--body-bg) l c h / 0.4); }
+
+.gold-text { color: var(--gold); }
+.gold-text-gradient {
+    background-image: linear-gradient(135deg, var(--gold), var(--gold-2), var(--gold-3));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.gold-border { border-color: var(--gold); }
+.gold-bg { background-color: var(--gold); color: oklch(20% 0.05 85); }
+.gold-glow { box-shadow: var(--gold-glow); }
+
+.text-gradient {
+    background-image: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.text-gradient-cool {
+    background-image: linear-gradient(135deg, var(--cyan), var(--blue), var(--purple));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.text-gradient-sunset {
+    background-image: linear-gradient(135deg, var(--orange), var(--pink), var(--purple));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+.glow-lg { box-shadow: 0 0 24px 4px oklch(from var(--primary) l c h / 0.35); }
+.glow-xl { box-shadow: 0 0 40px 8px oklch(from var(--primary) l c h / 0.4); }
+.glow-gold { box-shadow: var(--gold-glow); }
+.shadow-colored { box-shadow: 0 10px 30px -10px oklch(from var(--primary) l c h / 0.5); }
+
+/* 3D transform utilities */
+.rotate-3d-x { transform: rotateX(12deg); }
+.rotate-3d-y { transform: rotateY(12deg); }
+.tilt-left { transform: perspective(800px) rotateY(-8deg) rotateX(4deg); }
+.tilt-right { transform: perspective(800px) rotateY(8deg) rotateX(4deg); }

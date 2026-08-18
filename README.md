@@ -5,7 +5,7 @@
 
 ### The Most Advanced CSS Framework in History — God Mode Edition
 
-[![Version](https://img.shields.io/badge/version-2.1.1-orange?style=for-the-badge&logo=semver)](https://github.com/TaniCSS/Tani/releases)
+[![Version](https://img.shields.io/badge/version-2.2.0-orange?style=for-the-badge&logo=semver)](https://github.com/TaniCSS/Tani/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 [![Size](https://img.shields.io/badge/min-~80KB-green?style=for-the-badge)](https://github.com/TaniCSS/Tani)
 [![Size](https://img.shields.io/badge/gzip-~14KB-green?style=for-the-badge)](https://github.com/TaniCSS/Tani)
@@ -67,7 +67,7 @@ Tani is a **next-generation CSS framework** that combines the best of modern CSS
 
 **Option 1: CDN (Coming Soon)**
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TaniCSS/Tani@v2.1.1/dist/css/tani.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TaniCSS/Tani@v2.2.0/dist/css/tani.min.css">
 ```
 
 **Option 2: Download**
@@ -688,6 +688,41 @@ A full source audit of `dist/css/tani.css` was performed. The following were fix
 
 ### 📦 Build
 - `dist/css/tani.min.css` rebuilt (was empty) — now ~120 KB raw, ~15 KB gzip.
+
+---
+
+## 🚀 v2.2.0 — Popover, Carousel, Animations & Premium Polish
+
+Tani is now feature-complete enough to be a **zero-JS, zero-build alternative to Tailwind** for most projects.
+
+### ✨ New in v2.2.0
+- **Popover (zero-JS):** `:hover`/`:focus` triggered, 4 directions (`popover-top/-bottom/-start/-end`), glass (`popover-glass`) & gold (`popover-gold`) variants, arrows, ARIA-friendly.
+- **Carousel (zero-JS):** native scroll-snap with anchor arrows/dots + touch swipe; `carousel-cols-2/3/4` for slides-per-view; autoplay marquee variant (`.carousel-auto`) that pauses on hover.
+- **Animations library:** `animate-fade-in`, `animate-slide-up`, `animate-scale-in` (mount), `animate-pulse`, `animate-float`, `animate-bounce`, `animate-spin`, `animate-shimmer`, `.hover-lift` (3D), `.marquee`, `.typewriter`. **All honor `prefers-reduced-motion`.**
+- **Container Queries:** `.cq` wrapper + `.cq-sm/md/lg/xl-*` utilities (breakpoints 400/560/768/1024) — component-based responsiveness.
+- **Subgrid:** `.grid-subgrid`, `.grid-cols-subgrid`, `.grid-rows-subgrid`.
+- **Premium polish:** `.glass` / `.glass-dark` / `.glass-strong`, gold tokens + `.gold-text` / `.gold-text-gradient` / `.gold-border` / `.gold-bg` / `.gold-glow`, gradient-text `.text-gradient` / `.text-gradient-cool` / `.text-gradient-sunset`, `.glow-lg` / `.glow-xl` / `.glow-gold` / `.shadow-colored`, 3D utilities (`.tilt-left/right`, `.rotate-3d-*`, `.perspective`, `.preserve-3d`).
+
+### 📊 Comparison (updated)
+
+| Feature | Tani 2.2 | Tailwind | Bootstrap |
+|---|---|---|---|
+| Zero-JS components | ✅ Full | ⚠️ (needs plugins) | ❌ (JS required) |
+| Zero-build | ✅ | ❌ (needs CLI) | ⚠️ (CDN only) |
+| OKLCH + relative colors | ✅ | ✅ | ❌ |
+| Scroll-driven animations | ✅ | ❌ | ❌ |
+| Container queries (utilities) | ✅ | ✅ | ❌ |
+| Subgrid utilities | ✅ | ✅ | ❌ |
+| Glassmorphism / gold accents | ✅ | ⚠️ manual | ❌ |
+| Carousel / Popover (no JS) | ✅ | ❌ | ❌ |
+| RTL (logical props) | ✅ | ✅ | ✅ |
+| Native dark mode | ✅ | ✅ | ✅ |
+
+### 📦 Migration Guide
+- **No breaking changes.** v2.2.0 only *adds* classes; everything from v2.1.x keeps working.
+- Upgrading from v2.1.x: replace the CSS link / file with `dist/css/tani.css` (or `tani.min.css`) v2.2.0.
+- Upgrading from v2.0 (God Mode): v2.1 added the utility library; v2.2 adds components + polish. No class renames occurred.
+- All new components are opt-in — add the classes only where you need them.
 
 ---
 
