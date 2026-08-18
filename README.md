@@ -5,7 +5,7 @@
 
 ### The Most Advanced CSS Framework in History — God Mode Edition
 
-[![Version](https://img.shields.io/badge/version-2.1.0-orange?style=for-the-badge&logo=semver)](https://github.com/TaniCSS/Tani/releases)
+[![Version](https://img.shields.io/badge/version-2.1.1-orange?style=for-the-badge&logo=semver)](https://github.com/TaniCSS/Tani/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 [![Size](https://img.shields.io/badge/min-~80KB-green?style=for-the-badge)](https://github.com/TaniCSS/Tani)
 [![Size](https://img.shields.io/badge/gzip-~14KB-green?style=for-the-badge)](https://github.com/TaniCSS/Tani)
@@ -61,17 +61,23 @@ Tani is a **next-generation CSS framework** that combines the best of modern CSS
 
 ---
 
-## Quick Start
+## ⚡ Quick Start
 
 ### Installation
 
 **Option 1: CDN (Coming Soon)**
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TaniCSS/Tani@v2.1.0/dist/css/tani.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TaniCSS/Tani@v2.1.1/dist/css/tani.min.css">
 ```
 
+**Option 2: Download**
 ```html
 <link rel="stylesheet" href="./dist/css/tani.css">
+```
+
+**Option 3: NPM (Coming Soon)**
+```bash
+npm install tanicss
 ```
 
 ### Basic Usage
@@ -94,7 +100,234 @@ Tani is a **next-generation CSS framework** that combines the best of modern CSS
 </html>
 ```
 
-## Comparison
+---
+
+## 🔥 God Mode Features
+
+### 1. 🌊 Scroll-Driven Animations
+
+Animate elements as they scroll into view — **no JavaScript required**!
+
+```html
+<div class="card tani-fade-in">
+    This card fades in as you scroll down
+</div>
+
+<div class="card tani-scale-in">
+    This card scales up as you scroll
+</div>
+```
+
+```css
+/* How it works (built into Tani) */
+.tani-fade-in {
+    animation: taniFadeIn linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+```
+
+**Browser Support:** Chrome 115+, Edge 115+
+
+---
+
+### 2. 📦 Container Queries
+
+Components adapt based on their **container size**, not viewport:
+
+```css
+.card {
+    container-type: inline-size;
+    container-name: tani-card;
+}
+
+@container tani-card (min-width: 400px) {
+    .card-horizontal-layout {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+```
+
+**Use Case:** A card component that displays vertically in a sidebar and horizontally in main content — without writing separate media queries.
+
+---
+
+### 3. 🎨 OKLCH Color System
+
+Perceptually uniform colors with **automatic hover states**:
+
+```css
+:root {
+    --primary: oklch(70% 0.18 70);
+    --primary-hover: oklch(from var(--primary) calc(l - 8%) c h);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+```
+
+**Benefits:**
+- Better color accuracy than HEX/RGB
+- Automatic variant generation
+- Zero extra code for hover states
+- Perfect dark mode compatibility
+
+---
+
+### 4. ⚡ Zero-JS Components
+
+Modals, accordions, and dropdowns work **without JavaScript**:
+
+```html
+<!-- Native Modal (using <dialog>) -->
+<button onclick="document.getElementById('myModal').showModal()">
+    Open Modal
+</button>
+
+<dialog id="myModal" class="modal">
+    <div class="modal-content">
+        <h3>Modal Title</h3>
+        <p>Modal content here...</p>
+        <button onclick="document.getElementById('myModal').close()">Close</button>
+    </div>
+</dialog>
+```
+
+```html
+<!-- Native Accordion (using <details>) -->
+<details class="accordion-item">
+    <summary>Click to expand</summary>
+    <div>
+        <p>Content here...</p>
+    </div>
+</details>
+```
+
+**Benefits:**
+- Works even with JavaScript disabled
+- Better accessibility (keyboard navigation built-in)
+- Smaller bundle size
+- Progressive enhancement
+
+---
+
+### 5. 🌙 Native Dark Mode
+
+Automatically adapts to system preferences — **no toggle needed**:
+
+```css
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body-bg: oklch(15% 0.01 250);
+        --body-color: oklch(95% 0.01 250);
+    }
+}
+```
+
+Just include Tani, and dark mode works automatically based on the user's OS settings.
+
+---
+
+### 6. 🌐 RTL/LTR Support
+
+Built-in support for right-to-left languages using **Logical Properties**:
+
+```css
+.container {
+    margin-inline: auto; /* Works in both LTR and RTL */
+    padding-inline: 1rem;
+}
+
+.text-start {
+    text-align: start; /* left in LTR, right in RTL */
+}
+```
+
+**Usage:**
+```html
+<!-- For RTL languages (Arabic, Hebrew, Persian, etc.) -->
+<html lang="ar" dir="rtl">
+    <!-- Your content -->
+</html>
+```
+
+**No extra RTL stylesheet needed!**
+
+---
+
+### 7. 📏 Fluid Typography
+
+Smooth scaling from mobile to 4K using `clamp()`:
+
+```css
+:root {
+    --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --text-2xl: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+}
+```
+
+**Benefits:**
+- No media queries needed
+- Perfect scaling on all devices
+- Better readability
+- Smaller CSS file
+
+---
+
+### 8. 🐛 Debug Mode
+
+Visual layout inspector for debugging:
+
+```html
+<body class="tani-debug">
+    <!-- Your content -->
+</body>
+```
+
+Adds colored outlines to all elements for easy debugging of spacing, alignment, and layout issues.
+
+---
+
+### 9. 🎯 Anchor Positioning
+
+Smart tooltips that automatically find the best position:
+
+```css
+.tooltip {
+    position: absolute;
+    position-anchor: --trigger;
+    top: anchor(bottom);
+    left: anchor(center);
+    position-try-fallbacks: flip-block, flip-inline;
+}
+```
+
+**Benefits:**
+- Tooltips automatically flip if there's no space
+- No JavaScript positioning calculations
+- Works responsively
+
+---
+
+### 10. 🚀 GPU-Accelerated Utilities
+
+Hardware-accelerated animations for 60fps performance:
+
+```html
+<div class="tani-gpu">
+    <!-- Smooth 60fps animations -->
+</div>
+
+<div class="tani-content-visibility">
+    <!-- Optimized rendering for long lists -->
+</div>
+```
+
+---
+
+## 📊 Comparison
 
 | Feature | Tani v2.1 | Tailwind v4 | Bootstrap 5 | Bulma |
 |---------|-----------|-------------|-------------|-------|
@@ -378,11 +611,11 @@ Tani includes a comprehensive set of components:
 
 Tani supports all modern browsers:
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Opera (latest)
+- ✅ Chrome (latest)
+- ✅ Firefox (latest)
+- ✅ Safari (latest)
+- ✅ Edge (latest)
+- ✅ Opera (latest)
 
 **Note:** Some advanced features (Scroll-Driven Animations, Container Queries, Anchor Positioning) require modern browsers. Graceful fallbacks are provided for older browsers.
 
@@ -398,7 +631,7 @@ Open `index.html` in your browser to view the complete documentation with exampl
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting a pull request.
 
@@ -417,9 +650,77 @@ open index.html
 
 ### What to Contribute
 
-- Bug fixes
-- New components
-- Documentation improvements
-- Design enhancements
-- Translations
-- Performance optimizations
+- 🐛 Bug fixes
+- ✨ New components
+- 📝 Documentation improvements
+- 🎨 Design enhancements
+- 🌍 Translations
+- ⚡ Performance optimizations
+
+---
+
+## 🛠 v2.1.1 — Audit Fixes & New Features
+
+A full source audit of `dist/css/tani.css` was performed. The following were fixed and added.
+
+### 🐛 Critical bugs fixed
+- **Responsive navbar was unusable:** `.navbar-toggler` was permanently `display:none` (no rule ever re-enabled it on small screens), so the mobile menu could never be opened. Now shown at the `≤991.98px` breakpoint and the nav stacks vertically.
+- **Anchor tooltips never positioned:** `.anchor-tooltip` referenced `position-anchor: --anchor-el`, but `.anchor` never declared `anchor-name: --anchor-el`. Added the anchor name so CSS Anchor Positioning works.
+- **Global paragraph constraint:** `p { max-width: 75ch }` was applied to **every** paragraph (navs, footers, buttons), breaking layouts. Now scoped to `.prose p` / `p.prose` as an opt-in.
+- **Invalid CSS:** `.list-disc` used the non-existent `list-style: type: disc;` → corrected to `list-style-type: disc;`.
+- **Mislabeled sections:** the utility sections were numbered `12`–`19` but physically placed after section `40`. Renumbered to `41`–`48` for accuracy.
+
+### ✨ Missing utilities added
+- **Per-axis spacing** for sizes `6/8/10/12/px` — `.mt-6 … .my-12`, `.pt-6 … .py-px` (only `.m-*` / `.p-*` existed before).
+- **Full opacity scale:** `.opacity-0 … .opacity-100`.
+- **Complete gray palette:** `text-gray-100…900`, `bg-gray-300…800`, `border-gray-100…900`.
+- **New utility families:** `ring-*`, `divide-*`, `space-x/y-*`, `aspect-*`, `object-fit/position-*`, `cursor-*`, `select-*`, `pointer-events-*`, `list-*`, `inset-*`, `backdrop-blur-*`, `transition-*` (property), full `duration-*` scale, `vertical-align` helpers, `line-clamp-*`, `min-h-screen/full`, width/height fractions.
+
+### 🧩 Missing components added
+- **`.list-group`** (+ item, flush, horizontal, color variants, active/disabled).
+- **`.input-group`** (+ text, sm/lg, with seamless radius handling).
+- **`.btn-close`** — unified close button (used by modal/alert/toast).
+- **`.offcanvas`** — zero-JS slide-in panel via `:target`.
+
+### 📱 Responsive system added
+- **Min-width breakpoints:** `sm (640)`, `md (768)`, `lg (992)`, `xl (1200)`, `xxl (1400)` with prefix syntax, e.g. `.md-flex-column`, `.lg-grid-cols-12`, `.xl-mt-4`, `.sm-hide`.
+- Covers display, flex-direction, flex-wrap, justify/align, text-align, floats, grid columns, gaps, margins, paddings, and order.
+
+### 📦 Build
+- `dist/css/tani.min.css` rebuilt (was empty) — now ~120 KB raw, ~15 KB gzip.
+
+---
+
+## 📝 License
+
+Tani is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgments
+
+- Built with modern CSS standards (2026)
+- Inspired by Tailwind CSS, Bootstrap, and Bulma
+- Uses [Prism.js](https://prismjs.com/) for syntax highlighting in documentation
+- Thanks to all contributors who help make Tani better
+
+---
+
+## 📬 Contact
+
+- **GitHub Issues:** [Report a bug](https://github.com/TaniCSS/Tani/issues)
+- **Discussions:** [Ask a question](https://github.com/TaniCSS/Tani/discussions)
+- **Twitter:** [@TaniCSS](https://twitter.com/TaniCSS)
+
+---
+
+<div align="center">
+
+**Made with ❤️ for the web community**
+
+**If you find Tani useful, please consider giving it a ⭐ star!**
+
+[⭐ Star this repo](https://github.com/TaniCSS/Tani) • [🍔 Fork this repo](https://github.com/TaniCSS/Tani/fork) • [📖 Read the docs](https://tanicss.github.io/docs)
+
+</div>
+```
