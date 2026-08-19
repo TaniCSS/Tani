@@ -5,7 +5,7 @@
 
 ### The Most Advanced CSS Framework in History — God Mode Edition
 
-[![Version](https://img.shields.io/badge/version-2.2.0-orange?style=for-the-badge&logo=semver)](https://github.com/TaniCSS/Tani/releases)
+[![Version](https://img.shields.io/badge/version-2.3.0-orange?style=for-the-badge&logo=semver)](https://github.com/TaniCSS/Tani/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
 [![Size](https://img.shields.io/badge/min-~80KB-green?style=for-the-badge)](https://github.com/TaniCSS/Tani)
 [![Size](https://img.shields.io/badge/gzip-~14KB-green?style=for-the-badge)](https://github.com/TaniCSS/Tani)
@@ -18,6 +18,26 @@
 [📖 Documentation](#-documentation) • [🚀 Quick Start](#-quick-start) • [✨ Features](#-god-mode-features) • [📊 Comparison](#-comparison) • [🎯 Examples](#-examples) • [🆕 v2.1](#-whats-new-in-v21)
 
 </div>
+
+---
+
+## 🆕 What's New in v2.3.0
+
+The "completeness" release — closing the gap with Tailwind v4, Bootstrap 5, and Bulma, plus full RTL / dark / a11y coverage:
+
+- ✅ **Logical spacing** — `ms-/me-/ps-/pe-*` (RTL-safe margins & padding)
+- ✅ **Full Sizing scale** — numeric `w-/h-*` (1–96), `size-*`, `min-w/h-*`, `max-w/h-*` (prose/sm–2xl/screen)
+- ✅ **Filters** — `blur`, `brightness`, `contrast`, `grayscale`, `invert`, `saturate`, `sepia`, `hue-rotate` + `backdrop-blur` (all combinable)
+- ✅ **Transforms** — per-axis `translate-x/y`, `rotate`, `scale-x/y`, `skew-x/y`, `origin-*`, `transform-gpu`
+- ✅ **Transitions** — property variants + full `duration-*` / `delay-*` / `ease-*`
+- ✅ **Interactivity** — `appearance-none`, `resize`, `select-*`, `will-change-*`, `cursor-*`, `pointer-events-*`
+- ✅ **Typography scale** — `tracking-*` / `leading-*` / `text-wrap` / `truncate` / `font-*`
+- ✅ **Backgrounds & gradients** — `bg-cover/contain`, `bg-clip-text`, `bg-gradient-to-*` + `from/via/to-*`
+- ✅ **Borders & divide** — `border-*` styles, `border-x/y-*`, `divide-x/y` + color variants
+- ✅ **Form validation** — `is-valid` / `.valid-feedback` (symmetric with `is-invalid`)
+- ✅ **Components** — `figure`, floating labels, full `offcanvas` (4 sides + backdrop), `progress` striped/animated, `table` striped/bordered/sm
+- ✅ **Animations library** — `ping`, `flash`, `heart-beat`, `fade-in-*`, `zoom-*`, `slide-in-*`, `shake`, `float`, `spin-slow` (+ reduced-motion safe)
+- ✅ **Responsive display** at `md / lg / xl / xxl`
 
 ---
 
@@ -67,7 +87,7 @@ Tani is a **next-generation CSS framework** that combines the best of modern CSS
 
 **Option 1: CDN (Coming Soon)**
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TaniCSS/Tani@v2.2.0/dist/css/tani.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TaniCSS/Tani@v2.3.0/dist/css/tani.min.css">
 ```
 
 **Option 2: Download**
