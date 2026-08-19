@@ -4199,3 +4199,18 @@ details.accordion-item > div { padding: 1rem 1.25rem; }
 .rotate-3d-y { transform: rotateY(12deg); }
 .tilt-left { transform: perspective(800px) rotateY(-8deg) rotateX(4deg); }
 .tilt-right { transform: perspective(800px) rotateY(8deg) rotateX(4deg); }
+
+/* ===== Premium gold buttons & utilities (Tani v2.2) ===== */
+.btn-gold{background:var(--gold);color:#1a1205;border:1px solid transparent}
+.btn-gold:hover{background:oklch(from var(--gold) l c h / .85);border-color:transparent}
+.btn-gold:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.btn-outline-gold{color:var(--gold);border:1px solid var(--gold);background:transparent}
+.btn-outline-gold:hover{background:oklch(from var(--gold) l c h / .12)}
+.text-gold{color:var(--gold)}
+.border-gold{border-color:var(--gold)}
+.brand,.navbar-brand{display:inline-flex;align-items:center;gap:.4rem;font-weight:800;font-size:1.15rem;text-decoration:none;color:var(--text)}
+.sidebar-link{display:block;padding:.55rem .75rem;border-radius:8px;color:var(--text-muted);text-decoration:none;transition:background .15s,color .15s}
+.sidebar-link:hover{background:oklch(from var(--primary) l c h / .1);color:var(--text)}
+.sidebar-link.active{background:oklch(from var(--primary) l c h / .16);color:var(--primary)}
+
+.carousel-cols-1 .carousel-slide{flex-basis:100%}

@@ -153,8 +153,10 @@
     });
     results.innerHTML = out; results.classList.add("open");
   }
+  function debounce(fn, ms) { var t; return function () { var a = arguments, c = this; clearTimeout(t); t = setTimeout(function () { fn.apply(c, a); }, ms); }; }
   if (input) {
-    input.addEventListener("input", function () { render(input.value); });
+    var doSearch = debounce(function () { render(input.value); }, 120);
+    input.addEventListener("input", doSearch);
     input.addEventListener("focus", function () { if (input.value) render(input.value); });
     document.addEventListener("click", function (e) { if (!e.target.closest(".doc-search")) results.classList.remove("open"); });
     results.addEventListener("click", function (e) { if (e.target.closest("a")) { results.classList.remove("open"); input.value = ""; closeSidebar(); } });
