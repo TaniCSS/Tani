@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tani v2.3.0 — Component & Utility Smoke Test</title>
+<link rel="stylesheet" href="../../dist/css/tani.css">
+<style>
+  /* test-only helpers (not part of the framework) */
+  body { padding: 1rem; }
+  .t-section { border-bottom: 1px solid #8883; margin: 1rem 0; padding-bottom: 1rem; }
+  .t-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 1rem; }
+  .t-box { width: 64px; height: 64px; border-radius: 8px; background: var(--primary); }
+  /* offcanvas open-on-check (toggle wired for the smoke test) */
+  #t-ocToggle:checked ~ #t-oc { transform: none; }
+  #t-ocToggle:checked ~ #t-ocb { display: block; }
+  #t-ocb { display: none; }
+  /* a fixed-height swatch for filter/transform comparison */
+  .t-swatch { height: 80px; background: linear-gradient(135deg, var(--primary), var(--gold)); }
+</style>
+</head>
+<body>
+<h1>Tani v2.3.0 Visual Smoke Test</h1>
+
+<!-- FILTERS -->
+<section class="t-section" id="sec-filters">
+  <h2>Filters</h2>
+  <div class="t-grid">
+    <div><div class="t-swatch blur-sm filter" id="t-blur"></div><small>blur-sm</small></div>
+    <div><div class="t-swatch grayscale filter" id="t-gray"></div><small>grayscale</small></div>
+    <div><div class="t-swatch blur-md brightness-150 saturate-200 filter" id="t-combo"></div><small>combo</small></div>
+    <div><div class="t-swatch backdrop backdrop-blur" id="t-bd"><div style="height:100%;background:oklch(20% 0 0 / .3)"></div></div><small>backdrop-blur</small></div>
+  </div>
+</section>
+
+<!-- TRANSFORMS -->
+<section class="t-section" id="sec-transforms">
+  <h2>Transforms</h2>
+  <div class="t-grid">
+    <div class="t-box rotate-45" id="t-rot"></div>
+    <div class="t-box scale-125" id="t-scl"></div>
+    <div class="t-box translate-x-4" id="t-trx"></div>
+    <div class="t-box skew-y-6" id="t-skew"></div>
+    <div class="t-box scale-x-150 rotate-12" id="t-combo2"></div>
+  </div>
+</section>
+
+<!-- ANIMATIONS -->
+<section class="t-section" id="sec-anim">
+  <h2>Animations</h2>
+  <div class="t-grid">
+    <span class="animate-ping" id="t-ping" style="width:24px;height:24px;border-radius:50%;background:var(--primary);display:inline-block"></span>
+    <span class="animate-heart-beat" id="t-heart" style="width:24px;height:24px;border-radius:50%;background:var(--danger);display:inline-block"></span>
+    <span class="animate-float" id="t-float" style="width:24px;height:24px;border-radius:50%;background:var(--gold);display:inline-block"></span>
+    <span class="animate-spin-slow" id="t-spin" style="width:24px;height:24px;border-radius:50%;border:3px solid var(--info);border-top-color:transparent;display:inline-block"></span>
+    <span class="badge badge-primary animate-fade-in-up" id="t-fade">fade-in-up</span>
+    <span class="badge badge-success animate-shake" id="t-shake">shake</span>
+  </div>
+</section>
+
+<!-- FIGURE -->
+<section class="t-section" id="sec-figure">
+  <h2>Figure</h2>
+  <figure class="figure" id="t-figure" style="max-width:220px">
+    <div class="figure-img" style="height:120px;background:linear-gradient(135deg,var(--primary),var(--gold))"></div>
+    <figcaption class="figure-caption">Figure caption</figcaption>
+  </figure>
+</section>
+
+<!-- FORM: floating + valid -->
+<section class="t-section" id="sec-form">
+  <h2>Floating labels &amp; validation</h2>
+  <div class="form-floating" id="t-ff" style="max-width:280px">
+    <input class="form-control is-valid" id="t-ff-in" placeholder=" ">
+    <label for="t-ff-in">Floating email</label>
+    <div class="valid-feedback" id="t-vf">Looks good!</div>
+  </div>
+</section>
+
+<!-- PROGRESS -->
+<section class="t-section" id="sec-progress">
+  <h2>Progress</h2>
+  <div class="progress mb-2" id="t-prog1"><div class="progress-bar progress-bar-striped" style="width:55%">55%</div></div>
+  <div class="progress mb-2" id="t-prog2"><div class="progress-bar progress-bar-success progress-bar-animated" style="width:72%">72%</div></div>
+  <div class="progress progress-lg" id="t-prog3"><div class="progress-bar progress-bar-warning" style="width:40%"></div></div>
+</section>
+
+<!-- TABLE -->
+<section class="t-section" id="sec-table">
+  <h2>Table variants</h2>
+  <table class="table table-striped table-bordered" id="t-table" style="max-width:420px">
+    <thead><tr><th>Name</th><th>Role</th></tr></thead>
+    <tbody><tr><td>Ada</td><td>Engineer</td></tr><tr><td>Linus</td><td>Maintainer</td></tr></tbody>
+  </table>
+</section>
+
+<!-- OFFCANVAS -->
+<section class="t-section" id="sec-offcanvas">
+  <h2>Offcanvas (zero-JS checkbox toggle)</h2>
+  <input type="checkbox" id="t-ocToggle" class="d-none">
+  <label for="t-ocToggle" class="btn btn-primary">Open offcanvas</label>
+  <div class="offcanvas offcanvas-start" id="t-oc" style="max-width:240px">
+    <div class="offcanvas-header"><h2 class="offcanvas-title">Menu</h2><button class="btn-close" onclick="document.getElementById('t-ocToggle').checked=false"></button></div>
+    <div class="offcanvas-body">Offcanvas body content</div>
+  </div>
+  <div class="offcanvas-backdrop" id="t-ocb"></div>
+</section>
+
+<!-- RESPONSIVE -->
+<section class="t-section" id="sec-responsive">
+  <h2>Responsive display</h2>
+  <div class="d-none d-md-block" id="t-resp" style="padding:0.5rem;background:var(--success);color:#fff">Visible at md+ (768px)</div>
+</section>
+
+<!-- RTL -->
+<section class="t-section" id="sec-rtl" dir="rtl">
+  <h2>RTL logical spacing</h2>
+  <div class="ms-4" id="t-rtl" style="width:80px;height:40px;background:var(--info)">ms-4 in RTL</div>
+</section>
+
+<!-- DARK TOGGLE -->
+<section class="t-section" id="sec-dark">
+  <h2>Dark mode</h2>
+  <button class="btn btn-secondary" id="t-darkbtn" onclick="document.documentElement.classList.toggle('dark-mode')">Toggle dark-mode</button>
+  <div class="card" id="t-card" style="max-width:240px;margin-top:.5rem"><div class="card-body">Card surface</div></div>
+</section>
+
+</body>
+</html>
